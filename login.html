@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ورود - سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا"
+    />
+    <title>ورود</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="static/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/login.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/IRANSans.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid d-flex justify-content-center align-items-center vh-100">
+      <div class="row justify-content-center align-items-center w-100">
+        <section
+          class="col-md-6 col-12 text-center p-4"
+          style="background: #fff; border-radius: 0.75rem"
+        >
+          <div class="row mb-4">
+            <div class="col-4">
+              <img
+                src="static/img/rahbar.jpg"
+                style="max-width: 128px; width: 100%"
+                alt="rahbar"
+              />
+            </div>
+            <div class="col-4">
+              <img
+                src="static/img/logo.jpeg"
+                style="max-width: 128px; width: 100%; height: auto"
+                alt="logo"
+              />
+              <div class="nastaligh" style="font-size: 17px">
+                معاونت منابع انسانی
+              </div>
+            </div>
+            <div class="col-4">
+              <img
+                src="static/img/emam.jpg"
+                style="max-width: 128px; float: left; width: 100%"
+                alt="emam"
+              />
+            </div>
+          </div>
+
+          <h1
+            class="title nastaligh"
+            style="font-size: 1.4rem; margin-top: 20px"
+          >
+            سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا
+          </h1>
+
+          <div id="login-form-div" class="form" style="margin-top: 50px">
+            <form id="username-form" autocomplete="off" class="form-horizontal">
+              <article
+                class="login-detail"
+                style="font-size: 1.2rem; color: #014339"
+              >
+                برای ورود یا ثبت ‌نام لطفا شماره همراه خود را وارد نمایید.
+              </article>
+
+              <div class="form-group row my-4  d-flex justify-content-center">
+                <label for="login_mobile" class="col-9 d-flex col-form-label">
+                  شماره همراه
+                </label>
+                <div class="col-9 d-flex justify-content-center">
+                  <input
+                    placeholder="09000000000"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    id="login_mobile"
+                    maxlength="11"
+                    class="form-control"
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
+
+              <div id="captcha-main" class="captcha-main row  d-flex justify-content-center">
+                <div class="col-6">
+                  <input
+                    type="text"
+                    maxlength="6"
+                    id="input-captcha"
+                    placeholder="... عبارت داخل کادر را وارد کنید"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-3">
+                  <div id="refresh-captcha" class="btn btn-outline-secondary">
+                    <img
+                      src="static/img/refresh.png"
+                      width="20px"
+                      alt="refresh"
+                    />
+                  </div>
+                  <img
+                    id="captcha-text"
+                    src="static/img/captcha-placeholder.png"
+                    width="120px"
+                    alt="captcha text"
+                  />
+                </div>
+              </div>
+
+              <p
+                id="captcha-error"
+                style="color: crimson; font-size: 0.75rem; margin-top: 5px; display: none"
+              >
+                عبارت داخل کادر به درستی وارد نشده است.
+              </p>
+
+              <p style="color: crimson; display: none" id="form-error">
+                کد ارسالی نامعتبر است. لطفا دوباره تلاش نمایید.
+              </p>
+
+              <a
+                id="login-pass"
+                href="login-pass.html"
+                style="font-size: 0.8rem; margin-top: 1rem; display: block"
+                >ورود با گذرواژه</a
+              >
+
+              <div class="form-group row mt-3 d-flex justify-content-center">
+                <button type="submit" class="col-9 btn btn-block rounded-md">
+                  ورود به سامانه
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="static/js/jquery-3.7.1.min.js"></script>
+    <script src="static/js/login.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

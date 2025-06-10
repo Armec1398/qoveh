@@ -1,0 +1,31 @@
+body{
+    font-family: 'IRANSans';
+    direction: rtl;
+}
+
+.btn {
+  color: #fff;
+  background-color: #1c90b0;
+  border-color: #1c90b0;
+}
+
+.btn:focus,
+.btn:hover {
+  color: #fff;
+  background-color: #1c90b0;
+  border-color: #1c90b0;
+}
+
+
+@font-face {
+    font-family: 'nastaligh';
+    src: url('/static/fonts/IranNastaliq.woff2') format('woff2'), url('/static/fonts/IranNastaliq.woff') format('woff'), url('/static/fonts/IranNastaliq.ttf') format('ttf'), url('/static/fonts/IranNastaliq.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.nastaligh{
+    font-family: 'nastaligh' !important;
+    font-size:25px
+}
+

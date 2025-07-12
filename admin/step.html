@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="داشبورد ادمین - سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا"
+    />
+    <title>داشبورد ادمین</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="../static/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="../static/fonts/fontawesome5-overrides.min.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/IRANSans.css" />
+  </head>
+
+  <body>
+    <div id="wrapper" class="dashboard-container position-relative">
+      <nav
+        class="navbar align-items-start sidebar sidebar-light accordion p-0 m-0 navbar-dark py-4"
+        style="flex-wrap: nowrap"
+      >
+        <div
+          class="container-fluid d-flex flex-column p-0 w-full align-items-center mx-auto"
+        >
+          <span id="closeSidebar" class="close-sidebar d-block d-lg-none"
+            >×</span
+          >
+          <div
+            class="navbar-brand d-flex justify-content-center align-items-center flex-column m-0 w-100"
+          >
+            <div class="text-center my-3">
+              <img
+                class="w-50 mb-1"
+                src="../static/img/logo.jpeg"
+                style="mix-blend-mode: multiply"
+              />
+              <div class="nastaligh primary-color" style="font-size: 17px">
+                معاونت منابع انسانی
+              </div>
+            </div>
+          </div>
+          <hr class="sidebar-divider my-0" />
+          <ul
+            class="navbar-nav text-light w-100 ps-3 gap-2"
+            id="accordionSidebar"
+          >
+            <li class="nav-item active">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-home"></i>
+                <span>داشبورد</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#"
+                ><i class="fa fa-user"></i> <span>منوی اول</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی دوم</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی سوم</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی چهارم</span></a
+              >
+            </li>
+            <div class="divider-sidebar my-2">
+              <span>مصاحبه ها</span>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی پنجم</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی ششم</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی هفتم</span></a
+              >
+            </li>
+          </ul>
+          <div
+            class="my-2 d-flex justify-content-center align-items-center gap-3 flex-row"
+          >
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../static/img/eitaa.webp"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../static/img/sorush.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img src="../static/img/bale.png" width="30px" height="30px" alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img src="../static/img/igap.png" width="30px" height="30px" alt=""
+            /></a>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="d-flex flex-column pb-4 bg-white"
+        id="content-wrapper"
+        style="border-right: 1px solid #e9eced"
+      >
+        <div id="content">
+          <nav
+            class="navbar navbar-expand bg-white mb-3 topbar static-top navbar-light px-md-3"
+            style="border-right: 0"
+          >
+            <div class="container-fluid px-1 px-lg-4">
+              <button
+                class="btn bg-transparent border-0 d-flex d-lg-none rounded-circle me-lg-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i
+                  class="fa fa-bars text-black font-size-medium"
+                  style="margin-top: 4px"
+                ></i>
+              </button>
+              <div id="overlay" class="overlay"></div>
+              <div class="ms-auto">
+                <a
+                  class="d-flex justify-content-center align-items-center rounded-medium"
+                  href="#"
+                  style="border: 0; text-decoration: none"
+                  ><img
+                    class="ms-2 d-none d-lg-block"
+                    src="../static/img/user.png"
+                    style="width: 40px; height: 40px; color: #fff"
+                  />
+                  <p class="text-black d-flex">
+                    <span style="display: inline-block; margin-bottom: 7px"
+                      >محمدرضا آرمانیان</span
+                    >
+                  </p>
+                </a>
+              </div>
+              <ul class="navbar-nav flex-nowrap d-flex">
+                <li class="nav-item dropdown no-arrow d-flex flex-row gap-2">
+                  <a
+                    class="btn text-black bg-transparent border-0 d-flex justify-content-center align-items-center py-2 px-2 position-relative"
+                    role="button"
+                    href="#"
+                    ><i class="fa fa-bell text-black font-size-medium"></i
+                    ><span
+                      class="badge bg-danger rounded-circle d-flex justify-content-center align-items-center position-absolute"
+                      style="width: 16px; height: 16px; top: -5px; right: 10%"
+                      >3</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container px-3 px-sm-4">
+            <div class="row d-flex">
+              <div class="col-lg-12 px-sm-3">
+                <div class="stepper-container" id="stepper"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/jquery-3.7.1.min.js"></script>
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/js/theme.js"></script>
+    <script src="../static/js/dashboard.js"></script>
+    <script>
+      const stepTitles = [
+  "شروع",
+  "اطلاعات کاربر",
+  "آدرس تحویل",
+  "شیوه ارسال",
+  "روش پرداخت",
+  "پیش‌نمایش سفارش",
+  "تأیید نهایی",
+  "پرداخت",
+  "اتمام سفارش",
+  "بازخورد و نظر",
+];
+
+const totalSteps = stepTitles.length;
+let currentStep = 5;
+
+const renderStepper = () => {
+  const container = document.getElementById("stepper");
+  container.innerHTML = "";
+
+  if (currentStep > 2) {
+    const dotsPrev = document.createElement("div");
+    dotsPrev.className = "step dots";
+    dotsPrev.textContent = "مرحله قبل";
+    dotsPrev.addEventListener("click", () => {
+      if (currentStep > 1) {
+        currentStep--;
+        renderStepper();
+      }
+    });
+    container.appendChild(dotsPrev);
+  }
+
+  if (currentStep > 1) {
+    const prev = document.createElement("div");
+    prev.className = "step prev";
+    prev.textContent = stepTitles[currentStep - 2];
+    container.appendChild(prev);
+  }
+
+  const curr = document.createElement("div");
+  curr.className = "step current";
+  curr.textContent = stepTitles[currentStep - 1];
+  container.appendChild(curr);
+
+  if (currentStep < totalSteps) {
+    const next = document.createElement("div");
+    next.className = "step next";
+    next.textContent = stepTitles[currentStep];
+    container.appendChild(next);
+  }
+
+  if (currentStep < totalSteps - 1) {
+    const dotsNext = document.createElement("div");
+    dotsNext.className = "step dots";
+    dotsNext.textContent = "مرحله بعد";
+    dotsNext.addEventListener("click", () => {
+      if (currentStep < totalSteps) {
+        currentStep++;
+        renderStepper();
+      }
+    });
+    container.appendChild(dotsNext);
+  }
+};
+renderStepper();
+
+    </script>
+  </body>
+</html>

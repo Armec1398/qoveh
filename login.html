@@ -18,13 +18,12 @@
     <link rel="stylesheet" type="text/css" href="static/css/IRANSans.css" />
   </head>
 
-  <body>
-    <div class="container-fluid d-flex justify-content-center align-items-center vh-100">
+  <body class="vh-100">
+    <div
+      class="container-fluid d-flex justify-content-center align-items-center py-4 vh-100"
+    >
       <div class="row justify-content-center align-items-center w-100">
-        <section
-          class="col-md-6 col-12 text-center p-4"
-          style="background: #fff; border-radius: 0.75rem"
-        >
+        <section class="col-md-6 col-12 text-center p-4 bg-white radius">
           <div class="row mb-4">
             <div class="col-4">
               <img
@@ -61,18 +60,15 @@
 
           <div id="login-form-div" class="form" style="margin-top: 50px">
             <form id="username-form" autocomplete="off" class="form-horizontal">
-              <article
-                class="login-detail"
-                style="font-size: 1.2rem; color: #014339"
-              >
+              <p class="login-detail text-sm" style="color: #014339">
                 برای ورود یا ثبت ‌نام لطفا شماره همراه خود را وارد نمایید.
-              </article>
+              </p>
 
-              <div class="form-group row my-4  d-flex justify-content-center">
-                <label for="login_mobile" class="col-9 d-flex col-form-label">
+              <div class="form-group row mt-4 d-flex justify-content-center gap-3">
+                <label for="login_mobile" class="col-9 d-flex">
                   شماره همراه
                 </label>
-                <div class="col-9 d-flex justify-content-center">
+                <div class="col-9 d-flex flex-column">
                   <input
                     placeholder="09000000000"
                     type="text"
@@ -80,59 +76,55 @@
                     pattern="[0-9]*"
                     id="login_mobile"
                     maxlength="11"
-                    class="form-control"
+                    class="form-control radius"
                     autocomplete="off"
+                    style="text-align: left; direction: ltr"
                   />
                 </div>
-              </div>
-
-              <div id="captcha-main" class="captcha-main row  d-flex justify-content-center">
-                <div class="col-6">
+                <div class="col-9 d-flex flex-row gap-3">
                   <input
                     type="text"
                     maxlength="6"
                     id="input-captcha"
-                    placeholder="... عبارت داخل کادر را وارد کنید"
-                    class="form-control"
+                    placeholder="عبارت داخل کادر را وارد کنید..."
+                    class="form-control radius"
                   />
-                </div>
-                <div class="col-3">
-                  <div id="refresh-captcha" class="btn btn-outline-secondary">
-                    <img
-                      src="static/img/refresh.png"
-                      width="20px"
-                      alt="refresh"
-                    />
+                  <div class="captcha radius">
+                    <div
+                      id="refresh-captcha"
+                      class="btn btn-outline-secondary"
+                      style="padding: 0.25rem 0.25rem"
+                    >
+                      <img
+                        src="static/img/refresh.png"
+                        width="20px"
+                        alt="refresh"
+                      />
+                    </div>
+                    <span class="text-black font-size-small">zl3wH</span>
                   </div>
-                  <img
-                    id="captcha-text"
-                    src="static/img/captcha-placeholder.png"
-                    width="120px"
-                    alt="captcha text"
-                  />
                 </div>
               </div>
 
-              <p
-                id="captcha-error"
-                style="color: crimson; font-size: 0.75rem; margin-top: 5px; display: none"
-              >
-                عبارت داخل کادر به درستی وارد نشده است.
-              </p>
-
-              <p style="color: crimson; display: none" id="form-error">
-                کد ارسالی نامعتبر است. لطفا دوباره تلاش نمایید.
-              </p>
-
-              <a
-                id="login-pass"
-                href="login-pass.html"
-                style="font-size: 0.8rem; margin-top: 1rem; display: block"
-                >ورود با گذرواژه</a
-              >
+              <div class="row d-flex justify-content-center">
+                <div class="col-9">
+                  <a
+                    id="login-pass"
+                    href="login-pass.html"
+                    style="
+                      font-size: 0.8rem;
+                      margin-top: 1rem;
+                      display: block;
+                      text-align: right;
+                      text-decoration: none;
+                    "
+                    >ورود با گذرواژه</a
+                  >
+                </div>
+              </div>
 
               <div class="form-group row mt-3 d-flex justify-content-center">
-                <button type="submit" class="col-9 btn btn-block rounded-md">
+                <button type="submit" class="col-9 btn btn-block radius">
                   ورود به سامانه
                 </button>
               </div>
@@ -143,7 +135,7 @@
     </div>
 
     <script src="static/js/jquery-3.7.1.min.js"></script>
-    <script src="static/js/login.js"></script>
     <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/theme.js"></script>
   </body>
 </html>

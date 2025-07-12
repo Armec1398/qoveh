@@ -1,3 +1,33 @@
 body{
     background-color: #0d7aa3;
 }
+.captcha{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #b7b9cc;
+    border-radius: 7px;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+#refresh-captcha{
+    background: none;
+    border: none;
+}
+
+.showeye {
+    position: absolute;
+    top: 6px;
+  }
+  .showeye-svg {
+    margin-right: 2px;
+    cursor: pointer;
+    transition: all ease-in 2s;
+  }
+  .display-none {
+    display: none;
+  }

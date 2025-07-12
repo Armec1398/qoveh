@@ -2,6 +2,29 @@ body{
     font-family: 'IRANSans';
     direction: rtl;
 }
+.primary-color{
+  color: #1c90b0;
+}
+
+.font-size-small{
+  font-size: 13px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.radius{
+  border-radius: .75rem;
+}
+.rounded-medium {
+  border-radius: 10px;
+}
+
+.shadow-sm{
+  box-shadow: 0 1px 0.2rem 0px #cbcbcb !important;
+}
+
 
 .btn {
   color: #fff;
@@ -19,7 +42,7 @@ body{
 
 @font-face {
     font-family: 'nastaligh';
-    src: url('/static/fonts/IranNastaliq.woff2') format('woff2'), url('/static/fonts/IranNastaliq.woff') format('woff'), url('/static/fonts/IranNastaliq.ttf') format('ttf'), url('/static/fonts/IranNastaliq.eot') format('eot');
+    src: url('../fonts/IranNastaliq.woff2') format('woff2'), url('../fonts/IranNastaliq.woff') format('woff'), url('../fonts/IranNastaliq.ttf') format('ttf'), url('../fonts/IranNastaliq.eot') format('eot');
     font-weight: normal;
     font-style: normal;
 }
@@ -29,3 +52,43 @@ body{
     font-size:25px
 }
 
+label {
+    font-size: 14px;
+    color: #23243b;
+}
+
+input{
+    box-sizing: border-box;
+    margin: 0;
+    font-variant: tabular-nums;
+    list-style: none;
+    font-feature-settings: "tnum";
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 2.5rem;
+    padding: 4px 11px;
+    color: rgba(0, 0, 0) !important;
+    font-size: 15px !important;
+    line-height: 1.5;
+    background-color: #fff;
+    background-image: none;
+    border: 2px solid #dcdcdc;
+    border-radius: 4px;
+    transition: all .3s;
+}
+
+input:focus {
+    border-color: #1c90b0 !important;
+    border-right-width: 1px !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 2px rgba(0, 122, 163, .2) !important;
+}
+
+input:hover {
+    border-color: #1c90b0;
+    border-right-width: 1px !important;
+}
+input::placeholder{
+    font-size: 15px;
+}

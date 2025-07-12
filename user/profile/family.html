@@ -228,7 +228,9 @@
             <div class="row d-flex mb-3">
               <div class="col-lg-12 px-sm-3">
                 <div class="">
-                  <h1 class="text-black main-heading mb-0">اطلاعات تماس</h1>
+                  <h1 class="text-black main-heading mb-0">
+                    اطلاعات اعضای خانواده
+                  </h1>
                 </div>
               </div>
             </div>
@@ -237,91 +239,165 @@
                 <div
                   class="content bg-white shadow-sm rounded-medium py-2 py-sm-4 px-3 px-sm-4"
                 >
+                  <div>
+                    <span class="text-danger d-block pb-3"
+                      >وارد کردن اطلاعات پدر، مادر، برادر ،خواهر و همسر (در صورت
+                      تأهل) الزامی باشد</span
+                    >
+                  </div>
                   <div class="w-100 d-flex justify-content-center mb-3">
                     <h5 class="divider-title primary-color mb-0">
-                      <span>اطلاعات تماس</span>
+                      <span>اطلاعات اعضای خانواده</span>
+                    </h5>
+                  </div>
+                  <span class="text-black d-block pb-1"
+                    >موردی ثبت نشده است.</span
+                  >
+                  <div class="w-100 d-flex justify-content-center mb-3">
+                    <h5 class="divider-title primary-color mb-0">
+                      <span>نمونه جدید</span>
                     </h5>
                   </div>
                   <form>
                     <div class="row">
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> شماره
-                          همراه</label
-                        >
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> نام و نام
+                          خانوادگی
+                        </label>
                         <input
                           type="text"
                           class="form-control"
-                          value="09211442768"
-                          disabled
-                          placeholder="09211442768"
+                          placeholder=""
                         />
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> شماره تلفن منزل
-                          با کد شهرستان</label
-                        >
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> نسبت
+                        </label>
+                        <select class="form-select">
+                          <option>-</option>
+                          <option>پدر</option>
+                          <option>مادر</option>
+                          <option>همسر</option>
+                          <option>فرزند</option>
+                          <option>برادر</option>
+                          <option>خواهر</option>
+                          <option>سایر</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> کد ملی
+                        </label>
                         <input
                           type="text"
                           class="form-control"
-                          placeholder="مثال: 02112345678"
+                          placeholder=""
                         />
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span>
-                          رایانامه(ایمیل)</label
-                        >
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> شماره شناسنامه
+                        </label>
                         <input
-                          type="email"
+                          type="text"
                           class="form-control"
-                          placeholder="مثال: example@email.com"
+                          placeholder=""
                         />
                       </div>
-                      <div class="col-md-6 mb-3"></div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> استان محل
-                          سکونت</label
-                        >
-                        <select class="form-select">
-                          <option>-</option>
-                          <option>تهران</option>
-                          <option>البرز</option>
-                          <option>اصفهان</option>
-                          <option>فارس</option>
-                          <option>خراسان رضوی</option>
-                          <option>آذربایجان شرقی</option>
-                          <option>آذربایجان غربی</option>
-                          <option>گیلان</option>
-                          <option>مازندران</option>
-                          <option>و ...</option>
-                        </select>
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> تحصیلات
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder=""
+                        />
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> شهرستان محل
-                          سکونت</label
-                        >
-                        <select class="form-select">
-                          <option>-</option>
-                          <option>تهران</option>
-                          <option>ری</option>
-                          <option>شمیرانات</option>
-                          <option>اسلامشهر</option>
-                          <option>و ...</option>
-                        </select>
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> شغل
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder=""
+                        />
                       </div>
-                    </div>
-                    <div class="d-flex justify-content-between mt-4">
-                      <button
-                        type="button"
-                        class="btn btn-primary px-4"
-                        onclick="window.location.href='contact/prev-address.html'"
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">محل کار</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder=""
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> تلفن
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder=""
+                        />
+                      </div>
+                      <div class="col-12 mb-3">
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> نشانی
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder=""
+                        />
+                      </div>
+                      <div
+                        class="col-12 mb-3 d-flex align-items-center justify-content-start"
                       >
-                        بعدی
-                      </button>
+                        <div class="custom-radio-group">
+                          <input
+                            type="checkbox"
+                            id="marriage-history"
+                            class="custom-checkbox-input"
+                          />
+                          <label
+                            for="marriage-history"
+                            class="custom-radio-label mb-0 border-0 pe-4"
+                            style="font-size: 15px"
+                            >سابقه ازدواج مجدد یا متارکه دارد.</label
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="col-12 mb-3 d-flex align-items-center justify-content-start"
+                      >
+                        <button type="submit" class="btn btn-primary px-5">
+                          ثبت
+                        </button>
+                      </div>
+
+                      <div
+                        class="col-12 d-flex justify-content-between align-items-center mt-2 gap-2"
+                      >
+                        <button
+                          type="button"
+                          class="btn btn-outline-primary px-4"
+                          style="background-color: transparent; color: #1c90b0"
+                          onclick="window.location.href='contact/prev-address.html'"
+                        >
+                          بازگشت
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-primary px-4"
+                          onclick="window.location.href='jebheh.html'"
+                        >
+                          بعدی
+                        </button>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -335,9 +411,9 @@
     <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../static/js/theme.js"></script>
     <script src="../../static/js/dashboard.js"></script>
-
+    <script src="../../static/js/form-control.js"></script>
     <script>
-      // تعریف مراحل برای صفحه contact
+      // تعریف مراحل برای صفحه family
       const stepTitles = [
         "اطلاعات تماس و سوابق",
         "سوابق سکونت",
@@ -358,7 +434,7 @@
       ];
 
       const totalSteps = stepTitles.length;
-      let currentStep = 1; // شروع از مرحله اول
+      let currentStep = 3; // مرحله سوم - اطلاعات اعضای خانواده
 
       const renderStepper = () => {
         const container = document.getElementById("stepper");
@@ -381,6 +457,9 @@
           const prev = document.createElement("div");
           prev.className = "step prev";
           prev.textContent = stepTitles[currentStep - 2];
+          prev.addEventListener("click", () => {
+            window.location.href = "contact/prev-address.html";
+          });
           container.appendChild(prev);
         }
 
@@ -394,7 +473,7 @@
           next.className = "step next";
           next.textContent = stepTitles[currentStep];
           next.addEventListener("click", () => {
-            window.location.href = "contact/prev-address.html";
+            window.location.href = "jebheh.html";
           });
           container.appendChild(next);
         }

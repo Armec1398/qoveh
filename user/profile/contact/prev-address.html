@@ -246,52 +246,30 @@
                 >
                   <div class="w-100 d-flex justify-content-center mb-3">
                     <h5 class="divider-title primary-color mb-0">
-                      <span>سوابق سکونت</span>
+                      <span>سابقه سکونت</span>
+                    </h5>
+                  </div>
+                  <span class="text-black d-block pb-1"
+                    >سوابق سکونت ۱۵ سال اخیر خود را ثبت نمایید</span
+                  >
+                  <span class="text-danger d-block pb-2"
+                    >((خوابگاه شامل محل سکونت نمی باشد))</span
+                  >
+                  <span class="text-black d-block mb-3"
+                    >موردی ثبت نشده است.</span
+                  >
+
+                  <div class="w-100 d-flex justify-content-center mb-3">
+                    <h5 class="divider-title primary-color mb-0">
+                      <span>نمونه جدید</span>
                     </h5>
                   </div>
                   <form>
                     <div class="row">
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> شماره
-                          همراه</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          value="09211442768"
-                          disabled
-                          placeholder="09211442768"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> شماره تلفن منزل
-                          با کد شهرستان</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="مثال: 02112345678"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span>
-                          رایانامه(ایمیل)</label
-                        >
-                        <input
-                          type="email"
-                          class="form-control"
-                          placeholder="مثال: example@email.com"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3"></div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> استان محل
-                          سکونت</label
-                        >
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> استان
+                        </label>
                         <select class="form-select">
                           <option>-</option>
                           <option>تهران</option>
@@ -307,10 +285,9 @@
                         </select>
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> شهرستان محل
-                          سکونت</label
-                        >
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> شهرستان
+                        </label>
                         <select class="form-select">
                           <option>-</option>
                           <option>تهران</option>
@@ -319,6 +296,37 @@
                           <option>اسلامشهر</option>
                           <option>و ...</option>
                         </select>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">تلفن</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder=""
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3 d-flex gap-2 align-items-end">
+                        <div class="flex-fill">
+                          <label class="form-label required">
+                            <span style="color: #ff4d4f">*</span> سال شروع سکونت
+                          </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="1395"
+                          />
+                        </div>
+                        <div class="flex-fill">
+                          <label class="form-label required">
+                            <span style="color: #ff4d4f">*</span> سال پایان
+                            سکونت</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="1395"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="d-flex justify-content-between mt-4">
@@ -330,7 +338,11 @@
                       >
                         بازگشت
                       </button>
-                      <button type="submit" class="btn btn-primary px-4">
+                      <button
+                        type="button"
+                        class="btn btn-primary px-4"
+                        onclick="window.location.href='../family.html'"
+                      >
                         بعدی
                       </button>
                     </div>
@@ -346,6 +358,7 @@
     <script src="../../../static/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../../static/js/theme.js"></script>
     <script src="../../../static/js/dashboard.js"></script>
+
     <script>
       // تعریف مراحل برای صفحه prev-address
       const stepTitles = [
@@ -406,6 +419,9 @@
           const next = document.createElement("div");
           next.className = "step next";
           next.textContent = stepTitles[currentStep];
+          next.addEventListener("click", () => {
+            window.location.href = "../family.html";
+          });
           container.appendChild(next);
         }
 

@@ -14,24 +14,24 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="../../static/bootstrap/css/bootstrap.min.css"
+      href="../../../..//static/bootstrap/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="../../static/fonts/fontawesome-all.min.css" />
-    <link rel="stylesheet" href="../../static/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../../..//static/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="../../../..//static/fonts/font-awesome.min.css" />
     <link
       rel="stylesheet"
-      href="../../static/fonts/fontawesome5-overrides.min.css"
+      href="../../../..//static/fonts/fontawesome5-overrides.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="../../static/css/style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../../static/css/dashboard.css"
-    />
+    <link rel="stylesheet" type="text/css" href="../../../..//static/css/style.css" />
     <link
       rel="stylesheet"
       type="text/css"
-      href="../../static/css/IRANSans.css"
+      href="../../../..//static/css/dashboard.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../..//static/css/IRANSans.css"
     />
   </head>
 
@@ -53,7 +53,7 @@
             <div class="text-center my-3">
               <img
                 class="w-50 mb-1"
-                src="../../static/img/logo.jpeg"
+                src="../../../..//static/img/logo.jpeg"
                 style="mix-blend-mode: multiply"
               />
               <div class="nastaligh primary-color" style="font-size: 17px">
@@ -125,7 +125,7 @@
               role="button"
               href="#"
               ><img
-                src="../../static/img/eitaa.webp"
+                src="../../../..//static/img/eitaa.webp"
                 width="30px"
                 height="30px"
                 alt=""
@@ -135,7 +135,7 @@
               role="button"
               href="#"
               ><img
-                src="../../static/img/sorush.png"
+                src="../../../..//static/img/sorush.png"
                 width="30px"
                 height="30px"
                 alt=""
@@ -145,7 +145,7 @@
               role="button"
               href="#"
               ><img
-                src="../../static/img/bale.png"
+                src="../../../..//static/img/bale.png"
                 width="30px"
                 height="30px"
                 alt=""
@@ -155,7 +155,7 @@
               role="button"
               href="#"
               ><img
-                src="../../static/img/igap.png"
+                src="../../../..//static/img/igap.png"
                 width="30px"
                 height="30px"
                 alt=""
@@ -192,7 +192,7 @@
                   style="border: 0; text-decoration: none"
                   ><img
                     class="ms-2 d-none d-lg-block"
-                    src="../../static/img/user.png"
+                    src="../../../..//static/img/user.png"
                     style="width: 40px; height: 40px; color: #fff"
                   />
                   <p class="text-black d-flex">
@@ -228,7 +228,7 @@
             <div class="row d-flex mb-3">
               <div class="col-lg-12 px-sm-3">
                 <div class="">
-                  <h1 class="text-black main-heading mb-0">اطلاعات تماس</h1>
+                  <h1 class="text-black main-heading mb-0">اطلاعات افراد مورد وثوق 3</h1>
                 </div>
               </div>
             </div>
@@ -239,7 +239,7 @@
                 >
                   <div class="w-100 d-flex justify-content-center mb-3">
                     <h5 class="divider-title primary-color mb-0">
-                      <span>اطلاعات تماس</span>
+                      <span>اطلاعات افراد مورد وثوق 3</span>
                     </h5>
                   </div>
                   <form>
@@ -317,8 +317,16 @@
                     <div class="d-flex justify-content-between mt-4">
                       <button
                         type="button"
+                        class="btn btn-outline-primary px-4"
+                        style="background-color: transparent; color: #1c90b0"
+                        onclick="window.location.href='famous.html'"
+                      >
+                        بازگشت
+                      </button>
+                      <button 
+                        type="button" 
                         class="btn btn-primary px-4"
-                        onclick="window.location.href='contact/prev-address.html'"
+                        onclick="window.location.href='neighbour.html'"
                       >
                         بعدی
                       </button>
@@ -331,13 +339,12 @@
         </div>
       </div>
     </div>
-    <script src="../../static/js/jquery-3.7.1.min.js"></script>
-    <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../../static/js/theme.js"></script>
-    <script src="../../static/js/dashboard.js"></script>
-
+    <script src="../../../..//static/js/jquery-3.7.1.min.js"></script>
+    <script src="../../../..//static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../..//static/js/theme.js"></script>
+    <script src="../../../..//static/js/dashboard.js"></script>
     <script>
-      // تعریف مراحل برای صفحه contact
+      // تعریف مراحل برای صفحه family.html
       const stepTitles = [
         "اطلاعات تماس و سوابق",
         "سوابق سکونت",
@@ -354,11 +361,11 @@
         "سوابق کیفری و دادگاهی",
         "سوابق اعتیاد",
         "سوابق کمیته انضباطی",
-        "ثبت نهایی",
+        "ثبت نهایی"
       ];
 
       const totalSteps = stepTitles.length;
-      let currentStep = 1; // شروع از مرحله اول
+      let currentStep = 7; // مرحله 7 - اطلاعات افراد مورد وثوق 3
 
       const renderStepper = () => {
         const container = document.getElementById("stepper");
@@ -381,6 +388,9 @@
           const prev = document.createElement("div");
           prev.className = "step prev";
           prev.textContent = stepTitles[currentStep - 2];
+          prev.addEventListener("click", () => {
+            window.location.href = "famous.html";
+          });
           container.appendChild(prev);
         }
 
@@ -394,7 +404,7 @@
           next.className = "step next";
           next.textContent = stepTitles[currentStep];
           next.addEventListener("click", () => {
-            window.location.href = "contact/prev-address.html";
+            window.location.href = "neighbour.html";
           });
           container.appendChild(next);
         }
@@ -414,7 +424,7 @@
       };
 
       // اجرای stepper هنگام بارگذاری صفحه
-      document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", function() {
         renderStepper();
       });
     </script>

@@ -228,7 +228,7 @@
             <div class="row d-flex mb-3">
               <div class="col-lg-12 px-sm-3">
                 <div class="">
-                  <h1 class="text-black main-heading mb-0">اطلاعات تماس</h1>
+                  <h1 class="text-black main-heading mb-0">ثبت نهایی</h1>
                 </div>
               </div>
             </div>
@@ -239,7 +239,7 @@
                 >
                   <div class="w-100 d-flex justify-content-center mb-3">
                     <h5 class="divider-title primary-color mb-0">
-                      <span>اطلاعات تماس</span>
+                      <span>ثبت نهایی</span>
                     </h5>
                   </div>
                   <form>
@@ -317,10 +317,14 @@
                     <div class="d-flex justify-content-between mt-4">
                       <button
                         type="button"
-                        class="btn btn-primary px-4"
-                        onclick="window.location.href='contact/prev-address.html'"
+                        class="btn btn-outline-primary px-4"
+                        style="background-color: transparent; color: #1c90b0"
+                        onclick="window.location.href='disciplinarycommittee.html'"
                       >
-                        بعدی
+                        بازگشت
+                      </button>
+                      <button type="submit" class="btn btn-primary px-4">
+                        ثبت نهایی
                       </button>
                     </div>
                   </form>
@@ -335,9 +339,9 @@
     <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../static/js/theme.js"></script>
     <script src="../../static/js/dashboard.js"></script>
-
+    <script src="../../static/js/form-control.js"></script>
     <script>
-      // تعریف مراحل برای صفحه contact
+      // تعریف مراحل برای صفحه final.html
       const stepTitles = [
         "اطلاعات تماس و سوابق",
         "سوابق سکونت",
@@ -358,7 +362,7 @@
       ];
 
       const totalSteps = stepTitles.length;
-      let currentStep = 1; // شروع از مرحله اول
+      let currentStep = 16; // مرحله 16 - ثبت نهایی
 
       const renderStepper = () => {
         const container = document.getElementById("stepper");
@@ -381,6 +385,9 @@
           const prev = document.createElement("div");
           prev.className = "step prev";
           prev.textContent = stepTitles[currentStep - 2];
+          prev.addEventListener("click", () => {
+            window.location.href = "disciplinarycommittee.html";
+          });
           container.appendChild(prev);
         }
 
@@ -388,16 +395,6 @@
         curr.className = "step current";
         curr.textContent = stepTitles[currentStep - 1];
         container.appendChild(curr);
-
-        if (currentStep < totalSteps) {
-          const next = document.createElement("div");
-          next.className = "step next";
-          next.textContent = stepTitles[currentStep];
-          next.addEventListener("click", () => {
-            window.location.href = "contact/prev-address.html";
-          });
-          container.appendChild(next);
-        }
 
         if (currentStep < totalSteps - 1) {
           const dotsNext = document.createElement("div");

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
+<html data-bs-theme="light" lang="fa">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -10,7 +10,7 @@
       name="description"
       content="داشبورد ادمین - سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا"
     />
-    <title>داشبورد ادمین</title>
+    <title>سابقه عضویت در احزاب و گروه ها</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -34,9 +34,9 @@
       href="../../static/css/IRANSans.css"
     />
   </head>
-
   <body>
     <div id="wrapper" class="dashboard-container position-relative">
+      <!-- سایدبار و هدر همانند قبل -->
       <nav
         class="navbar align-items-start sidebar sidebar-light accordion p-0 m-0 navbar-dark py-4"
         style="flex-wrap: nowrap"
@@ -67,9 +67,8 @@
             id="accordionSidebar"
           >
             <li class="nav-item active">
-              <a class="nav-link rounded-small" href="#">
-                <i class="fa fa-home"></i>
-                <span>داشبورد</span></a
+              <a class="nav-link rounded-small" href="#"
+                ><i class="fa fa-home"></i><span>داشبورد</span></a
               >
             </li>
             <li class="nav-item">
@@ -78,42 +77,34 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-small" href="#">
-                <i class="fa fa-user"></i>
-                <span>منوی دوم</span></a
+              <a class="nav-link rounded-small" href="#"
+                ><i class="fa fa-user"></i><span>منوی دوم</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-small" href="#">
-                <i class="fa fa-user"></i>
-                <span>منوی سوم</span></a
+              <a class="nav-link rounded-small" href="#"
+                ><i class="fa fa-user"></i><span>منوی سوم</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-small" href="#">
-                <i class="fa fa-user"></i>
-                <span>منوی چهارم</span></a
+              <a class="nav-link rounded-small" href="#"
+                ><i class="fa fa-user"></i><span>منوی چهارم</span></a
               >
             </li>
-            <div class="divider-sidebar my-2">
-              <span>مصاحبه ها</span>
-            </div>
+            <div class="divider-sidebar my-2"><span>مصاحبه ها</span></div>
             <li class="nav-item">
-              <a class="nav-link rounded-small" href="#">
-                <i class="fa fa-user"></i>
-                <span>منوی پنجم</span></a
+              <a class="nav-link rounded-small" href="#"
+                ><i class="fa fa-user"></i><span>منوی پنجم</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-small" href="#">
-                <i class="fa fa-user"></i>
-                <span>منوی ششم</span></a
+              <a class="nav-link rounded-small" href="#"
+                ><i class="fa fa-user"></i><span>منوی ششم</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-small" href="#">
-                <i class="fa fa-user"></i>
-                <span>منوی هفتم</span></a
+              <a class="nav-link rounded-small" href="#"
+                ><i class="fa fa-user"></i><span>منوی هفتم</span></a
               >
             </li>
           </ul>
@@ -241,99 +232,135 @@
                 >
                   <div class="w-100 d-flex justify-content-center mb-3">
                     <h5 class="divider-title primary-color mb-0">
-                      <span>سابقه عضویت در احزاب و گروه ها</span>
+                      <span>مواردی که قبلا ثبت کرده اید:</span>
                     </h5>
                   </div>
-                  <form>
+                  <span class="text-black d-block pb-1"
+                    >موردی ثبت نشده است.</span
+                  >
+                  <!-- سوال اصلی -->
+                  <div class="row mb-4">
+                    <div class="col-12">
+                      <div class="text-center">
+                        <h6 class="mb-3 text-black">
+                          آیا خود یا اقوام شما سابقه گرایش فکری، هواداری و عضویت
+                          در یکی از سازمانها، گروهها یا احزاب را داشته و یا
+                          دارید؟
+                        </h6>
+                        <div class="d-flex justify-content-center gap-3">
+                          <button
+                            type="button"
+                            class="btn btn-primary px-4"
+                            id="btnYes"
+                          >
+                            بله
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-primary px-4"
+                            id="btnNo"
+                          >
+                            خیر
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- فرم (در ابتدا مخفی) -->
+                  <form id="partiesForm" style="display: none">
+                    <div class="w-100 d-flex justify-content-center mb-3">
+                      <h5 class="divider-title primary-color mb-0">
+                        <span>سابقه عضویت در حزب یا گروه</span>
+                      </h5>
+                    </div>
                     <div class="row">
                       <div class="col-md-6 mb-3">
                         <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> شماره
-                          همراه</label
+                          ><span style="color: #ff4d4f">*</span> نام حزب یا
+                          گروه</label
                         >
                         <input
                           type="text"
                           class="form-control"
-                          value="09211442768"
-                          disabled
-                          placeholder="09211442768"
+                          required
+                          placeholder="نام حزب یا گروه"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> شماره تلفن منزل
-                          با کد شهرستان</label
+                          ><span style="color: #ff4d4f">*</span> نوع حزب یا
+                          گروه</label
                         >
                         <input
                           type="text"
                           class="form-control"
-                          placeholder="مثال: 02112345678"
+                          required
+                          placeholder="نوع حزب یا گروه"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span>
-                          رایانامه(ایمیل)</label
+                          ><span style="color: #ff4d4f">*</span> نام و نام
+                          خانوادگی</label
                         >
                         <input
-                          type="email"
+                          type="text"
                           class="form-control"
-                          placeholder="مثال: example@email.com"
+                          required
+                          placeholder="نام و نام خانوادگی"
                         />
                       </div>
-                      <div class="col-md-6 mb-3"></div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> استان محل
-                          سکونت</label
+                          ><span style="color: #ff4d4f">*</span> نسبت</label
                         >
-                        <select class="form-select">
-                          <option>-</option>
-                          <option>تهران</option>
-                          <option>البرز</option>
-                          <option>اصفهان</option>
-                          <option>فارس</option>
-                          <option>خراسان رضوی</option>
-                          <option>آذربایجان شرقی</option>
-                          <option>آذربایجان غربی</option>
-                          <option>گیلان</option>
-                          <option>مازندران</option>
-                          <option>و ...</option>
-                        </select>
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                          placeholder="نسبت"
+                        />
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> شهرستان محل
-                          سکونت</label
-                        >
-                        <select class="form-select">
-                          <option>-</option>
-                          <option>تهران</option>
-                          <option>ری</option>
-                          <option>شمیرانات</option>
-                          <option>اسلامشهر</option>
-                          <option>و ...</option>
-                        </select>
+                        <label class="form-label">تاریخ فعالیت</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="تاریخ فعالیت (مثال: 1398-1400)"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">نظر شما</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="نظر شما"
+                        />
                       </div>
                     </div>
-                    <div class="d-flex justify-content-between mt-4">
-                      <button
-                        type="button"
-                        class="btn btn-outline-primary px-4"
-                        style="background-color: transparent; color: #1c90b0"
-                        onclick="window.location.href='relative-disagreement.html'"
-                      >
-                        بازگشت
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-primary px-4"
-                        onclick="window.location.href='criminal_records.html'"
-                      >
-                        بعدی
+                    <div class="d-flex justify-content-start mt-4">
+                      <button type="button" class="btn btn-primary px-5">
+                        ارسال
                       </button>
                     </div>
                   </form>
+                  <div class="d-flex justify-content-between mt-4">
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary px-4"
+                      style="background-color: transparent; color: #1c90b0"
+                      onclick="window.location.href='relative-disagreement.html'"
+                    >
+                      بازگشت
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary px-4"
+                      onclick="window.location.href='criminal_records.html'"
+                    >
+                      بعدی
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -366,70 +393,99 @@
         "سوابق کمیته انضباطی",
         "ثبت نهایی",
       ];
+      const pageRoutes = [
+        "contact.html",
+        "contact/prev-address.html",
+        "family.html",
+        "jebheh.html",
+        "contact/classmate.html",
+        "contact/related/famous.html",
+        "contact/related/family.html",
+        "contact/related/neighbour.html",
+        "contact/related/coworker.html",
+        "jebheh_history.html",
+        "relative-disagreement.html",
+        "parties_member.html",
+        "criminal_records.html",
+        "addict_history.html",
+        "disciplinarycommittee.html",
+        "final.html",
+      ];
+      let currentStep = 11; // ایندکس parties_member.html در آرایه (شروع از 0)
 
-      const totalSteps = stepTitles.length;
-      let currentStep = 12; // مرحله دوازدهم - سابقه عضویت در احزاب و گروه ها
+      function goToNextStep() {
+        if (currentStep < pageRoutes.length - 1) {
+          window.location.href = pageRoutes[currentStep + 1];
+        }
+      }
+      function goToPreviousStep() {
+        if (currentStep > 0) {
+          window.location.href = pageRoutes[currentStep - 1];
+        }
+      }
 
       const renderStepper = () => {
         const container = document.getElementById("stepper");
         container.innerHTML = "";
-
-        if (currentStep > 2) {
+        if (currentStep > 1) {
           const dotsPrev = document.createElement("div");
           dotsPrev.className = "step dots";
           dotsPrev.textContent = "مرحله قبل";
-          dotsPrev.addEventListener("click", () => {
-            if (currentStep > 1) {
-              currentStep--;
-              renderStepper();
-            }
-          });
+          dotsPrev.addEventListener("click", goToPreviousStep);
           container.appendChild(dotsPrev);
         }
-
-        if (currentStep > 1) {
+        if (currentStep > 0) {
           const prev = document.createElement("div");
           prev.className = "step prev";
-          prev.textContent = stepTitles[currentStep - 2];
-          prev.addEventListener("click", () => {
-            window.location.href = "relative-disagreement.html";
-          });
+          prev.textContent = stepTitles[currentStep - 1];
+          prev.addEventListener("click", goToPreviousStep);
           container.appendChild(prev);
         }
-
         const curr = document.createElement("div");
         curr.className = "step current";
-        curr.textContent = stepTitles[currentStep - 1];
+        curr.textContent = stepTitles[currentStep];
         container.appendChild(curr);
-
-        if (currentStep < totalSteps) {
+        if (currentStep < stepTitles.length - 1) {
           const next = document.createElement("div");
           next.className = "step next";
-          next.textContent = stepTitles[currentStep];
-          next.addEventListener("click", () => {
-            window.location.href = "criminal_records.html";
-          });
+          next.textContent = stepTitles[currentStep + 1];
+          next.addEventListener("click", goToNextStep);
           container.appendChild(next);
         }
-
-        if (currentStep < totalSteps - 1) {
+        if (currentStep < stepTitles.length - 2) {
           const dotsNext = document.createElement("div");
           dotsNext.className = "step dots";
           dotsNext.textContent = "مرحله بعد";
-          dotsNext.addEventListener("click", () => {
-            if (currentStep < totalSteps) {
-              currentStep++;
-              renderStepper();
-            }
-          });
+          dotsNext.addEventListener("click", goToNextStep);
           container.appendChild(dotsNext);
         }
       };
-
-      // اجرای stepper هنگام بارگذاری صفحه
       document.addEventListener("DOMContentLoaded", function () {
         renderStepper();
+        // دکمه‌های بله/خیر
+        const btnYes = document.getElementById("btnYes");
+        const btnNo = document.getElementById("btnNo");
+        const form = document.getElementById("partiesForm");
+        btnYes.addEventListener("click", function () {
+          form.style.display = "block";
+          btnYes.classList.add("active");
+          btnNo.classList.remove("active");
+        });
+        btnNo.addEventListener("click", goToNextStep);
+        // دکمه‌های فرم
+        const btnBack = document.querySelector(
+          "#partiesForm button.btn-outline-primary"
+        );
+        if (btnBack) btnBack.onclick = goToPreviousStep;
+        const btnNext = document.querySelector(
+          "#partiesForm button.btn-primary.px-4"
+        );
+        if (btnNext) btnNext.onclick = goToNextStep;
       });
+      // استایل انتخاب شده برای دکمه فعال
+      const style = document.createElement("style");
+      style.innerHTML = `.btn.active { background-color: #117a8b !important; color: #fff !important; }`;
+      document.head.appendChild(style);
     </script>
   </body>
 </html>

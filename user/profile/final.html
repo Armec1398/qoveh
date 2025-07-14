@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
+<html data-bs-theme="light" lang="fa">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -10,7 +10,7 @@
       name="description"
       content="داشبورد ادمین - سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا"
     />
-    <title>داشبورد ادمین</title>
+    <title>ثبت نهایی</title>
     <link
       rel="stylesheet"
       type="text/css"
@@ -34,7 +34,6 @@
       href="../../static/css/IRANSans.css"
     />
   </head>
-
   <body>
     <div id="wrapper" class="dashboard-container position-relative">
       <nav
@@ -67,9 +66,8 @@
             id="accordionSidebar"
           >
             <li class="nav-item active">
-              <a class="nav-link rounded-small" href="#">
-                <i class="fa fa-home"></i>
-                <span>داشبورد</span></a
+              <a class="nav-link rounded-small" href="#"
+                ><i class="fa fa-home"></i><span>داشبورد</span></a
               >
             </li>
             <li class="nav-item">
@@ -78,42 +76,34 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-small" href="#">
-                <i class="fa fa-user"></i>
-                <span>منوی دوم</span></a
+              <a class="nav-link rounded-small" href="#"
+                ><i class="fa fa-user"></i><span>منوی دوم</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-small" href="#">
-                <i class="fa fa-user"></i>
-                <span>منوی سوم</span></a
+              <a class="nav-link rounded-small" href="#"
+                ><i class="fa fa-user"></i><span>منوی سوم</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-small" href="#">
-                <i class="fa fa-user"></i>
-                <span>منوی چهارم</span></a
+              <a class="nav-link rounded-small" href="#"
+                ><i class="fa fa-user"></i><span>منوی چهارم</span></a
               >
             </li>
-            <div class="divider-sidebar my-2">
-              <span>مصاحبه ها</span>
-            </div>
+            <div class="divider-sidebar my-2"><span>مصاحبه ها</span></div>
             <li class="nav-item">
-              <a class="nav-link rounded-small" href="#">
-                <i class="fa fa-user"></i>
-                <span>منوی پنجم</span></a
+              <a class="nav-link rounded-small" href="#"
+                ><i class="fa fa-user"></i><span>منوی پنجم</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-small" href="#">
-                <i class="fa fa-user"></i>
-                <span>منوی ششم</span></a
+              <a class="nav-link rounded-small" href="#"
+                ><i class="fa fa-user"></i><span>منوی ششم</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-small" href="#">
-                <i class="fa fa-user"></i>
-                <span>منوی هفتم</span></a
+              <a class="nav-link rounded-small" href="#"
+                ><i class="fa fa-user"></i><span>منوی هفتم</span></a
               >
             </li>
           </ul>
@@ -237,97 +227,27 @@
                 <div
                   class="content bg-white shadow-sm rounded-medium py-2 py-sm-4 px-3 px-sm-4"
                 >
-                  <div class="w-100 d-flex justify-content-center mb-3">
-                    <h5 class="divider-title primary-color mb-0">
-                      <span>ثبت نهایی</span>
-                    </h5>
+                  <div
+                    class="w-100 d-flex flex-column align-items-center justify-content-center mb-3"
+                  >
+                    <div class="success-check">
+                      <i
+                        class="fa fa-check"
+                        style="font-size: 40px; color: #2ecc71"
+                      ></i>
+                    </div>
+                    <div class="success-message">شما با موفقیت ثبت شدید!</div>
                   </div>
-                  <form>
-                    <div class="row">
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> شماره
-                          همراه</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          value="09211442768"
-                          disabled
-                          placeholder="09211442768"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> شماره تلفن منزل
-                          با کد شهرستان</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="مثال: 02112345678"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span>
-                          رایانامه(ایمیل)</label
-                        >
-                        <input
-                          type="email"
-                          class="form-control"
-                          placeholder="مثال: example@email.com"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3"></div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> استان محل
-                          سکونت</label
-                        >
-                        <select class="form-select">
-                          <option>-</option>
-                          <option>تهران</option>
-                          <option>البرز</option>
-                          <option>اصفهان</option>
-                          <option>فارس</option>
-                          <option>خراسان رضوی</option>
-                          <option>آذربایجان شرقی</option>
-                          <option>آذربایجان غربی</option>
-                          <option>گیلان</option>
-                          <option>مازندران</option>
-                          <option>و ...</option>
-                        </select>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> شهرستان محل
-                          سکونت</label
-                        >
-                        <select class="form-select">
-                          <option>-</option>
-                          <option>تهران</option>
-                          <option>ری</option>
-                          <option>شمیرانات</option>
-                          <option>اسلامشهر</option>
-                          <option>و ...</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="d-flex justify-content-between mt-4">
-                      <button
-                        type="button"
-                        class="btn btn-outline-primary px-4"
-                        style="background-color: transparent; color: #1c90b0"
-                        onclick="window.location.href='disciplinarycommittee.html'"
-                      >
-                        بازگشت
-                      </button>
-                      <button type="submit" class="btn btn-primary px-4">
-                        ثبت نهایی
-                      </button>
-                    </div>
-                  </form>
+                  <div class="d-flex justify-content-center mt-4">
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary px-4"
+                      style="background-color: transparent; color: #1c90b0"
+                      onclick="window.location.href='disciplinarycommittee.html'"
+                    >
+                      بازگشت
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -360,59 +280,59 @@
         "سوابق کمیته انضباطی",
         "ثبت نهایی",
       ];
+      const pageRoutes = [
+        "contact.html",
+        "contact/prev-address.html",
+        "family.html",
+        "jebheh.html",
+        "contact/classmate.html",
+        "contact/related/famous.html",
+        "contact/related/family.html",
+        "contact/related/neighbour.html",
+        "contact/related/coworker.html",
+        "jebheh_history.html",
+        "relative-disagreement.html",
+        "parties_member.html",
+        "criminal_records.html",
+        "addict_history.html",
+        "disciplinarycommittee.html",
+        "final.html",
+      ];
+      let currentStep = 15; // ایندکس final.html در آرایه (شروع از 0)
 
-      const totalSteps = stepTitles.length;
-      let currentStep = 16; // مرحله 16 - ثبت نهایی
+      function goToPreviousStep() {
+        if (currentStep > 0) {
+          window.location.href = pageRoutes[currentStep - 1];
+        }
+      }
 
       const renderStepper = () => {
         const container = document.getElementById("stepper");
         container.innerHTML = "";
-
-        if (currentStep > 2) {
+        if (currentStep > 1) {
           const dotsPrev = document.createElement("div");
           dotsPrev.className = "step dots";
           dotsPrev.textContent = "مرحله قبل";
-          dotsPrev.addEventListener("click", () => {
-            if (currentStep > 1) {
-              currentStep--;
-              renderStepper();
-            }
-          });
+          dotsPrev.addEventListener("click", goToPreviousStep);
           container.appendChild(dotsPrev);
         }
-
-        if (currentStep > 1) {
+        if (currentStep > 0) {
           const prev = document.createElement("div");
           prev.className = "step prev";
-          prev.textContent = stepTitles[currentStep - 2];
-          prev.addEventListener("click", () => {
-            window.location.href = "disciplinarycommittee.html";
-          });
+          prev.textContent = stepTitles[currentStep - 1];
+          prev.addEventListener("click", goToPreviousStep);
           container.appendChild(prev);
         }
-
         const curr = document.createElement("div");
         curr.className = "step current";
-        curr.textContent = stepTitles[currentStep - 1];
+        curr.textContent = stepTitles[currentStep];
         container.appendChild(curr);
-
-        if (currentStep < totalSteps - 1) {
-          const dotsNext = document.createElement("div");
-          dotsNext.className = "step dots";
-          dotsNext.textContent = "مرحله بعد";
-          dotsNext.addEventListener("click", () => {
-            if (currentStep < totalSteps) {
-              currentStep++;
-              renderStepper();
-            }
-          });
-          container.appendChild(dotsNext);
-        }
       };
-
-      // اجرای stepper هنگام بارگذاری صفحه
       document.addEventListener("DOMContentLoaded", function () {
         renderStepper();
+        // دکمه بازگشت
+        const btnBack = document.querySelector("button.btn-outline-primary");
+        if (btnBack) btnBack.onclick = goToPreviousStep;
       });
     </script>
   </body>

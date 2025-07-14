@@ -360,6 +360,26 @@
     <script src="../../../static/js/dashboard.js"></script>
 
     <script>
+      // تعریف مسیرهای صفحات برای navigation
+      const pageRoutes = [
+        "../contact.html",
+        "prev-address.html",
+        "../family.html",
+        "../jebheh_history.html",
+        "../contact/related/family.html",
+        "../contact/related/coworker.html",
+        "../contact/related/neighbour.html",
+        "../contact/related/famous.html",
+        "../contact/classmate.html",
+        "../jebheh.html",
+        "../parties_member.html",
+        "../criminal_records.html",
+        "../addict_history.html",
+        "../disciplinarycommittee.html",
+        "../relative-disagreement.html",
+        "../final.html",
+      ];
+
       // تعریف مراحل برای صفحه prev-address
       const stepTitles = [
         "اطلاعات تماس و سوابق",
@@ -383,6 +403,20 @@
       const totalSteps = stepTitles.length;
       let currentStep = 2; // مرحله دوم - سوابق سکونت
 
+      // تابع navigation برای رفتن به مرحله بعدی
+      function goToNextStep() {
+        if (currentStep < totalSteps) {
+          window.location.href = pageRoutes[currentStep];
+        }
+      }
+
+      // تابع navigation برای رفتن به مرحله قبلی
+      function goToPreviousStep() {
+        if (currentStep > 1) {
+          window.location.href = pageRoutes[currentStep - 2];
+        }
+      }
+
       const renderStepper = () => {
         const container = document.getElementById("stepper");
         container.innerHTML = "";
@@ -391,12 +425,7 @@
           const dotsPrev = document.createElement("div");
           dotsPrev.className = "step dots";
           dotsPrev.textContent = "مرحله قبل";
-          dotsPrev.addEventListener("click", () => {
-            if (currentStep > 1) {
-              currentStep--;
-              renderStepper();
-            }
-          });
+          dotsPrev.addEventListener("click", goToPreviousStep);
           container.appendChild(dotsPrev);
         }
 
@@ -404,9 +433,7 @@
           const prev = document.createElement("div");
           prev.className = "step prev";
           prev.textContent = stepTitles[currentStep - 2];
-          prev.addEventListener("click", () => {
-            window.location.href = "../contact.html";
-          });
+          prev.addEventListener("click", goToPreviousStep);
           container.appendChild(prev);
         }
 
@@ -419,9 +446,7 @@
           const next = document.createElement("div");
           next.className = "step next";
           next.textContent = stepTitles[currentStep];
-          next.addEventListener("click", () => {
-            window.location.href = "../family.html";
-          });
+          next.addEventListener("click", goToNextStep);
           container.appendChild(next);
         }
 
@@ -429,12 +454,7 @@
           const dotsNext = document.createElement("div");
           dotsNext.className = "step dots";
           dotsNext.textContent = "مرحله بعد";
-          dotsNext.addEventListener("click", () => {
-            if (currentStep < totalSteps) {
-              currentStep++;
-              renderStepper();
-            }
-          });
+          dotsNext.addEventListener("click", goToNextStep);
           container.appendChild(dotsNext);
         }
       };

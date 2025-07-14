@@ -275,7 +275,7 @@
                         <input
                           type="text"
                           class="form-control"
-                          placeholder=""
+                          placeholder="نام و نام خانوادگی (مثال: زهرا رضایی)"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
@@ -285,7 +285,7 @@
                         <input
                           type="text"
                           class="form-control"
-                          placeholder=""
+                          placeholder="نسبت یا همکلاسی (مثال: همکلاسی)"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
@@ -295,7 +295,7 @@
                         <input
                           type="text"
                           class="form-control"
-                          placeholder=""
+                          placeholder="مقطع تحصیلی (مثال: کارشناسی)"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
@@ -305,7 +305,7 @@
                         <input
                           type="text"
                           class="form-control"
-                          placeholder=""
+                          placeholder="مدت آشنایی (مثال: 4 سال)"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
@@ -315,7 +315,7 @@
                         <input
                           type="text"
                           class="form-control"
-                          placeholder=""
+                          placeholder="تلفن (مثال: 09121234567)"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
@@ -325,7 +325,7 @@
                         <input
                           type="text"
                           class="form-control"
-                          placeholder=""
+                          placeholder="تلفن همراه"
                         />
                       </div>
                       <div class="col-12 mb-3">
@@ -335,7 +335,7 @@
                         <input
                           type="text"
                           class="form-control"
-                          placeholder=""
+                          placeholder="نشانی (مثال: تهران، خیابان آزادی)"
                         />
                       </div>
                     </div>
@@ -374,7 +374,26 @@
     <script src="../../../static/js/theme.js"></script>
     <script src="../../../static/js/dashboard.js"></script>
     <script>
-      // تعریف مراحل برای صفحه classmate.html
+      // تعریف مسیرهای صفحات برای navigation
+      const pageRoutes = [
+        "../contact.html",
+        "prev-address.html",
+        "../family.html",
+        "../jebheh.html",
+        "classmate.html",
+        "related/famous.html",
+        "related/family.html",
+        "related/neighbour.html",
+        "related/coworker.html",
+        "../jebheh_history.html",
+        "../parties_member.html",
+        "../criminal_records.html",
+        "../addict_history.html",
+        "../disciplinarycommittee.html",
+        "../relative-disagreement.html",
+        "../final.html",
+      ];
+
       const stepTitles = [
         "اطلاعات تماس و سوابق",
         "سوابق سکونت",
@@ -397,6 +416,18 @@
       const totalSteps = stepTitles.length;
       let currentStep = 5; // مرحله 5 - اطلاعات افراد مورد وثوق 1
 
+      function goToNextStep() {
+        if (currentStep < totalSteps) {
+          window.location.href = pageRoutes[5]; // related/famous.html
+        }
+      }
+
+      function goToPreviousStep() {
+        if (currentStep > 1) {
+          window.location.href = pageRoutes[3]; // ../jebheh.html
+        }
+      }
+
       const renderStepper = () => {
         const container = document.getElementById("stepper");
         container.innerHTML = "";
@@ -405,12 +436,7 @@
           const dotsPrev = document.createElement("div");
           dotsPrev.className = "step dots";
           dotsPrev.textContent = "مرحله قبل";
-          dotsPrev.addEventListener("click", () => {
-            if (currentStep > 1) {
-              currentStep--;
-              renderStepper();
-            }
-          });
+          dotsPrev.addEventListener("click", goToPreviousStep);
           container.appendChild(dotsPrev);
         }
 
@@ -418,9 +444,7 @@
           const prev = document.createElement("div");
           prev.className = "step prev";
           prev.textContent = stepTitles[currentStep - 2];
-          prev.addEventListener("click", () => {
-            window.location.href = "../jebheh.html";
-          });
+          prev.addEventListener("click", goToPreviousStep);
           container.appendChild(prev);
         }
 
@@ -433,9 +457,7 @@
           const next = document.createElement("div");
           next.className = "step next";
           next.textContent = stepTitles[currentStep];
-          next.addEventListener("click", () => {
-            window.location.href = "related/famous.html";
-          });
+          next.addEventListener("click", goToNextStep);
           container.appendChild(next);
         }
 
@@ -443,17 +465,11 @@
           const dotsNext = document.createElement("div");
           dotsNext.className = "step dots";
           dotsNext.textContent = "مرحله بعد";
-          dotsNext.addEventListener("click", () => {
-            if (currentStep < totalSteps) {
-              currentStep++;
-              renderStepper();
-            }
-          });
+          dotsNext.addEventListener("click", goToNextStep);
           container.appendChild(dotsNext);
         }
       };
 
-      // اجرای stepper هنگام بارگذاری صفحه
       document.addEventListener("DOMContentLoaded", function () {
         renderStepper();
       });

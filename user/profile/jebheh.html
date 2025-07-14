@@ -262,23 +262,18 @@
                         <input
                           type="text"
                           class="form-control"
-                          placeholder=""
+                          placeholder="نام و نام خانوادگی (مثال: علی رضایی)"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label required">
                           <span style="color: #ff4d4f">*</span> نسبت
                         </label>
-                        <select class="form-select">
-                          <option>-</option>
-                          <option>پدر</option>
-                          <option>مادر</option>
-                          <option>همسر</option>
-                          <option>فرزند</option>
-                          <option>برادر</option>
-                          <option>خواهر</option>
-                          <option>سایر</option>
-                        </select>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="نسبت (مثال: پدر)"
+                        />
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label required">
@@ -295,13 +290,24 @@
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label required">
-                          <span style="color: #ff4d4f">*</span> مدت زمان سابقه
-                          جبهه (ماه)
+                          <span style="color: #ff4d4f">*</span> محل اعزام (مثال:
+                          جبهه جنوب)
                         </label>
                         <input
                           type="text"
                           class="form-control"
-                          placeholder=""
+                          placeholder="محل اعزام (مثال: جبهه جنوب)"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> مدت حضور (مثال:
+                          6 ماه)
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="مدت حضور (مثال: 6 ماه)"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
@@ -311,7 +317,7 @@
                         <input
                           type="text"
                           class="form-control"
-                          placeholder=""
+                          placeholder="تلفن (مثال: 09121234567)"
                         />
                       </div>
                     </div>
@@ -330,7 +336,6 @@
                         بازگشت
                       </button>
                       <div class="d-flex gap-2">
-                        
                         <button
                           type="button"
                           class="btn btn-primary px-4"
@@ -354,6 +359,26 @@
     <script src="../../static/js/dashboard.js"></script>
     <script src="../../static/js/form-control.js"></script>
     <script>
+      // تعریف مسیرهای صفحات برای navigation
+      const pageRoutes = [
+        "contact.html",
+        "contact/prev-address.html",
+        "family.html",
+        "jebheh.html",
+        "contact/related/family.html",
+        "contact/related/coworker.html",
+        "contact/related/neighbour.html",
+        "contact/related/famous.html",
+        "contact/classmate.html",
+        "jebheh_history.html",
+        "parties_member.html",
+        "criminal_records.html",
+        "addict_history.html",
+        "disciplinarycommittee.html",
+        "relative-disagreement.html",
+        "final.html",
+      ];
+
       // تعریف مراحل برای صفحه jebheh
       const stepTitles = [
         "اطلاعات تماس و سوابق",
@@ -377,6 +402,20 @@
       const totalSteps = stepTitles.length;
       let currentStep = 4; // مرحله چهارم - اطلاعات سابقه ی ایثارگری اعضای خانواده
 
+      // تابع navigation برای رفتن به مرحله بعدی
+      function goToNextStep() {
+        if (currentStep < totalSteps) {
+          window.location.href = pageRoutes[8]; // contact/classmate.html
+        }
+      }
+
+      // تابع navigation برای رفتن به مرحله قبلی
+      function goToPreviousStep() {
+        if (currentStep > 1) {
+          window.location.href = pageRoutes[2]; // family.html
+        }
+      }
+
       const renderStepper = () => {
         const container = document.getElementById("stepper");
         container.innerHTML = "";
@@ -385,12 +424,7 @@
           const dotsPrev = document.createElement("div");
           dotsPrev.className = "step dots";
           dotsPrev.textContent = "مرحله قبل";
-          dotsPrev.addEventListener("click", () => {
-            if (currentStep > 1) {
-              currentStep--;
-              renderStepper();
-            }
-          });
+          dotsPrev.addEventListener("click", goToPreviousStep);
           container.appendChild(dotsPrev);
         }
 
@@ -398,9 +432,7 @@
           const prev = document.createElement("div");
           prev.className = "step prev";
           prev.textContent = stepTitles[currentStep - 2];
-          prev.addEventListener("click", () => {
-            window.location.href = "family.html";
-          });
+          prev.addEventListener("click", goToPreviousStep);
           container.appendChild(prev);
         }
 
@@ -413,9 +445,7 @@
           const next = document.createElement("div");
           next.className = "step next";
           next.textContent = stepTitles[currentStep];
-          next.addEventListener("click", () => {
-            window.location.href = "contact/classmate.html";
-          });
+          next.addEventListener("click", goToNextStep);
           container.appendChild(next);
         }
 
@@ -423,12 +453,7 @@
           const dotsNext = document.createElement("div");
           dotsNext.className = "step dots";
           dotsNext.textContent = "مرحله بعد";
-          dotsNext.addEventListener("click", () => {
-            if (currentStep < totalSteps) {
-              currentStep++;
-              renderStepper();
-            }
-          });
+          dotsNext.addEventListener("click", goToNextStep);
           container.appendChild(dotsNext);
         }
       };

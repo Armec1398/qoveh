@@ -406,15 +406,14 @@
                             class="custom-radio-label"
                             style="flex: 1 1 50%; justify-content: center"
                           >
-                            زن
                             <input type="radio" name="gender" value="female" />
                             <span class="custom-radio-indicator"></span>
+                            زن
                           </label>
                           <label
                             class="custom-radio-label"
                             style="flex: 1 1 50%; justify-content: center"
                           >
-                            مرد
                             <input
                               type="radio"
                               name="gender"
@@ -422,6 +421,7 @@
                               checked
                             />
                             <span class="custom-radio-indicator"></span>
+                            مرد
                           </label>
                         </div>
                       </div>
@@ -958,27 +958,17 @@
                         <span> اطلاعات وضعیت سلامت</span>
                       </h5>
                     </div>
-                    <div class="custom-radio-group" style="width: 100%">
+                    <div class="custom-checkbox-group">
+                      <input
+                        type="checkbox"
+                        id="healthCheck"
+                        class="custom-checkbox-input"
+                      />
                       <label
-                        class="custom-radio-label"
-                        style="
-                          flex: 1 1 100%;
-                          justify-content: flex-start;
-                          border: 0;
-                          font-size: 1rem !important;
-                        "
+                        for="healthCheck"
+                        class="custom-checkbox-label mb-0 border-0 pe-4"
+                        style="font-size: 15px"
                       >
-                        <input
-                          type="radio"
-                          name="healthCheck"
-                          id="healthCheck"
-                          class="form-check-input"
-                          style="margin-left: 0.5rem; vertical-align: middle"
-                        />
-                        <span
-                          class="custom-radio-indicator"
-                          style="margin-left: 0.5rem; vertical-align: middle"
-                        ></span>
                         لیست بیماری های دارای منع استخدام را مطالعه کرده ام و
                         شامل اینجانب نمی باشد
                         <a href="/diseases">( لیست بیماری ها )</a>
@@ -988,8 +978,8 @@
                       <button
                         type="button"
                         class="btn btn-outline-primary px-4"
-                        style="background-color: transparent;
-                              color: #1c90b0;"
+                        style="background-color: transparent; color: #1c90b0"
+                        onclick="window.location.href='../../dashboard-user.html'"
                       >
                         بازگشت
                       </button>

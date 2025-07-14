@@ -94,13 +94,13 @@ input::placeholder {
   font-size: 15px;
 }
 
-/* Custom Checkbox (مشابه custom radio) */
+/* Custom Radio Group */
 .custom-radio-group {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.custom-checkbox-input {
+.custom-radio-group input[type="radio"] {
   display: none;
 }
 .custom-radio-label {
@@ -110,7 +110,50 @@ input::placeholder {
   user-select: none;
   font-size: 15px;
 }
-.custom-radio-label:before {
+.custom-radio-indicator {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  border: 2px solid #1c90b0;
+  border-radius: 50%;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+.custom-radio-label
+  input[type="radio"]:checked
+  ~ .custom-radio-indicator:after {
+  content: "";
+  position: absolute;
+  right: 2.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background: #1c90b0;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+/* Custom Checkbox - کلاس‌های جداگانه */
+.custom-checkbox-input {
+  display: none;
+}
+.custom-checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.custom-checkbox-label {
+  position: relative;
+  padding-right: 32px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 15px;
+}
+.custom-checkbox-label:before {
   content: "";
   position: absolute;
   right: 0;
@@ -123,7 +166,7 @@ input::placeholder {
   background: #fff;
   transition: border-color 0.2s;
 }
-.custom-checkbox-input:checked + .custom-radio-label:after {
+.custom-checkbox-input:checked + .custom-checkbox-label:after {
   content: "";
   position: absolute;
   right: 6px;
@@ -135,6 +178,6 @@ input::placeholder {
   border-radius: 3px;
   transition: background 0.2s;
 }
-.custom-checkbox-input:focus + .custom-radio-label:before {
+.custom-checkbox-input:focus + .custom-checkbox-label:before {
   border-color: #0d6efd;
 }

@@ -241,99 +241,141 @@
                 >
                   <div class="w-100 d-flex justify-content-center mb-3">
                     <h5 class="divider-title primary-color mb-0">
-                      <span>اطلاعات سوابق حضور در جبهه</span>
+                      <span>مواردی که قبلا ثبت کرده اید:</span>
                     </h5>
                   </div>
-                  <form>
-                    <div class="row">
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> شماره
-                          همراه</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          value="09211442768"
-                          disabled
-                          placeholder="09211442768"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> شماره تلفن منزل
-                          با کد شهرستان</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="مثال: 02112345678"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span>
-                          رایانامه(ایمیل)</label
-                        >
-                        <input
-                          type="email"
-                          class="form-control"
-                          placeholder="مثال: example@email.com"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3"></div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> استان محل
-                          سکونت</label
-                        >
-                        <select class="form-select">
-                          <option>-</option>
-                          <option>تهران</option>
-                          <option>البرز</option>
-                          <option>اصفهان</option>
-                          <option>فارس</option>
-                          <option>خراسان رضوی</option>
-                          <option>آذربایجان شرقی</option>
-                          <option>آذربایجان غربی</option>
-                          <option>گیلان</option>
-                          <option>مازندران</option>
-                          <option>و ...</option>
-                        </select>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label required"
-                          ><span style="color: #ff4d4f">*</span> شهرستان محل
-                          سکونت</label
-                        >
-                        <select class="form-select">
-                          <option>-</option>
-                          <option>تهران</option>
-                          <option>ری</option>
-                          <option>شمیرانات</option>
-                          <option>اسلامشهر</option>
-                          <option>و ...</option>
-                        </select>
+                  <span class="text-black d-block pb-1"
+                    >موردی ثبت نشده است.</span
+                  >
+
+                  <!-- سوال اولیه -->
+                  <div class="row mb-4">
+                    <div class="col-12">
+                      <div class="text-center">
+                        <h6 class="mb-3 text-black">
+                          آیا خود، پدر یا خانواده شما در 8 سال دفاع مقدس حضور
+                          داشته اید؟
+                        </h6>
+                        <div class="d-flex justify-content-center gap-3">
+                          <button
+                            type="button"
+                            class="btn btn-outline-primary px-4"
+                            id="btnYes"
+                          >
+                            بله
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-outline-secondary px-4"
+                            id="btnNo"
+                          >
+                            خیر
+                          </button>
+                        </div>
                       </div>
                     </div>
-                    <div class="d-flex justify-content-between mt-4">
-                      <button
-                        type="button"
-                        class="btn btn-outline-primary px-4"
-                        style="background-color: transparent; color: #1c90b0"
-                        onclick="window.location.href='contact/related/coworker.html'"
-                      >
-                        بازگشت
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-primary px-4"
-                        onclick="window.location.href='relative-disagreement.html'"
-                      >
-                        بعدی
+                  </div>
+
+                  <!-- فرم (در ابتدا مخفی) -->
+                  <form id="jebhehForm" style="display: none">
+                    <div class="w-100 d-flex justify-content-center mb-3">
+                      <h5 class="divider-title primary-color mb-0">
+                        <span>اطلاعات سوابق حضور در جبهه</span>
+                      </h5>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> نام و نام
+                          خانوادگی
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                          placeholder="نام و نام خانوادگی"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> نسبت
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                          placeholder="نسبت"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> نام منطقه
+                          عملیاتی
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                          placeholder="نام منطقه عملیاتی"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> واحد اعزام کننده
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                          placeholder="واحد اعزام کننده"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> سمت
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                          placeholder="سمت"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label required">
+                          <span style="color: #ff4d4f">*</span> مدت حضور
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                          placeholder="مدت حضور (مثال: 6 ماه)"
+                        />
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-start mt-4">
+                      <button type="button" class="btn btn-primary px-5">
+                        ثبت
                       </button>
                     </div>
                   </form>
+                  <div class="d-flex justify-content-between mt-4">
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary px-4"
+                      style="background-color: transparent; color: #1c90b0"
+                      onclick="window.location.href='contact/related/coworker.html'"
+                    >
+                      بازگشت
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary px-4"
+                      onclick="window.location.href='relative-disagreement.html'"
+                    >
+                      بعدی
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -367,61 +409,76 @@
         "ثبت نهایی",
       ];
 
-      const totalSteps = stepTitles.length;
-      let currentStep = 10; // مرحله 10 - اطلاعات سوابق حضور در جبهه
+      const pageRoutes = [
+        "contact.html",
+        "contact/prev-address.html",
+        "family.html",
+        "jebheh.html",
+        "contact/classmate.html",
+        "contact/related/famous.html",
+        "contact/related/family.html",
+        "contact/related/neighbour.html",
+        "contact/related/coworker.html",
+        "jebheh_history.html",
+        "relative-disagreement.html",
+        "parties_member.html",
+        "criminal_records.html",
+        "addict_history.html",
+        "disciplinarycommittee.html",
+        "final.html",
+      ];
+
+      let currentStep = 9; // ایندکس jebheh_history.html در آرایه (شروع از 0)
+
+      function goToNextStep() {
+        if (currentStep < pageRoutes.length - 1) {
+          window.location.href = pageRoutes[currentStep + 1];
+        }
+      }
+      function goToPreviousStep() {
+        if (currentStep > 0) {
+          window.location.href = pageRoutes[currentStep - 1];
+        }
+      }
 
       const renderStepper = () => {
         const container = document.getElementById("stepper");
         container.innerHTML = "";
 
-        if (currentStep > 2) {
+        if (currentStep > 1) {
           const dotsPrev = document.createElement("div");
           dotsPrev.className = "step dots";
           dotsPrev.textContent = "مرحله قبل";
-          dotsPrev.addEventListener("click", () => {
-            if (currentStep > 1) {
-              currentStep--;
-              renderStepper();
-            }
-          });
+          dotsPrev.addEventListener("click", goToPreviousStep);
           container.appendChild(dotsPrev);
         }
 
-        if (currentStep > 1) {
+        if (currentStep > 0) {
           const prev = document.createElement("div");
           prev.className = "step prev";
-          prev.textContent = stepTitles[currentStep - 2];
-          prev.addEventListener("click", () => {
-            window.location.href = "contact/related/coworker.html";
-          });
+          prev.textContent = stepTitles[currentStep - 1];
+          prev.addEventListener("click", goToPreviousStep);
           container.appendChild(prev);
         }
 
         const curr = document.createElement("div");
         curr.className = "step current";
-        curr.textContent = stepTitles[currentStep - 1];
+        curr.textContent = stepTitles[currentStep];
         container.appendChild(curr);
 
-        if (currentStep < totalSteps) {
+        if (currentStep < stepTitles.length - 1) {
           const next = document.createElement("div");
           next.className = "step next";
-          next.textContent = stepTitles[currentStep];
-          next.addEventListener("click", () => {
-            window.location.href = "relative-disagreement.html";
-          });
+          next.textContent = stepTitles[currentStep + 1];
+          next.addEventListener("click", goToNextStep);
           container.appendChild(next);
         }
 
-        if (currentStep < totalSteps - 1) {
+        if (currentStep < stepTitles.length - 2) {
           const dotsNext = document.createElement("div");
           dotsNext.className = "step dots";
           dotsNext.textContent = "مرحله بعد";
-          dotsNext.addEventListener("click", () => {
-            if (currentStep < totalSteps) {
-              currentStep++;
-              renderStepper();
-            }
-          });
+          dotsNext.addEventListener("click", goToNextStep);
           container.appendChild(dotsNext);
         }
       };
@@ -429,6 +486,32 @@
       // اجرای stepper هنگام بارگذاری صفحه
       document.addEventListener("DOMContentLoaded", function () {
         renderStepper();
+
+        // اضافه کردن event listeners برای دکمه های بله و خیر
+        document
+          .getElementById("btnYes")
+          .addEventListener("click", function () {
+            document.getElementById("jebhehForm").style.display = "block";
+            this.classList.remove("btn-outline-primary");
+            this.classList.add("btn-primary");
+            document.getElementById("btnNo").classList.remove("btn-primary");
+            document
+              .getElementById("btnNo")
+              .classList.add("btn-outline-secondary");
+          });
+
+        document
+          .getElementById("btnNo")
+          .addEventListener("click", goToNextStep);
+        // دکمه‌های فرم
+        const btnBack = document.querySelector(
+          "#jebhehForm button.btn-outline-primary"
+        );
+        if (btnBack) btnBack.onclick = goToPreviousStep;
+        const btnNext = document.querySelector(
+          "#jebhehForm button.btn-primary.px-4"
+        );
+        if (btnNext) btnNext.onclick = goToNextStep;
       });
     </script>
   </body>

@@ -357,24 +357,24 @@
                   <form>
                     <div class="row">
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> نام</label
                         >
                         <input
                           type="text"
-                          class="form-control"
+                          class="form-control required"
                           value=""
                           placeholder="مثال: محمد"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> نام
                           خانوادگی</label
                         >
                         <input
                           type="text"
-                          class="form-control"
+                          class="form-control required"
                           value=""
                           placeholder="مثال: محمدی"
                         />
@@ -408,7 +408,7 @@
                         />
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> جنسیت</label
                         >
                         <div
@@ -419,7 +419,12 @@
                             class="custom-radio-label"
                             style="flex: 1 1 50%; justify-content: center"
                           >
-                            <input type="radio" name="gender" value="female" />
+                            <input
+                              type="radio"
+                              name="gender"
+                              value="female"
+                              class="required"
+                            />
                             <span class="custom-radio-indicator"></span>
                             زن
                           </label>
@@ -432,6 +437,7 @@
                               name="gender"
                               value="male"
                               checked
+                              class="required"
                             />
                             <span class="custom-radio-indicator"></span>
                             مرد
@@ -439,46 +445,46 @@
                         </div>
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> کد ملی</label
                         >
                         <input
                           type="text"
-                          class="form-control"
+                          class="form-control required"
                           value="0023456789"
                           disabled
                           placeholder="مثال: 0023456789"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> شماره
                           شناسنامه</label
                         >
                         <input
                           type="text"
-                          class="form-control"
+                          class="form-control required"
                           placeholder="مثال: 123456"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> محل صدور</label
                         >
                         <input
                           type="text"
-                          class="form-control"
+                          class="form-control required"
                           placeholder="مثال: تهران"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> تاریخ
                           صدور</label
                         >
                         <div class="row g-2">
                           <div class="col-4">
-                            <select class="form-select">
+                            <select class="form-select required">
                               <option>-</option>
                               <option>1</option>
                               <option>2</option>
@@ -514,7 +520,7 @@
                             </select>
                           </div>
                           <div class="col-4">
-                            <select class="form-select">
+                            <select class="form-select required">
                               <option>-</option>
                               <option>فروردین</option>
                               <option>اردیبهشت</option>
@@ -531,7 +537,7 @@
                             </select>
                           </div>
                           <div class="col-4">
-                            <select class="form-select">
+                            <select class="form-select required">
                               <option>-</option>
                               <option>1320</option>
                               <option>1321</option>
@@ -608,7 +614,7 @@
                         </div>
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> تابعیت
                           فعلی</label
                         >
@@ -627,27 +633,27 @@
                         />
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> ملیت</label
                         >
                         <input
                           type="text"
-                          class="form-control"
+                          class="form-control required"
                           placeholder="مثال: ایرانی"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> نام پدر</label
                         >
                         <input
                           type="text"
-                          class="form-control"
+                          class="form-control required"
                           placeholder="مثال: محمد"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> تابعیت
                           پدر</label
                         >
@@ -666,7 +672,7 @@
                     </div>
                     <div class="row">
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> وضعیت فعلی
                           تاهل</label
                         >
@@ -678,7 +684,7 @@
                         </select>
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> تعداد
                           فرزندان</label
                         >
@@ -699,10 +705,10 @@
                     </div>
                     <div class="row">
                       <div class="col-md-4 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> روز</label
                         >
-                        <select class="form-select">
+                        <select class="form-select required">
                           <option>-</option>
                           <option>1</option>
                           <option>2</option>
@@ -738,10 +744,10 @@
                         </select>
                       </div>
                       <div class="col-md-4 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> ماه</label
                         >
-                        <select class="form-select">
+                        <select class="form-select required">
                           <option>-</option>
                           <option>فروردین</option>
                           <option>اردیبهشت</option>
@@ -758,10 +764,10 @@
                         </select>
                       </div>
                       <div class="col-md-4 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> سال</label
                         >
-                        <select class="form-select">
+                        <select class="form-select required">
                           <option>-</option>
                           <option>1320</option>
                           <option>1321</option>
@@ -836,11 +842,11 @@
                         </select>
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> استان محل
                           تولد</label
                         >
-                        <select class="form-select">
+                        <select class="form-select required">
                           <option>-</option>
                           <option>آذربایجان شرقی</option>
                           <option>آذربایجان غربی</option>
@@ -876,11 +882,11 @@
                         </select>
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> شهرستان محل
                           تولد</label
                         >
-                        <select class="form-select">
+                        <select class="form-select required">
                           <option>-</option>
                         </select>
                       </div>
@@ -893,7 +899,7 @@
                     </div>
                     <div class="row">
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> وضعیت نظام
                           وظیفه</label
                         >
@@ -938,7 +944,7 @@
                     </div>
                     <div class="row">
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> دین</label
                         >
                         <select class="form-select">
@@ -946,7 +952,7 @@
                         </select>
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> مذهب</label
                         >
                         <select class="form-select">
@@ -975,7 +981,7 @@
                       <input
                         type="checkbox"
                         id="healthCheck"
-                        class="custom-checkbox-input"
+                        class="custom-checkbox-input required"
                       />
                       <label
                         for="healthCheck"
@@ -996,7 +1002,10 @@
                       >
                         بازگشت
                       </button>
-                      <button type="submit" class="btn btn-primary px-4">
+                      <button
+                        type="submit"
+                        class="btn btn-primary px-4 submit-btn"
+                      >
                         ثبت
                       </button>
                     </div>
@@ -1012,5 +1021,54 @@
     <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../static/js/theme.js"></script>
     <script src="../../static/js/dashboard.js"></script>
+    <script src="../../static/js/formcontrol.js"></script>
+    <script>
+      // فعال‌سازی انتخاب تصویر و پیش‌نمایش
+      $(document).ready(function () {
+        $("#selectPersonalImage").on("click", function () {
+          $("#personalImageInput").click();
+        });
+        $("#personalImageInput").on("change", function (e) {
+          const file = this.files[0];
+          if (file) {
+            if (
+              !file.type.match("image/jpeg") &&
+              !file.type.match("image/jpg")
+            ) {
+              $("#personalImageError").text("فرمت تصویر باید jpg باشد.");
+              $("#personalImageTag").hide();
+              $("#personalImagePlaceholder").show();
+              return;
+            }
+            if (file.size > 1024 * 1024) {
+              $("#personalImageError").text(
+                "حجم تصویر نباید بیشتر از ۱ مگابایت باشد."
+              );
+              $("#personalImageTag").hide();
+              $("#personalImagePlaceholder").show();
+              return;
+            }
+            $("#personalImageError").text("");
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              $("#personalImageTag").attr("src", e.target.result).show();
+              $("#personalImagePlaceholder").hide();
+              $("#removePersonalImage").show();
+            };
+            reader.readAsDataURL(file);
+          } else {
+            $("#personalImageTag").hide();
+            $("#personalImagePlaceholder").show();
+            $("#removePersonalImage").hide();
+          }
+        });
+        $("#removePersonalImage").on("click", function () {
+          $("#personalImageInput").val("");
+          $("#personalImageTag").hide();
+          $("#personalImagePlaceholder").show();
+          $(this).hide();
+        });
+      });
+    </script>
   </body>
 </html>

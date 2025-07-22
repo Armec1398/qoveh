@@ -267,10 +267,10 @@
                   <form>
                     <div class="row">
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required">
-                          <span style="color: #ff4d4f">*</span> استان
-                        </label>
-                        <select class="form-select">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> استان</label
+                        >
+                        <select class="form-select required">
                           <option>-</option>
                           <option>تهران</option>
                           <option>البرز</option>
@@ -285,10 +285,10 @@
                         </select>
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required">
-                          <span style="color: #ff4d4f">*</span> شهرستان
-                        </label>
-                        <select class="form-select">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> شهرستان</label
+                        >
+                        <select class="form-select required">
                           <option>-</option>
                           <option>تهران</option>
                           <option>ری</option>
@@ -307,23 +307,24 @@
                       </div>
                       <div class="col-md-6 mb-3 d-flex gap-2 align-items-end">
                         <div class="flex-fill">
-                          <label class="form-label required">
-                            <span style="color: #ff4d4f">*</span> سال شروع سکونت
-                          </label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="1395"
-                          />
-                        </div>
-                        <div class="flex-fill">
-                          <label class="form-label required">
-                            <span style="color: #ff4d4f">*</span> سال پایان
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> سال شروع
                             سکونت</label
                           >
                           <input
                             type="text"
-                            class="form-control"
+                            class="form-control required"
+                            placeholder="1395"
+                          />
+                        </div>
+                        <div class="flex-fill">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> سال پایان
+                            سکونت</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required"
                             placeholder="1395"
                           />
                         </div>
@@ -331,17 +332,17 @@
                     </div>
                     <div class="d-flex justify-content-between mt-4">
                       <button
-                        type="button"
-                        class="btn btn-outline-primary px-4"
-                        style="background-color: transparent; color: #1c90b0"
-                        onclick="window.location.href='../contact.html'"
+                        type="submit"
+                        class="btn btn-success px-4 submit-btn"
                       >
-                        بازگشت
+                        ثبت اطلاعات
                       </button>
+                    </div>
+                    <div class="d-flex justify-content-between mt-2">
                       <button
                         type="button"
-                        class="btn btn-primary px-4"
-                        onclick="window.location.href='../family.html'"
+                        class="btn btn-primary px-4 next-btn"
+                        onclick="window.location.href='family.html'"
                       >
                         بعدی
                       </button>
@@ -358,6 +359,7 @@
     <script src="../../../static/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../../static/js/theme.js"></script>
     <script src="../../../static/js/dashboard.js"></script>
+    <script src="../../../static/js/formcontrol.js"></script>
 
     <script>
       // تعریف مسیرهای صفحات برای navigation

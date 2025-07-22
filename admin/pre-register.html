@@ -264,10 +264,17 @@
                       <div
                         class="d-flex justify-content-between align-items-center"
                       >
-                      <button type="submit" class="btn btn-block" style="background-color: transparent;color:#1c90b0">
+                        <button
+                          type="submit"
+                          class="btn btn-block next-btn"
+                          style="background-color: transparent; color: #1c90b0"
+                        >
                           قبلی
                         </button>
-                        <button type="submit" class="btn btn-primary btn-block">
+                        <button
+                          type="submit"
+                          class="btn btn-primary btn-block submit-btn"
+                        >
                           بعدی
                         </button>
                       </div>
@@ -286,72 +293,71 @@
     <script src="../static/js/dashboard.js"></script>
     <script>
       const stepTitles = [
-  "شروع",
-  "اطلاعات کاربر",
-  "آدرس تحویل",
-  "شیوه ارسال",
-  "روش پرداخت",
-  "پیش‌نمایش سفارش",
-  "تأیید نهایی",
-  "پرداخت",
-  "اتمام سفارش",
-  "بازخورد و نظر",
-];
+        "شروع",
+        "اطلاعات کاربر",
+        "آدرس تحویل",
+        "شیوه ارسال",
+        "روش پرداخت",
+        "پیش‌نمایش سفارش",
+        "تأیید نهایی",
+        "پرداخت",
+        "اتمام سفارش",
+        "بازخورد و نظر",
+      ];
 
-const totalSteps = stepTitles.length;
-let currentStep = 5;
+      const totalSteps = stepTitles.length;
+      let currentStep = 5;
 
-const renderStepper = () => {
-  const container = document.getElementById("stepper");
-  container.innerHTML = "";
+      const renderStepper = () => {
+        const container = document.getElementById("stepper");
+        container.innerHTML = "";
 
-  if (currentStep > 2) {
-    const dotsPrev = document.createElement("div");
-    dotsPrev.className = "step dots";
-    dotsPrev.textContent = "مرحله قبل";
-    dotsPrev.addEventListener("click", () => {
-      if (currentStep > 1) {
-        currentStep--;
-        renderStepper();
-      }
-    });
-    container.appendChild(dotsPrev);
-  }
+        if (currentStep > 2) {
+          const dotsPrev = document.createElement("div");
+          dotsPrev.className = "step dots";
+          dotsPrev.textContent = "مرحله قبل";
+          dotsPrev.addEventListener("click", () => {
+            if (currentStep > 1) {
+              currentStep--;
+              renderStepper();
+            }
+          });
+          container.appendChild(dotsPrev);
+        }
 
-  if (currentStep > 1) {
-    const prev = document.createElement("div");
-    prev.className = "step prev";
-    prev.textContent = stepTitles[currentStep - 2];
-    container.appendChild(prev);
-  }
+        if (currentStep > 1) {
+          const prev = document.createElement("div");
+          prev.className = "step prev";
+          prev.textContent = stepTitles[currentStep - 2];
+          container.appendChild(prev);
+        }
 
-  const curr = document.createElement("div");
-  curr.className = "step current";
-  curr.textContent = stepTitles[currentStep - 1];
-  container.appendChild(curr);
+        const curr = document.createElement("div");
+        curr.className = "step current";
+        curr.textContent = stepTitles[currentStep - 1];
+        container.appendChild(curr);
 
-  if (currentStep < totalSteps) {
-    const next = document.createElement("div");
-    next.className = "step next";
-    next.textContent = stepTitles[currentStep];
-    container.appendChild(next);
-  }
+        if (currentStep < totalSteps) {
+          const next = document.createElement("div");
+          next.className = "step next";
+          next.textContent = stepTitles[currentStep];
+          container.appendChild(next);
+        }
 
-  if (currentStep < totalSteps - 1) {
-    const dotsNext = document.createElement("div");
-    dotsNext.className = "step dots";
-    dotsNext.textContent = "مرحله بعد";
-    dotsNext.addEventListener("click", () => {
-      if (currentStep < totalSteps) {
-        currentStep++;
-        renderStepper();
-      }
-    });
-    container.appendChild(dotsNext);
-  }
-};
-renderStepper();
-
+        if (currentStep < totalSteps - 1) {
+          const dotsNext = document.createElement("div");
+          dotsNext.className = "step dots";
+          dotsNext.textContent = "مرحله بعد";
+          dotsNext.addEventListener("click", () => {
+            if (currentStep < totalSteps) {
+              currentStep++;
+              renderStepper();
+            }
+          });
+          container.appendChild(dotsNext);
+        }
+      };
+      renderStepper();
     </script>
   </body>
 </html>

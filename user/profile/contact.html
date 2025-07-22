@@ -258,47 +258,47 @@
                   <form>
                     <div class="row">
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> شماره
                           همراه</label
                         >
                         <input
                           type="text"
-                          class="form-control"
+                          class="form-control required"
                           value="09211442768"
                           disabled
                           placeholder="09211442768"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> شماره تلفن منزل
                           با کد شهرستان</label
                         >
                         <input
                           type="text"
-                          class="form-control"
+                          class="form-control required"
                           placeholder="مثال: 02112345678"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span>
                           رایانامه(ایمیل)</label
                         >
                         <input
                           type="email"
-                          class="form-control"
+                          class="form-control required"
                           placeholder="مثال: example@email.com"
                         />
                       </div>
                       <div class="col-md-6 mb-3"></div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> استان محل
                           سکونت</label
                         >
-                        <select class="form-select">
+                        <select class="form-select required">
                           <option>-</option>
                           <option>تهران</option>
                           <option>البرز</option>
@@ -313,11 +313,11 @@
                         </select>
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label class="form-label required"
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> شهرستان محل
                           سکونت</label
                         >
-                        <select class="form-select">
+                        <select class="form-select required">
                           <option>-</option>
                           <option>تهران</option>
                           <option>ری</option>
@@ -329,8 +329,16 @@
                     </div>
                     <div class="d-flex justify-content-between mt-4">
                       <button
+                        type="submit"
+                        class="btn btn-success px-4 submit-btn"
+                      >
+                        ثبت اطلاعات
+                      </button>
+                    </div>
+                    <div class="d-flex justify-content-between mt-2">
+                      <button
                         type="button"
-                        class="btn btn-primary px-4"
+                        class="btn btn-primary px-4 next-btn"
                         onclick="window.location.href='contact/prev-address.html'"
                       >
                         بعدی
@@ -348,6 +356,7 @@
     <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../static/js/theme.js"></script>
     <script src="../../static/js/dashboard.js"></script>
+    <script src="../../static/js/formcontrol.js"></script>
 
     <script>
       // تعریف مسیرهای صفحات برای navigation

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="fa">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="فرم مشخصات کلی - سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا"
+    />
+    <title>مشخصات کلی</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="../static/fonts/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="../static/fonts/fontawesome5-overrides.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/IRANSans.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/persian-datepicker.min.css"
+    />
+  </head>
+  <body>
+    <div id="wrapper" class="dashboard-container position-relative">
+      <nav
+        class="navbar align-items-start sidebar sidebar-light accordion p-0 m-0 navbar-dark py-4"
+        style="flex-wrap: nowrap"
+      >
+        <div
+          class="container-fluid d-flex flex-column p-0 w-full align-items-center mx-auto"
+        >
+          <span id="closeSidebar" class="close-sidebar d-block d-lg-none"
+            >×</span
+          >
+          <div
+            class="navbar-brand d-flex justify-content-center align-items-center flex-column m-0 w-100"
+          >
+            <div class="text-center my-3">
+              <img
+                class="w-50 mb-1"
+                src="../static/img/logo.jpeg"
+                style="mix-blend-mode: multiply"
+              />
+              <div class="nastaligh primary-color" style="font-size: 17px">
+                معاونت منابع انسانی
+              </div>
+            </div>
+          </div>
+          <hr class="sidebar-divider my-0" />
+          <ul
+            class="navbar-nav text-light w-100 ps-3 gap-2"
+            id="accordionSidebar"
+          >
+            <li class="nav-item active">
+              <a class="nav-link rounded-small" href="../first-dashboard.html">
+                <i class="fa fa-home"></i>
+                <span>داشبورد اول</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div
+        class="d-flex flex-column pb-4 bg-white"
+        id="content-wrapper"
+        style="border-right: 1px solid #e9eced"
+      >
+        <div id="content">
+          <nav
+            class="navbar navbar-expand bg-white mb-3 topbar static-top navbar-light px-md-3"
+            style="border-right: 0"
+          >
+            <div class="container-fluid px-1 px-lg-4">
+              <button
+                class="btn bg-transparent border-0 d-flex d-lg-none rounded-circle me-lg-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i
+                  class="fa fa-bars text-black font-size-medium"
+                  style="margin-top: 4px"
+                ></i>
+              </button>
+              <div id="overlay" class="overlay"></div>
+              <div class="ms-auto">
+                <a
+                  class="d-flex justify-content-center align-items-center rounded-medium"
+                  href="#"
+                  style="border: 0; text-decoration: none"
+                >
+                  <img
+                    class="ms-2 d-none d-lg-block"
+                    src="../static/img/user.png"
+                    style="width: 40px; height: 40px; color: #fff"
+                  />
+                  <p class="text-black d-flex">
+                    <span style="display: inline-block; margin-bottom: 7px"
+                      >محمدرضا آرمانیان</span
+                    >
+                  </p>
+                </a>
+              </div>
+              <ul class="navbar-nav flex-nowrap d-flex">
+                <li class="nav-item dropdown no-arrow d-flex flex-row gap-2">
+                  <a
+                    class="btn text-black bg-transparent border-0 d-flex justify-content-center align-items-center py-2 px-2 position-relative"
+                    role="button"
+                    href="#"
+                  >
+                    <i class="fa fa-bell text-black font-size-medium"></i>
+                    <span
+                      class="badge bg-danger rounded-circle d-flex justify-content-center align-items-center position-absolute"
+                      style="width: 16px; height: 16px; top: -5px; right: 10%"
+                      >3</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container px-3 px-sm-4">
+            <div class="row d-flex mb-3">
+              <div class="col-lg-12 px-sm-3">
+                <div class="">
+                  <h1 class="text-black main-heading mb-0">مشخصات کلی</h1>
+                </div>
+              </div>
+            </div>
+            <div class="row d-flex">
+              <div class="col-lg-12 px-sm-3">
+                <div
+                  class="content bg-white shadow-sm rounded-medium py-2 py-sm-4 px-3 px-sm-4"
+                >
+                  <form>
+                    <div class="w-100 d-flex justify-content-center mb-3">
+                      <h5 class="divider-title primary-color mb-0">
+                        <span>تصویر پرسنلی</span>
+                      </h5>
+                    </div>
+                    <div class="row mb-4">
+                      <div
+                        class="col-12 d-flex flex-wrap justify-content-between align-items-start"
+                      >
+                        <div class="col-md-6 mb-3 mb-md-0">
+                          <p class="text-black">
+                            لطفا جهت ارسال تصویر به موارد زیر توجه فرمایید:
+                          </p>
+                          <ul
+                            class="mb-2"
+                            style="color: #95989a; font-size: 0.95rem"
+                          >
+                            <li>فرمت تصویر حتما باید jpg باشد.</li>
+                            <li>
+                              حجم فایل بارگذاری شده نباید از یک مگابایت بیشتر
+                              باشد.
+                            </li>
+                          </ul>
+                          <input
+                            type="file"
+                            id="personalImageInput"
+                            accept="image/jpeg,image/jpg"
+                            style="display: none"
+                            class="required"
+                          />
+                          <button
+                            type="button"
+                            id="selectPersonalImage"
+                            class="btn primary-bg shadow-sm mt-3"
+                            style="border-radius: 8px"
+                          >
+                            انتخاب تصویر
+                          </button>
+                          <div
+                            id="personalImageError"
+                            class="text-danger mt-2"
+                            style="font-size: 0.95rem"
+                          ></div>
+                        </div>
+                        <div
+                          class="col-md-5 d-flex justify-content-center align-items-center position-relative"
+                        >
+                          <div
+                            id="personalImagePreview"
+                            class="d-flex justify-content-center align-items-center"
+                            style="
+                              width: 150px;
+                              height: 200px;
+                              border-radius: 8px;
+                              border: 1.5px dashed #d7d7d7;
+                              background: #ecedee;
+                              position: relative;
+                              overflow: hidden;
+                            "
+                          >
+                            <span
+                              id="personalImagePlaceholder"
+                              style="color: #aaa; font-size: 1rem"
+                              >تصویر پرسنلی</span
+                            >
+                            <img
+                              id="personalImageTag"
+                              src=""
+                              alt="پیش‌نمایش تصویر"
+                              style="
+                                display: none;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                              "
+                            />
+                            <button
+                              id="removePersonalImage"
+                              type="button"
+                              style="
+                                display: none;
+                                position: absolute;
+                                top: 6px;
+                                left: 6px;
+                                background: rgba(255, 255, 255, 0.8);
+                                border: none;
+                                border-radius: 50%;
+                                width: 28px;
+                                height: 28px;
+                                text-align: center;
+                                padding: 0;
+                                cursor: pointer;
+                              "
+                            >
+                              <span style="font-size: 1.2rem; color: #d9534f"
+                                >&times;</span
+                              >
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-100 d-flex justify-content-center mb-3">
+                        <h5 class="divider-title primary-color mb-0">
+                          <span>مشخصات کلی </span>
+                        </h5>
+                      </div>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> نام</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          placeholder="مثال: محمد"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> نام
+                          خانوادگی</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          placeholder="مثال: محمدی"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> نام پدر</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          placeholder="مثال: علی"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> کد ملی</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          placeholder="مثال: 0023456789"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> شماره
+                          شناسنامه</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          placeholder="مثال: 123456"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> وضعیت
+                          تاهل</label
+                        >
+                        <select class="form-select required" >
+                          <option value="">انتخاب کنید</option>
+                          <option>مجرد</option>
+                          <option>متاهل</option>
+                          <option>متارکه</option>
+                          <option>فوت همسر</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> جنسیت</label
+                        >
+                        <select class="form-select required" >
+                          <option value="">انتخاب کنید</option>
+                          <option>مرد</option>
+                          <option>زن</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> محل صدور
+                          شناسنامه</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          placeholder="مثال: تهران"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> تاریخ انجام تست
+                          روانشناسی</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required jalali-date"
+                          placeholder="انتخاب تاریخ"
+                          readonly
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> تاریخ
+                          تولد</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required jalali-date"
+                          placeholder="انتخاب تاریخ"
+                          readonly
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> محل تولد</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          placeholder="مثال: تهران"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> تاریخ مصاحبه
+                          روان شناسی</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required jalali-date"
+                          placeholder="انتخاب تاریخ"
+                          readonly
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> وضعیت نظام
+                          وظیفه</label
+                        >
+                        <select class="form-select required" >
+                          <option value="">انتخاب کنید</option>
+                          <option>پایان خدمت</option>
+                          <option>پایان خدمت امریه</option>
+                          <option>سرباز</option>
+                          <option>معافیت تحصیلی</option>
+                          <option>معافیت دائم</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> دین</label
+                        >
+                        <select class="form-select required" >
+                          <option value="">انتخاب کنید</option>
+                          <option>مسلمان</option>
+                          <option>مسیحی</option>
+                          <option>زرتشتی</option>
+                          <option>کلیمی</option>
+                          <option>سایر</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> مذهب</label
+                        >
+                        <select class="form-select required" >
+                          <option value="">انتخاب کنید</option>
+                          <option>شیعه</option>
+                          <option>اهل سنت</option>
+                          <option>سایر</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end mt-4">
+                      <button
+                        type="submit"
+                        class="btn btn-primary px-4 submit-btn"
+                      >
+                        ثبت اطلاعات
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/jquery-3.7.1.min.js"></script>
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/js/theme.js"></script>
+    <script src="../static/js/dashboard.js"></script>
+    <script src="../static/js/formcontrol.js"></script>
+    <script src="../static/js/persian-date.js"></script>
+    <script src="../static/js/persian-datepicker.min.js"></script>
+    <script>
+      // تصویر پرسنلی دقیقاً مثل personal.html
+      $(document).ready(function () {
+        $("#selectPersonalImage").on("click", function () {
+          $("#personalImageInput").click();
+        });
+        $("#personalImageInput").on("change", function (e) {
+          const file = this.files[0];
+          if (file) {
+            if (
+              !file.type.match("image/jpeg") &&
+              !file.type.match("image/jpg")
+            ) {
+              $("#personalImageError").text("فرمت تصویر باید jpg باشد.");
+              $("#personalImageTag").hide();
+              $("#personalImagePlaceholder").show();
+              return;
+            }
+            if (file.size > 1024 * 1024) {
+              $("#personalImageError").text(
+                "حجم تصویر نباید بیشتر از ۱ مگابایت باشد."
+              );
+              $("#personalImageTag").hide();
+              $("#personalImagePlaceholder").show();
+              return;
+            }
+            $("#personalImageError").text("");
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              $("#personalImageTag").attr("src", e.target.result).show();
+              $("#personalImagePlaceholder").hide();
+              $("#removePersonalImage").show();
+            };
+            reader.readAsDataURL(file);
+          } else {
+            $("#personalImageTag").hide();
+            $("#personalImagePlaceholder").show();
+            $("#removePersonalImage").hide();
+          }
+        });
+        $("#removePersonalImage").on("click", function () {
+          $("#personalImageInput").val("");
+          $("#personalImageTag").hide();
+          $("#personalImagePlaceholder").show();
+          $(this).hide();
+        });
+        // فعال‌سازی تقویم شمسی روی همه فیلدهای تاریخ
+        $(".jalali-date").persianDatepicker({
+          format: "YYYY/MM/DD",
+          autoClose: true,
+          initialValue: false,
+        });
+      });
+    </script>
+  </body>
+</html>

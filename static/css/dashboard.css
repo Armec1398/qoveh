@@ -487,3 +487,24 @@ input, .form-control {
   font-size: 22px;
   margin-bottom: 30px;
 }
+
+.form-check {
+  display: block;
+  min-height: 1.5rem;
+  padding-right: 1.5em;
+  padding-left: 0;
+  margin-bottom: .125rem;
+}
+
+.form-check .form-check-input {
+  float: right;
+  margin-right: -1.5em;
+  margin-left: 5px;
+  padding: 6px;
+  border-color: #1c90b0;
+}
+
+.form-check-input[type=checkbox]{
+  border-radius: 5px !important;
+  padding: 6px;
+}

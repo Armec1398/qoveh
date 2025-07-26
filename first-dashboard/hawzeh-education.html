@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="fa">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="اطلاعات تحصیلات حوزوی - سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا"
+    />
+    <title>اطلاعات تحصیلات حوزوی</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="../static/fonts/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="../static/fonts/fontawesome5-overrides.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/IRANSans.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/persian-datepicker.min.css"
+    />
+  </head>
+  <body>
+    <div id="wrapper" class="dashboard-container position-relative">
+      <nav
+        class="navbar align-items-start sidebar sidebar-light accordion p-0 m-0 navbar-dark py-4"
+        style="flex-wrap: nowrap"
+      >
+        <div
+          class="container-fluid d-flex flex-column p-0 w-full align-items-center mx-auto"
+        >
+          <span id="closeSidebar" class="close-sidebar d-block d-lg-none"
+            >×</span
+          >
+          <div
+            class="navbar-brand d-flex justify-content-center align-items-center flex-column m-0 w-100"
+          >
+            <div class="text-center my-3">
+              <img
+                class="w-50 mb-1"
+                src="../static/img/logo.jpeg"
+                style="mix-blend-mode: multiply"
+              />
+              <div class="nastaligh primary-color" style="font-size: 17px">
+                معاونت منابع انسانی
+              </div>
+            </div>
+          </div>
+          <hr class="sidebar-divider my-0" />
+          <ul
+            class="navbar-nav text-light w-100 ps-3 gap-2"
+            id="accordionSidebar"
+          >
+            <li class="nav-item active">
+              <a class="nav-link rounded-small" href="../first-dashboard.html">
+                <i class="fa fa-home"></i>
+                <span>داشبورد اول</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div
+        class="d-flex flex-column pb-4 bg-white"
+        id="content-wrapper"
+        style="border-right: 1px solid #e9eced"
+      >
+        <div id="content">
+          <nav
+            class="navbar navbar-expand bg-white mb-3 topbar static-top navbar-light px-md-3"
+            style="border-right: 0"
+          >
+            <div class="container-fluid px-1 px-lg-4">
+              <button
+                class="btn bg-transparent border-0 d-flex d-lg-none rounded-circle me-lg-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i
+                  class="fa fa-bars text-black font-size-medium"
+                  style="margin-top: 4px"
+                ></i>
+              </button>
+              <div id="overlay" class="overlay"></div>
+              <div class="ms-auto">
+                <a
+                  class="d-flex justify-content-center align-items-center rounded-medium"
+                  href="#"
+                  style="border: 0; text-decoration: none"
+                >
+                  <img
+                    class="ms-2 d-none d-lg-block"
+                    src="../static/img/user.png"
+                    style="width: 40px; height: 40px; color: #fff"
+                  />
+                  <p class="text-black d-flex">
+                    <span style="display: inline-block; margin-bottom: 7px"
+                      >محمدرضا آرمانیان</span
+                    >
+                  </p>
+                </a>
+              </div>
+              <ul class="navbar-nav flex-nowrap d-flex">
+                <li class="nav-item dropdown no-arrow d-flex flex-row gap-2">
+                  <a
+                    class="btn text-black bg-transparent border-0 d-flex justify-content-center align-items-center py-2 px-2 position-relative"
+                    role="button"
+                    href="#"
+                  >
+                    <i class="fa fa-bell text-black font-size-medium"></i>
+                    <span
+                      class="badge bg-danger rounded-circle d-flex justify-content-center align-items-center position-absolute"
+                      style="width: 16px; height: 16px; top: -5px; right: 10%"
+                      >3</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container px-3 px-sm-4">
+            <div class="row d-flex mb-3">
+              <div class="col-lg-12 px-sm-3">
+                <div class="">
+                  <h1 class="text-black main-heading mb-0">
+                    اطلاعات تحصیلات حوزوی
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="row d-flex">
+              <div class="col-lg-12 px-sm-3">
+                <div
+                  class="content bg-white shadow-sm rounded-medium py-2 py-sm-4 px-3 px-sm-4"
+                >
+                  <form>
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">سطح:</label>
+                      <div class="d-flex flex-wrap gap-4 px-3">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input hawzeh-checkbox"
+                            type="checkbox"
+                            value="level1"
+                            id="level1"
+                          />
+                          <label class="form-check-label" for="level1"
+                            >سطح ۱</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input hawzeh-checkbox"
+                            type="checkbox"
+                            value="level2"
+                            id="level2"
+                          />
+                          <label class="form-check-label" for="level2"
+                            >سطح ۲</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input hawzeh-checkbox"
+                            type="checkbox"
+                            value="level3"
+                            id="level3"
+                          />
+                          <label class="form-check-label" for="level3"
+                            >سطح ۳</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <!-- فرم سطح ۱ -->
+                    <div
+                      class="hawzeh-form"
+                      id="formLevel1"
+                      style="display: none"
+                    >
+                      <h5 class="divider-title primary-color mb-3 mt-4">
+                        <span>سطح ۱</span>
+                      </h5>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> تاریخ
+                            ورود</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required jalali-date"
+                            placeholder="انتخاب تاریخ"
+                            readonly
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> تاریخ
+                            اخذ</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required jalali-date"
+                            placeholder="انتخاب تاریخ"
+                            readonly
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> محل
+                            تحصیل</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required"
+                            placeholder="مثال: حوزه علمیه قم"
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> معدل</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required"
+                            placeholder="مثال: 18.50"
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3 d-flex align-items-center">
+                          <input
+                            type="checkbox"
+                            class="form-check-input ms-2 is-studying"
+                            id="studyingLevel1"
+                          />
+                          <label class="form-label mb-0" for="studyingLevel1"
+                            >در حال تحصیل هستم</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <!-- فرم سطح ۲ -->
+                    <div
+                      class="hawzeh-form"
+                      id="formLevel2"
+                      style="display: none"
+                    >
+                      <h5 class="divider-title primary-color mb-3 mt-4">
+                        <span>سطح ۲</span>
+                      </h5>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> تاریخ
+                            ورود</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required jalali-date"
+                            placeholder="انتخاب تاریخ"
+                            readonly
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> تاریخ
+                            اخذ</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required jalali-date"
+                            placeholder="انتخاب تاریخ"
+                            readonly
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> محل
+                            تحصیل</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required"
+                            placeholder="مثال: حوزه علمیه مشهد"
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> معدل</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required"
+                            placeholder="مثال: 19.00"
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3 d-flex align-items-center">
+                          <input
+                            type="checkbox"
+                            class="form-check-input ms-2 is-studying"
+                            id="studyingLevel2"
+                          />
+                          <label class="form-label mb-0" for="studyingLevel2"
+                            >در حال تحصیل هستم</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <!-- فرم سطح ۳ -->
+                    <div
+                      class="hawzeh-form"
+                      id="formLevel3"
+                      style="display: none"
+                    >
+                      <h5 class="divider-title primary-color mb-3 mt-4">
+                        <span>سطح ۳</span>
+                      </h5>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> تاریخ
+                            ورود</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required jalali-date"
+                            placeholder="انتخاب تاریخ"
+                            readonly
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> تاریخ
+                            اخذ</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required jalali-date"
+                            placeholder="انتخاب تاریخ"
+                            readonly
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> محل
+                            تحصیل</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required"
+                            placeholder="مثال: حوزه علمیه تهران"
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> معدل</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required"
+                            placeholder="مثال: 18.00"
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3 d-flex align-items-center">
+                          <input
+                            type="checkbox"
+                            class="form-check-input ms-2 is-studying"
+                            id="studyingLevel3"
+                          />
+                          <label class="form-label mb-0" for="studyingLevel3"
+                            >در حال تحصیل هستم</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end mt-4">
+                      <button
+                        type="submit"
+                        class="btn btn-primary px-4 submit-btn"
+                      >
+                        ثبت اطلاعات
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/jquery-3.7.1.min.js"></script>
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/js/theme.js"></script>
+    <script src="../static/js/dashboard.js"></script>
+    <script src="../static/js/formcontrol.js"></script>
+    <script src="../static/js/persian-date.js"></script>
+    <script src="../static/js/persian-datepicker.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // نمایش فرم هر سطح با انتخاب چک‌باکس
+        $(".hawzeh-checkbox").on("change", function () {
+          $("#formLevel1").toggle($("#level1").is(":checked"));
+          $("#formLevel2").toggle($("#level2").is(":checked"));
+          $("#formLevel3").toggle($("#level3").is(":checked"));
+        });
+        // فعال‌سازی تقویم شمسی روی همه فیلدهای تاریخ
+        $(".jalali-date").persianDatepicker({
+          format: "YYYY/MM/DD",
+          autoClose: true,
+          initialValue: false,
+        });
+      });
+    </script>
+  </body>
+</html>

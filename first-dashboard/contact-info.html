@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="fa">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="اطلاعات تماس - سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا"
+    />
+    <title>اطلاعات تماس</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="../static/fonts/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="../static/fonts/fontawesome5-overrides.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/IRANSans.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/persian-datepicker.min.css"
+    />
+  </head>
+  <body>
+    <div id="wrapper" class="dashboard-container position-relative">
+      <nav
+        class="navbar align-items-start sidebar sidebar-light accordion p-0 m-0 navbar-dark py-4"
+        style="flex-wrap: nowrap"
+      >
+        <div
+          class="container-fluid d-flex flex-column p-0 w-full align-items-center mx-auto"
+        >
+          <span id="closeSidebar" class="close-sidebar d-block d-lg-none"
+            >×</span
+          >
+          <div
+            class="navbar-brand d-flex justify-content-center align-items-center flex-column m-0 w-100"
+          >
+            <div class="text-center my-3">
+              <img
+                class="w-50 mb-1"
+                src="../static/img/logo.jpeg"
+                style="mix-blend-mode: multiply"
+              />
+              <div class="nastaligh primary-color" style="font-size: 17px">
+                معاونت منابع انسانی
+              </div>
+            </div>
+          </div>
+          <hr class="sidebar-divider my-0" />
+          <ul
+            class="navbar-nav text-light w-100 ps-3 gap-2"
+            id="accordionSidebar"
+          >
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../first-dashboard.html">
+                <i class="fa fa-home"></i>
+                <span>داشبورد اول</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div
+        class="d-flex flex-column pb-4 bg-white"
+        id="content-wrapper"
+        style="border-right: 1px solid #e9eced"
+      >
+        <div id="content">
+          <nav
+            class="navbar navbar-expand bg-white mb-3 topbar static-top navbar-light px-md-3"
+            style="border-right: 0"
+          >
+            <div class="container-fluid px-1 px-lg-4">
+              <button
+                class="btn bg-transparent border-0 d-flex d-lg-none rounded-circle me-lg-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i
+                  class="fa fa-bars text-black font-size-medium"
+                  style="margin-top: 4px"
+                ></i>
+              </button>
+              <div id="overlay" class="overlay"></div>
+              <div class="ms-auto">
+                <a
+                  class="d-flex justify-content-center align-items-center rounded-medium"
+                  href="#"
+                  style="border: 0; text-decoration: none"
+                >
+                  <img
+                    class="ms-2 d-none d-lg-block"
+                    src="../static/img/user.png"
+                    style="width: 40px; height: 40px; color: #fff"
+                  />
+                  <p class="text-black d-flex">
+                    <span style="display: inline-block; margin-bottom: 7px"
+                      >محمدرضا آرمانیان</span
+                    >
+                  </p>
+                </a>
+              </div>
+              <ul class="navbar-nav flex-nowrap d-flex">
+                <li class="nav-item dropdown no-arrow d-flex flex-row gap-2">
+                  <a
+                    class="btn text-black bg-transparent border-0 d-flex justify-content-center align-items-center py-2 px-2 position-relative"
+                    role="button"
+                    href="#"
+                  >
+                    <i class="fa fa-bell text-black font-size-medium"></i>
+                    <span
+                      class="badge bg-danger rounded-circle d-flex justify-content-center align-items-center position-absolute"
+                      style="width: 16px; height: 16px; top: -5px; right: 10%"
+                      >3</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container px-3 px-sm-4">
+            <div class="row d-flex mb-3">
+              <div class="col-lg-12 px-sm-3">
+                <div class="">
+                  <h1 class="text-black main-heading mb-0">اطلاعات تماس</h1>
+                </div>
+              </div>
+            </div>
+            <div class="row d-flex">
+              <div class="col-lg-12 px-sm-3">
+                <div
+                  class="content bg-white shadow-sm rounded-medium py-2 py-sm-4 px-3 px-sm-4"
+                >
+                  <form id="contactInfoForm">
+                    <div class="row">
+                      <div class="col-12 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> آدرس محل
+                          سکونت</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="address"
+                          placeholder="مثال: تهران، خیابان ..."
+                        />
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> کدپستی</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="postal_code"
+                          placeholder="مثال: 1234567890"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> تلفن
+                          ثابت</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="phone"
+                          placeholder="مثال: 02112345678"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> ایمیل</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control required"
+                          name="email"
+                          placeholder="مثال: example@email.com"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> شماره
+                          پرونده</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="case_number"
+                          placeholder="مثال: 12345"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> تلفن
+                          همراه</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="mobile"
+                          placeholder="مثال: 09121234567"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> تلفن جهت تماس
+                          ضروری</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="emergency_phone"
+                          placeholder="مثال: 09121234567"
+                        />
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end mt-4">
+                      <button
+                        type="submit"
+                        class="btn btn-primary px-4 submit-btn"
+                      >
+                        ثبت اطلاعات
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/jquery-3.7.1.min.js"></script>
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/js/theme.js"></script>
+    <script src="../static/js/dashboard.js"></script>
+    <script src="../static/js/formcontrol.js"></script>
+  </body>
+</html>

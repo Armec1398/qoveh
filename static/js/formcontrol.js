@@ -65,7 +65,12 @@ $(document).ready(function () {
           .text()
           .replace("*", "")
           .trim();
-        showError(input, "فیلد " + label + " اجباری است.");
+        // اگر name رادیو entryType بود، پیام خاص نمایش بده
+        if (input.is(":radio") && input.attr("name") === "entryType") {
+          showError(input, "فیلد نحوه ورود اجباری است.");
+        } else {
+          showError(input, "فیلد " + label + " اجباری است.");
+        }
         valid = false;
       } else {
         removeError(input);
@@ -78,9 +83,17 @@ $(document).ready(function () {
   $("form").each(function () {
     const form = $(this);
     form.on("submit", function (e) {
-      // فقط اگر دکمه submit-btn زده شد اعتبارسنجی کن
+      // اگر دکمه submit-btn فعال بود، فقط در این صورت اعتبارسنجی کن، در غیر این صورت همیشه اعتبارسنجی کن
       const submitter = document.activeElement;
-      if ($(submitter).hasClass("submit-btn")) {
+      if (
+        $(submitter).hasClass("submit-btn") ||
+        form.find(".submit-btn").length === 0
+      ) {
+        if (!validateForm(form)) {
+          e.preventDefault();
+        }
+      } else {
+        // اگر دکمه submit-btn نبود، باز هم اعتبارسنجی کن
         if (!validateForm(form)) {
           e.preventDefault();
         }

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="fa">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="مشخصات همسر و فرزندان - سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا"
+    />
+    <title>مشخصات همسر و فرزندان</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="../static/fonts/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="../static/fonts/fontawesome5-overrides.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/IRANSans.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/persian-datepicker.min.css"
+    />
+  </head>
+  <body>
+    <div id="wrapper" class="dashboard-container position-relative">
+      <nav
+        class="navbar align-items-start sidebar sidebar-light accordion p-0 m-0 navbar-dark py-4"
+        style="flex-wrap: nowrap"
+      >
+        <div
+          class="container-fluid d-flex flex-column p-0 w-full align-items-center mx-auto"
+        >
+          <span id="closeSidebar" class="close-sidebar d-block d-lg-none"
+            >×</span
+          >
+          <div
+            class="navbar-brand d-flex justify-content-center align-items-center flex-column m-0 w-100"
+          >
+            <div class="text-center my-3">
+              <img
+                class="w-50 mb-1"
+                src="../static/img/logo.jpeg"
+                style="mix-blend-mode: multiply"
+              />
+              <div class="nastaligh primary-color" style="font-size: 17px">
+                معاونت منابع انسانی
+              </div>
+            </div>
+          </div>
+          <hr class="sidebar-divider my-0" />
+          <ul
+            class="navbar-nav text-light w-100 ps-3 gap-2"
+            id="accordionSidebar"
+          >
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../first-dashboard.html">
+                <i class="fa fa-home"></i>
+                <span>داشبورد اول</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div
+        class="d-flex flex-column pb-4 bg-white"
+        id="content-wrapper"
+        style="border-right: 1px solid #e9eced"
+      >
+        <div id="content">
+          <nav
+            class="navbar navbar-expand bg-white mb-3 topbar static-top navbar-light px-md-3"
+            style="border-right: 0"
+          >
+            <div class="container-fluid px-1 px-lg-4">
+              <button
+                class="btn bg-transparent border-0 d-flex d-lg-none rounded-circle me-lg-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i
+                  class="fa fa-bars text-black font-size-medium"
+                  style="margin-top: 4px"
+                ></i>
+              </button>
+              <div id="overlay" class="overlay"></div>
+              <div class="ms-auto">
+                <a
+                  class="d-flex justify-content-center align-items-center rounded-medium"
+                  href="#"
+                  style="border: 0; text-decoration: none"
+                >
+                  <img
+                    class="ms-2 d-none d-lg-block"
+                    src="../static/img/user.png"
+                    style="width: 40px; height: 40px; color: #fff"
+                  />
+                  <p class="text-black d-flex">
+                    <span style="display: inline-block; margin-bottom: 7px"
+                      >محمدرضا آرمانیان</span
+                    >
+                  </p>
+                </a>
+              </div>
+              <ul class="navbar-nav flex-nowrap d-flex">
+                <li class="nav-item dropdown no-arrow d-flex flex-row gap-2">
+                  <a
+                    class="btn text-black bg-transparent border-0 d-flex justify-content-center align-items-center py-2 px-2 position-relative"
+                    role="button"
+                    href="#"
+                  >
+                    <i class="fa fa-bell text-black font-size-medium"></i>
+                    <span
+                      class="badge bg-danger rounded-circle d-flex justify-content-center align-items-center position-absolute"
+                      style="width: 16px; height: 16px; top: -5px; right: 10%"
+                      >3</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container px-3 px-sm-4">
+            <div class="row d-flex mb-3">
+              <div class="col-lg-12 px-sm-3">
+                <div class="">
+                  <h1 class="text-black main-heading mb-0">
+                    مشخصات همسر و فرزندان
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="row d-flex">
+              <div class="col-lg-12 px-sm-3">
+                <div
+                  class="content bg-white shadow-sm rounded-medium py-2 py-sm-4 px-3 px-sm-4"
+                >
+                  <form id="spouseChildrenForm">
+                    <div class="w-100 d-flex justify-content-center mb-3">
+                      <h5 class="divider-title primary-color mb-0">
+                        <span>مشخصات همسر</span>
+                      </h5>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> مدت زمان ازدواج
+                          (سال)</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control required"
+                          name="marriage_duration"
+                          placeholder="مثال: 10"
+                          min="0"
+                        />
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> تحصیلات
+                          همسر</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="spouse_education"
+                          placeholder="مثال: لیسانس"
+                        />
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> شغل همسر</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="spouse_job"
+                          placeholder="مثال: معلم"
+                        />
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> سال تولد
+                          همسر</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control required"
+                          name="spouse_birth_year"
+                          placeholder="مثال: 1365"
+                          min="1200"
+                          max="1500"
+                        />
+                      </div>
+                    </div>
+                    <div class="w-100 d-flex justify-content-center mb-3 mt-4">
+                      <h5 class="divider-title primary-color mb-0">
+                        <span>فرزندان</span>
+                      </h5>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> تعداد
+                          فرزندان</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control required"
+                          name="children_count"
+                          id="childrenCountInput"
+                          placeholder="مثال: 2"
+                          min="0"
+                          max="20"
+                        />
+                      </div>
+                    </div>
+                    <div id="childrenFields"></div>
+                    <div class="d-flex justify-content-end mt-4">
+                      <button
+                        type="submit"
+                        class="btn btn-primary px-4 submit-btn"
+                      >
+                        ثبت اطلاعات
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/jquery-3.7.1.min.js"></script>
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/js/theme.js"></script>
+    <script src="../static/js/dashboard.js"></script>
+    <script src="../static/js/formcontrol.js"></script>
+    <script>
+      $(document).ready(function () {
+        function renderChildrenFields(count) {
+          let html = "";
+          for (let i = 1; i <= count; i++) {
+            html += `
+              <div class="row align-items-end mb-3 child-row" data-index="${i}">
+                <div class="col-md-3 mb-2">
+                  <label class="form-label"><span style='color: #ff4d4f'>*</span> جنسیت فرزند ${i}</label>
+                  <select class="form-select required" name="child_gender_${i}">
+                    <option value="">انتخاب کنید</option>
+                    <option value="پسر">پسر</option>
+                    <option value="دختر">دختر</option>
+                  </select>
+                </div>
+                <div class="col-md-3 mb-2">
+                  <label class="form-label"><span style='color: #ff4d4f'>*</span> سن فرزند ${i}</label>
+                  <input type="number" class="form-control required" name="child_age_${i}" placeholder="مثال: 8" min="0" max="50" />
+                </div>
+              </div>
+            `;
+          }
+          $("#childrenFields").html(html);
+        }
+        $("#childrenCountInput").on("input change", function () {
+          let val = parseInt($(this).val());
+          if (!isNaN(val) && val > 0 && val <= 20) {
+            renderChildrenFields(val);
+          } else {
+            $("#childrenFields").html("");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="fa">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="ایجاد تحقیقات جدید - سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا"
+    />
+    <title>ایجاد تحقیقات جدید</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="../static/fonts/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="../static/fonts/fontawesome5-overrides.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/IRANSans.css" />
+  </head>
+  <body>
+    <div id="wrapper" class="dashboard-container position-relative">
+      <nav
+        class="navbar align-items-start sidebar sidebar-light accordion p-0 m-0 navbar-dark py-4"
+        style="flex-wrap: nowrap"
+      >
+        <div
+          class="container-fluid d-flex flex-column p-0 w-full align-items-center mx-auto"
+        >
+          <span id="closeSidebar" class="close-sidebar d-block d-lg-none"
+            >×</span
+          >
+          <div
+            class="navbar-brand d-flex justify-content-center align-items-center flex-column m-0 w-100"
+          >
+            <div class="text-center my-3">
+              <img
+                class="w-50 mb-1"
+                src="../static/img/logo.jpeg"
+                style="mix-blend-mode: multiply"
+              />
+              <div class="nastaligh primary-color" style="font-size: 17px">
+                معاونت منابع انسانی
+              </div>
+            </div>
+          </div>
+          <hr class="sidebar-divider my-0" />
+          <ul
+            class="navbar-nav text-light w-100 ps-3 gap-2"
+            id="accordionSidebar"
+          >
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="user-dashboard.html">
+                <i class="fa fa-users"></i>
+                <span>مشاهده اطلاعات کاربران</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="create-interview.html">
+                <i class="fa fa-plus-circle"></i>
+                <span>ایجاد مصاحبه جدید</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link rounded-small active"
+                href="create-research.html"
+              >
+                <i class="fa fa-search-plus"></i>
+                <span>ایجاد تحقیقات جدید</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="researchers-list.html">
+                <i class="fa fa-user-graduate"></i>
+                <span>لیست محققان</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="create-interviewer.html">
+                <i class="fa fa-user-plus"></i>
+                <span>ایجاد مصاحبه کننده و محقق</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link rounded-small"
+                href="ideological-interviewers.html"
+              >
+                <i class="fa fa-user-friends"></i>
+                <span>لیست مصاحبه کنندگان عقیدتی</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="performance-report.html">
+                <i class="fa fa-chart-bar"></i>
+                <span>گزارش عملکرد کارکنان</span>
+              </a>
+            </li>
+          </ul>
+          <div
+            class="my-2 d-flex justify-content-center align-items-center gap-3 flex-row"
+          >
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../static/img/eitaa.webp"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../static/img/sorush.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../static/img/bale.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../static/img/igap.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="d-flex flex-column pb-4 bg-white"
+        id="content-wrapper"
+        style="border-right: 1px solid #e9eced"
+      >
+        <div id="content">
+          <nav
+            class="navbar navbar-expand bg-white mb-3 topbar static-top navbar-light px-md-3"
+            style="border-right: 0"
+          >
+            <div class="container-fluid px-1 px-lg-4">
+              <button
+                class="btn bg-transparent border-0 d-flex d-lg-none rounded-circle me-lg-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i
+                  class="fa fa-bars text-black font-size-medium"
+                  style="margin-top: 4px"
+                ></i>
+              </button>
+              <div id="overlay" class="overlay"></div>
+              <div class="ms-auto">
+                <a
+                  class="d-flex justify-content-center align-items-center rounded-medium"
+                  href="#"
+                  style="border: 0; text-decoration: none"
+                >
+                  <img
+                    class="ms-2 d-none d-lg-block"
+                    src="../static/img/user.png"
+                    style="width: 40px; height: 40px; color: #fff"
+                  />
+                  <p class="text-black d-flex">
+                    <span style="display: inline-block; margin-bottom: 7px">
+                      محمدرضا آرمانیان</span
+                    >
+                  </p>
+                </a>
+              </div>
+              <ul class="navbar-nav flex-nowrap d-flex">
+                <li class="nav-item dropdown no-arrow d-flex flex-row gap-2">
+                  <a
+                    class="btn text-black bg-transparent border-0 d-flex justify-content-center align-items-center py-2 px-2 position-relative"
+                    role="button"
+                    href="#"
+                    ><i class="fa fa-bell text-black font-size-medium"></i
+                    ><span
+                      class="badge bg-danger rounded-circle d-flex justify-content-center align-items-center position-absolute"
+                      style="width: 16px; height: 16px; top: -5px; right: 10%"
+                      >3</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container px-3 px-sm-4">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div>
+                <h4 class="mb-0 text-dark">ایجاد تحقیقات جدید</h4>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-12 px-sm-3">
+                <div class="card p-4" style="border-radius: 20px">
+                  <form id="researchForm">
+                    <div class="row mb-4">
+                      <div class="col-md-6 mb-3">
+                        <label for="researchProvince" class="form-label"
+                          >استان</label
+                        >
+                        <select
+                          class="form-control required"
+                          id="researchProvince"
+                        >
+                          <option value="">انتخاب کنید</option>
+                          <option value="تهران">تهران</option>
+                          <option value="اصفهان">اصفهان</option>
+                          <option value="خراسان رضوی">خراسان رضوی</option>
+                          <option value="فارس">فارس</option>
+                          <option value="آذربایجان شرقی">آذربایجان شرقی</option>
+                          <option value="قم">قم</option>
+                          <option value="مرکزی">مرکزی</option>
+                          <option value="البرز">البرز</option>
+                          <option value="گیلان">گیلان</option>
+                          <option value="مازندران">مازندران</option>
+                          <option value="گلستان">گلستان</option>
+                          <option value="خراسان شمالی">خراسان شمالی</option>
+                          <option value="خراسان جنوبی">خراسان جنوبی</option>
+                          <option value="یزد">یزد</option>
+                          <option value="کرمان">کرمان</option>
+                          <option value="سیستان و بلوچستان">
+                            سیستان و بلوچستان
+                          </option>
+                          <option value="هرمزگان">هرمزگان</option>
+                          <option value="بوشهر">بوشهر</option>
+                          <option value="کهگیلویه و بویراحمد">
+                            کهگیلویه و بویراحمد
+                          </option>
+                          <option value="چهارمحال و بختیاری">
+                            چهارمحال و بختیاری
+                          </option>
+                          <option value="لرستان">لرستان</option>
+                          <option value="ایلام">ایلام</option>
+                          <option value="کرمانشاه">کرمانشاه</option>
+                          <option value="همدان">همدان</option>
+                          <option value="زنجان">زنجان</option>
+                          <option value="آذربایجان غربی">آذربایجان غربی</option>
+                          <option value="کردستان">کردستان</option>
+                          <option value="آذربایجان شمالی">
+                            آذربایجان شمالی
+                          </option>
+                          <option value="اردبیل">اردبیل</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="researchCity" class="form-label"
+                          >شهرستان</label
+                        >
+                        <div class="d-flex flex-column">
+                          <button
+                            type="button"
+                            class="btn btn-primary me-2 mb-3"
+                            style="font-size: 12px; width: fit-content"
+                          >
+                            انتخاب همه
+                          </button>
+                          <select
+                            class="form-control required"
+                            id="researchCity"
+                            multiple
+                            size="4"
+                          >
+                            <option value="تهران">تهران</option>
+                            <option value="شهریار">شهریار</option>
+                            <option value="ورامین">ورامین</option>
+                            <option value="دماوند">دماوند</option>
+                            <option value="فیروزکوه">فیروزکوه</option>
+                            <option value="پردیس">پردیس</option>
+                            <option value="پیشوا">پیشوا</option>
+                            <option value="رباط کریم">رباط کریم</option>
+                            <option value="ملارد">ملارد</option>
+                            <option value="پردیس">پردیس</option>
+                            <option value="پیشوا">پیشوا</option>
+                            <option value="رباط کریم">رباط کریم</option>
+                            <option value="ملارد">ملارد</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mb-4">
+                      <div class="col-md-6 mb-3">
+                        <label for="researchCount" class="form-label"
+                          >تعداد</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control required"
+                          id="researchCount"
+                          placeholder="تعداد تحقیقات را وارد کنید"
+                          min="1"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="researcher" class="form-label">محقق</label>
+                        <select class="form-control required" id="researcher">
+                          <option value="">انتخاب محقق</option>
+                          <option value="1">علی احمدی</option>
+                          <option value="2">فاطمه محمدی</option>
+                          <option value="3">حسن رضایی</option>
+                          <option value="4">مریم کریمی</option>
+                          <option value="5">محمد رضایی</option>
+                          <option value="6">زهرا صالحی</option>
+                          <option value="7">احمد نوری</option>
+                          <option value="8">سارا احمدی</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12 text-end">
+                        <button type="submit" class="btn btn-primary">
+                          ایجاد تحقیق
+                        </button>
+                        <button type="button" class="btn btn-secondary ms-2">
+                          انصراف
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/jquery-3.7.1.min.js"></script>
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/js/theme.js"></script>
+    <script src="../static/js/formcontrol.js"></script>
+    <script>
+      // Select all cities functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const selectAllBtn = document.querySelector(
+          'button[style*="font-size: 12px"]'
+        );
+        const citySelect = document.getElementById("researchCity");
+
+        if (selectAllBtn && citySelect) {
+          selectAllBtn.addEventListener("click", function () {
+            const options = citySelect.querySelectorAll("option");
+            options.forEach((option) => {
+              option.selected = true;
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

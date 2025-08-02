@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="fa">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="جزئیات کاربر - سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا"
+    />
+    <title>جزئیات کاربر</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="static/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="static/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="static/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="static/fonts/fontawesome5-overrides.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/IRANSans.css" />
+    <style>
+      .user-info-section {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .accordion-item {
+        border: none;
+        margin-bottom: 15px;
+        border-radius: 15px !important;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .accordion-button {
+        background: linear-gradient(270deg, #1c90b0, #8aaeb8);
+        color: white;
+        border: none;
+        padding: 20px 25px;
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .accordion-button:not(.collapsed) {
+        background: linear-gradient(270deg, #1c90b0, #8aaeb8);
+        color: white;
+        box-shadow: none;
+      }
+      .accordion-button:after {
+        margin-left: 0;
+        margin-right: auto;
+        filter: brightness(0);
+      }
+      .accordion-button:focus {
+        box-shadow: none;
+        border: none;
+      }
+      .accordion-body {
+        padding: 25px;
+        background: white;
+      }
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .info-row:last-child {
+        border-bottom: none;
+      }
+      .info-label {
+        font-weight: 600;
+        color: #333;
+        min-width: 150px;
+      }
+      .info-value {
+        color: #666;
+        text-align: left;
+      }
+      .profile-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #1c90b0;
+      }
+      .back-btn {
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      .back-btn:hover {
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .search-section {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .search-input {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 12px 15px;
+        font-size: 14px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: flex-end;
+      }
+
+      .btn-print,
+      .btn-confirm {
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .btn-print:hover,
+      .btn-confirm:hover {
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      @media print {
+        .sidebar,
+        .topbar,
+        .back-btn,
+        .search-section,
+        .btn-print,
+        .btn-confirm {
+          display: none !important;
+        }
+
+        .accordion-button {
+          background: #1c90b0 !important;
+          color: white !important;
+        }
+
+        .accordion-collapse {
+          display: block !important;
+        }
+
+        .accordion-collapse.collapse {
+          display: block !important;
+        }
+
+        .accordion-collapse.collapsing {
+          display: block !important;
+        }
+
+        .accordion-collapse.show {
+          display: block !important;
+        }
+
+        .container-fluid {
+          padding: 0 !important;
+        }
+
+        body {
+          background: white !important;
+        }
+
+        .user-info-section,
+        .accordion-item,
+        .accordion-body {
+          box-shadow: none !important;
+          border: 1px solid #ddd !important;
+        }
+
+        .table-label {
+          background-color: #f8f9fa;
+          font-weight: 600;
+          color: #333;
+          width: 25%;
+        }
+
+        .table {
+          margin-bottom: 0;
+        }
+
+        .table td {
+          vertical-align: middle;
+          padding: 12px 15px;
+        }
+
+        .table-bordered {
+          border: 1px solid #dee2e6;
+        }
+
+        .table-hover tbody tr:hover {
+          background-color: rgba(28, 144, 176, 0.05);
+        }
+
+        .divider-title {
+          text-align: center;
+          position: relative;
+          margin: 20px 0;
+        }
+
+        .divider-title::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: #dee2e6;
+          z-index: 1;
+        }
+
+        .divider-title span {
+          background: white;
+          padding: 0 15px;
+          position: relative;
+          z-index: 2;
+          color: #1c90b0;
+          font-weight: 600;
+        }
+
+        .map-placeholder {
+          background: #f8f9fa;
+          border: 1px solid #dee2e6;
+          border-radius: 8px;
+          padding: 40px;
+          text-align: center;
+          min-height: 200px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .map-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .address-buttons {
+          display: flex;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+
+        .address-buttons .btn {
+          border: 1px solid #dee2e6;
+          color: #333;
+          background: white;
+          transition: all 0.3s ease;
+        }
+
+        .address-buttons .btn:hover {
+          background: #1c90b0;
+          color: white;
+          border-color: #1c90b0;
+        }
+
+        /* گواهینامه گالری */
+        .certificates-gallery {
+          padding: 20px 0;
+        }
+
+        .certificate-item {
+          position: relative;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .certificate-item:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .certificate-img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          display: block;
+        }
+
+        .certificate-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(28, 144, 176, 0.8);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .certificate-item:hover .certificate-overlay {
+          opacity: 1;
+        }
+
+        .certificate-overlay i {
+          color: white;
+          font-size: 24px;
+        }
+
+        /* فرم استعلام */
+        .inquiry-form-container {
+          background: #f8f9fa;
+          border-radius: 15px;
+          padding: 30px;
+          border: 1px solid #dee2e6;
+        }
+
+        .form-control {
+          border-radius: 8px;
+          border: 1px solid #dee2e6;
+          padding: 12px 15px;
+          font-size: 14px;
+        }
+
+        .form-control:focus {
+          border-color: #1c90b0;
+          box-shadow: 0 0 0 0.2rem rgba(28, 144, 176, 0.25);
+        }
+
+        .radio-group {
+          display: flex;
+          gap: 20px;
+          flex-wrap: wrap;
+        }
+
+        .form-check-inline {
+          margin-right: 0;
+          margin-left: 20px;
+        }
+
+        /* دکمه ثبت */
+        .submit-btn {
+          background: linear-gradient(90deg, #1c90b0, #8aaeb8);
+          color: white;
+          border: none;
+          padding: 12px 25px;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .submit-btn:hover {
+          color: white;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .submit-btn i {
+          font-size: 16px;
+        }
+
+        /* تصویر پرسنلی آپلود */
+        .personal-image-upload {
+          width: 100%;
+        }
+
+        .image-upload-area {
+          width: 150px;
+          height: 150px;
+          border: 3px dashed #1c90b0;
+          border-radius: 50%;
+          margin: 0 auto;
+          position: relative;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+          overflow: hidden;
+        }
+
+        .image-upload-area:hover {
+          border-color: #8aaeb8;
+          transform: scale(1.05);
+          box-shadow: 0 8px 25px rgba(28, 144, 176, 0.3);
+        }
+
+        .upload-placeholder {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 20px;
+        }
+
+        .upload-icon {
+          margin-bottom: 10px;
+        }
+
+        .upload-icon i {
+          font-size: 32px;
+          color: #1c90b0;
+        }
+
+        .upload-text p {
+          margin: 0 0 5px 0;
+          font-size: 12px;
+          font-weight: 600;
+          color: #333;
+          line-height: 1.2;
+        }
+
+        .upload-text small {
+          font-size: 10px;
+          color: #666;
+          line-height: 1.2;
+        }
+
+        /* پیش‌نمایش کوچک */
+        .image-preview-small {
+          width: 100%;
+          height: 100%;
+          position: relative;
+        }
+
+        .image-preview-small img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+
+        /* آدرس دکمه‌ها */
+        .address-buttons .btn {
+          transition: all 0.3s ease;
+        }
+
+        .address-buttons .btn.active {
+          background: #1c90b0;
+          color: white;
+          border-color: #1c90b0;
+        }
+
+        /* مودال آدرس */
+        .address-modal {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.5);
+          display: none;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
+        }
+
+        .address-modal-content {
+          background: white;
+          border-radius: 15px;
+          padding: 30px;
+          max-width: 500px;
+          width: 90%;
+          max-height: 80vh;
+          overflow-y: auto;
+        }
+
+        .address-modal-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+        }
+
+        .address-modal-title {
+          font-size: 18px;
+          font-weight: 600;
+          color: #333;
+        }
+
+        .address-modal-close {
+          background: none;
+          border: none;
+          font-size: 24px;
+          cursor: pointer;
+          color: #666;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper" class="dashboard-container position-relative">
+      <nav
+        class="navbar align-items-start sidebar sidebar-light accordion p-0 m-0 navbar-dark py-4"
+        style="flex-wrap: nowrap"
+      >
+        <div
+          class="container-fluid d-flex flex-column p-0 w-full align-items-center mx-auto"
+        >
+          <span id="closeSidebar" class="close-sidebar d-block d-lg-none"
+            >×</span
+          >
+          <div
+            class="navbar-brand d-flex justify-content-center align-items-center flex-column m-0 w-100"
+          >
+            <div class="text-center my-3">
+              <img
+                class="w-50 mb-1"
+                src="static/img/logo.jpeg"
+                style="mix-blend-mode: multiply"
+              />
+              <div class="nastaligh primary-color" style="font-size: 17px">
+                معاونت منابع انسانی
+              </div>
+            </div>
+          </div>
+          <hr class="sidebar-divider my-0" />
+          <ul
+            class="navbar-nav text-light w-100 ps-3 gap-2"
+            id="accordionSidebar"
+          >
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="dashboard-user.html">
+                <i class="fa fa-home"></i>
+                <span>داشبورد</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link rounded-small"
+                href="admin/dashboard-admin.html"
+              >
+                <i class="fa fa-home"></i>
+                <span>داشبورد ادمین</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="login.html">
+                <i class="fa fa-home"></i>
+                <span>ورود/عضویت</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی دوم</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی سوم</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی چهارم</span></a
+              >
+            </li>
+            <div class="divider-sidebar my-2">
+              <span>مصاحبه ها</span>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی پنجم</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی ششم</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی هفتم</span></a
+              >
+            </li>
+          </ul>
+          <div
+            class="my-2 d-flex justify-content-center align-items-center gap-3 flex-row"
+          >
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="static/img/eitaa.webp"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="static/img/sorush.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img src="static/img/bale.png" width="30px" height="30px" alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img src="static/img/igap.png" width="30px" height="30px" alt=""
+            /></a>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="d-flex flex-column pb-4 bg-white"
+        id="content-wrapper"
+        style="border-right: 1px solid #e9eced"
+      >
+        <div id="content">
+          <nav
+            class="navbar navbar-expand bg-white mb-3 topbar static-top navbar-light px-md-3"
+            style="border-right: 0"
+          >
+            <div class="container-fluid px-1 px-lg-4">
+              <button
+                class="btn bg-transparent border-0 d-flex d-lg-none rounded-circle me-lg-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i
+                  class="fa fa-bars text-black font-size-medium"
+                  style="margin-top: 4px"
+                ></i>
+              </button>
+              <div id="overlay" class="overlay"></div>
+              <div class="ms-auto">
+                <a
+                  class="d-flex justify-content-center align-items-center rounded-medium"
+                  href="#"
+                  style="border: 0; text-decoration: none"
+                >
+                  <img
+                    class="ms-2 d-none d-lg-block"
+                    src="static/img/user.png"
+                    style="width: 40px; height: 40px; color: #fff"
+                  />
+                  <p class="text-black d-flex">
+                    <span style="display: inline-block; margin-bottom: 7px"
+                      >محمدرضا آرمانیان</span
+                    >
+                  </p>
+                </a>
+              </div>
+              <ul class="navbar-nav flex-nowrap d-flex">
+                <li class="nav-item dropdown no-arrow d-flex flex-row gap-2">
+                  <a
+                    class="btn text-black bg-transparent border-0 d-flex justify-content-center align-items-center py-2 px-2 position-relative"
+                    role="button"
+                    href="#"
+                  >
+                    <i class="fa fa-bell text-black font-size-medium"></i>
+                    <span
+                      class="badge bg-danger rounded-circle d-flex justify-content-center align-items-center position-absolute"
+                      style="width: 16px; height: 16px; top: -5px; right: 10%"
+                      >3</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container-fluid px-1 px-lg-4">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div>
+                <h4 class="mb-0 text-dark">جزئیات کاربر</h4>
+                <p class="text-dark mb-0">مشاهده اطلاعات کامل کاربر</p>
+              </div>
+              <a href="filter-user.html" class="btn back-btn">
+                <i class="fa fa-arrow-right"></i> بازگشت
+              </a>
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-section">
+              <div class="row">
+                <div class="col-md-12">
+                  <label
+                    for="fileCode"
+                    class="form-label"
+                    style="
+                      font-weight: 600;
+                      color: #333;
+                      margin-bottom: 10px;
+                      display: block;
+                    "
+                    >کد پرونده گزینش:</label
+                  >
+                  <input
+                    type="text"
+                    id="fileCode"
+                    class="search-input"
+                    placeholder="کد پرونده را وارد کنید"
+                  />
+                  <div class="action-buttons">
+                    <button
+                      type="button"
+                      class="btn btn-print"
+                      onclick="printPage()"
+                    >
+                      <i class="fa fa-print"></i> پرینت
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-confirm"
+                      onclick="confirmAction()"
+                    >
+                      <i class="fa fa-check"></i> تایید
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion Section -->
+            <div class="accordion" id="userAccordion">
+              <!-- اطلاعات فردی -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse1"
+                    aria-expanded="true"
+                    aria-controls="collapse1"
+                  >
+                    اطلاعات فردی
+                  </button>
+                </h2>
+                <div
+                  id="collapse1"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="heading1"
+                  data-bs-parent="#userAccordion"
+                >
+                  <div class="accordion-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label"><strong>نام:</strong></td>
+                            <td>میلاد</td>
+                            <td class="table-label">
+                              <strong>نام خانوادگی:</strong>
+                            </td>
+                            <td>کیوان فر</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>جنسیت:</strong></td>
+                            <td>مرد</td>
+                            <td class="table-label">
+                              <strong>کد ملی:</strong>
+                            </td>
+                            <td>۲۲۶۰۱۹۶۸۸۸</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>محل صدور:</strong>
+                            </td>
+                            <td>علی آباد</td>
+                            <td class="table-label">
+                              <strong>شماره شناسنامه:</strong>
+                            </td>
+                            <td>۲۲۶۰۱۹۶۸۸۸</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>وضعیت تاهل:</strong>
+                            </td>
+                            <td>مجرد</td>
+                            <td class="table-label">
+                              <strong>تابعیت فعلی:</strong>
+                            </td>
+                            <td>ایرانی</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>ملیت:</strong></td>
+                            <td>ایرانی</td>
+                            <td class="table-label">
+                              <strong>تاریخ تولد:</strong>
+                            </td>
+                            <td>۱۳۷۵/۰۲/۱۵</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>محل تولد:</strong>
+                            </td>
+                            <td colspan="3">
+                              استان چهار محال و بختیاری، شهر بروجن
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>تاریخ صدور:</strong>
+                            </td>
+                            <td>۱۳۳۴/۰۳/۱۱</td>
+                            <td class="table-label">
+                              <strong>نام پدر:</strong>
+                            </td>
+                            <td>تلعا</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>تابعیت پدر:</strong>
+                            </td>
+                            <td>نتبلغان</td>
+                            <td class="table-label">
+                              <strong>وضعیت نظام وظیفه:</strong>
+                            </td>
+                            <td>پایان خدمت</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>سال شروع خدمت:</strong>
+                            </td>
+                            <td>-</td>
+                            <td class="table-label">
+                              <strong>سال پایان خدمت:</strong>
+                            </td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>واحد و نشانی محل خدمت:</strong>
+                            </td>
+                            <td colspan="3">-</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>دین:</strong></td>
+                            <td>مسلمان</td>
+                            <td class="table-label"><strong>مذهب:</strong></td>
+                            <td>شیعه</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>توضیحات:</strong>
+                            </td>
+                            <td colspan="3">-</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- اطلاعات تماس -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse2"
+                    aria-expanded="false"
+                    aria-controls="collapse2"
+                  >
+                    اطلاعات تماس
+                  </button>
+                </h2>
+                <div
+                  id="collapse2"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading2"
+                  data-bs-parent="#userAccordion"
+                >
+                  <div class="accordion-body">
+                    <h5 class="divider-title primary-color mb-0">
+                      <span>تماس</span>
+                    </h5>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>شماره همراه:</strong>
+                            </td>
+                            <td>۰۹۱۱۹۶۲۰۲۶۶</td>
+                            <td class="table-label">
+                              <strong>شماره تلفن ثابت:</strong>
+                            </td>
+                            <td>None</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>رایانامه (ایمیل):</strong>
+                            </td>
+                            <td colspan="3">milad@gmail.com</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <h5 class="divider-title primary-color mb-0 mt-4">
+                      <span>سابقه سکونت</span>
+                    </h5>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>شماره تلفن:</strong>
+                            </td>
+                            <td>None</td>
+                            <td class="table-label">
+                              <strong>از تاریخ:</strong>
+                            </td>
+                            <td>۱۳۹۴</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>تا:</strong></td>
+                            <td>۱۳۹۵</td>
+                            <td class="table-label"><strong>استان:</strong></td>
+                            <td>آذربایجان غربی</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>شهر:</strong></td>
+                            <td colspan="3">سردشت</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="map-placeholder mt-4">
+                      <div class="map-container">
+                        <i
+                          class="fa fa-map-marker"
+                          style="font-size: 48px; color: #1c90b0"
+                        ></i>
+                        <p class="text-muted mt-2">mapbox</p>
+                      </div>
+                    </div>
+
+                    <div class="address-buttons mt-4">
+                      <button class="btn btn-outline-secondary me-2">
+                        نشانی ۱
+                      </button>
+                      <button class="btn btn-outline-secondary me-2">
+                        نشانی ۲
+                      </button>
+                      <button class="btn btn-outline-secondary me-2">
+                        نشانی ۳
+                      </button>
+                      <button class="btn btn-outline-secondary">نشانی ۴</button>
+                    </div>
+
+                    <h5 class="divider-title primary-color mb-0 mt-4">
+                      <span>اطلاعات اعضاء خانواده</span>
+                    </h5>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label"><strong>نسبت:</strong></td>
+                            <td>همسر</td>
+                            <td class="table-label">
+                              <strong>نام و نام خانوادگی:</strong>
+                            </td>
+                            <td>efwfwe</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>کد ملی:</strong>
+                            </td>
+                            <td>۲۲۶۰۱۹۶۸۸۸</td>
+                            <td class="table-label">
+                              <strong>شماره شناسنامه:</strong>
+                            </td>
+                            <td>Unknown</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>تحصیلات:</strong>
+                            </td>
+                            <td>few</td>
+                            <td class="table-label"><strong>شغل:</strong></td>
+                            <td>wrgwrg</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>محل کار:</strong>
+                            </td>
+                            <td>-</td>
+                            <td class="table-label"><strong>تلفن:</strong></td>
+                            <td>۰۲۱۳۳۳۶۵۶۵۶</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>آدرس محل سکونت:</strong>
+                            </td>
+                            <td colspan="3">ewqgfqweg</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <h5 class="divider-title primary-color mb-0 mt-4">
+                      <span>اطلاعات سابقه ایثارگری اعضاء خانواده</span>
+                    </h5>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label"><strong>نسبت:</strong></td>
+                            <td>همسر</td>
+                            <td class="table-label">
+                              <strong>نام و نام خانوادگی:</strong>
+                            </td>
+                            <td>aqfeqwr</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>مدت زمان سابقه جبهه (ماه):</strong>
+                            </td>
+                            <td>۶۲۶</td>
+                            <td class="table-label"><strong>تلفن:</strong></td>
+                            <td>۰۲۱۵۴۵۶۵۶۳</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>نوع ایثارگری:</strong>
+                            </td>
+                            <td>آزاده</td>
+                            <td class="table-label">
+                              <strong>مدت زمان اسارت:</strong>
+                            </td>
+                            <td>None</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <h5 class="divider-title primary-color mb-0 mt-4">
+                      <span>اطلاعات افراد مورد وثوق</span>
+                    </h5>
+
+                    <h6
+                      class="divider-title primary-color mb-0 mt-3"
+                      style="font-size: 14px"
+                    >
+                      <span>اطلاعات افراد فامیل</span>
+                    </h6>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>نام و نام خانوادگی:</strong>
+                            </td>
+                            <td>بثبص</td>
+                            <td class="table-label"><strong>تلفن:</strong></td>
+                            <td>۰۲۱۳۶۵۶۳۶۳۶</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>شغل:</strong></td>
+                            <td>-</td>
+                            <td class="table-label">
+                              <strong>مدت آشنایی:</strong>
+                            </td>
+                            <td>۳</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>تلفن همراه:</strong>
+                            </td>
+                            <td>۰۹۱۱۹۶۲۰۲۶۶</td>
+                            <td class="table-label"><strong>نسبت:</strong></td>
+                            <td>Unknown</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>نشانی:</strong></td>
+                            <td colspan="3">بصثبلث</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <h6
+                      class="divider-title primary-color mb-0 mt-3"
+                      style="font-size: 14px"
+                    >
+                      <span>اطلاعات افراد همکاران</span>
+                    </h6>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>نام و نام خانوادگی:</strong>
+                            </td>
+                            <td>لیایلی</td>
+                            <td class="table-label"><strong>تلفن:</strong></td>
+                            <td>۰۲۱۲۵۲۵۶۵۶</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>شغل:</strong></td>
+                            <td>-</td>
+                            <td class="table-label">
+                              <strong>مدت آشنایی:</strong>
+                            </td>
+                            <td>۵</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>تلفن همراه:</strong>
+                            </td>
+                            <td>۰۹۱۱۹۶۲۰۲۶۳</td>
+                            <td class="table-label">
+                              <strong>تحصیلات:</strong>
+                            </td>
+                            <td>not define</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>نشانی:</strong></td>
+                            <td colspan="3">اغعبغه</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <h6
+                      class="divider-title primary-color mb-0 mt-3"
+                      style="font-size: 14px"
+                    >
+                      <span>اطلاعات همشهریان</span>
+                    </h6>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>نام و نام خانوادگی:</strong>
+                            </td>
+                            <td>ابلغ</td>
+                            <td class="table-label"><strong>تلفن:</strong></td>
+                            <td>۰۲۱۵۴۵۴۵۴۵۴</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>شغل:</strong></td>
+                            <td>-</td>
+                            <td class="table-label">
+                              <strong>مدت آشنایی:</strong>
+                            </td>
+                            <td>۲</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>تلفن همراه:</strong>
+                            </td>
+                            <td>۰۹۱۱۹۶۲۰۲۶۶</td>
+                            <td class="table-label"><strong>نشانی:</strong></td>
+                            <td>عتبلعت</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <h6
+                      class="divider-title primary-color mb-0 mt-3"
+                      style="font-size: 14px"
+                    >
+                      <span>اطلاعات هم‌درسی و هم‌بحثی ها</span>
+                    </h6>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>نام و نام خانوادگی:</strong>
+                            </td>
+                            <td>ثیبلصسلر</td>
+                            <td class="table-label">
+                              <strong>مدت آشنایی:</strong>
+                            </td>
+                            <td>۲</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>تلفن:</strong></td>
+                            <td>۰۲۱۳۳۳۶۶۵۵۶</td>
+                            <td class="table-label">
+                              <strong>تلفن همراه:</strong>
+                            </td>
+                            <td>۰۹۱۱۹۶۲۰۲۶۶</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>نشانی:</strong></td>
+                            <td colspan="3">بثصختبضثصضثب</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>نام و نام خانوادگی:</strong>
+                            </td>
+                            <td>بثصضبص</td>
+                            <td class="table-label">
+                              <strong>مدت آشنایی:</strong>
+                            </td>
+                            <td>۲</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>تلفن:</strong></td>
+                            <td>۰۲۱۵۴۵۴۵۶۵۶</td>
+                            <td class="table-label">
+                              <strong>تلفن همراه:</strong>
+                            </td>
+                            <td>۰۹۱۱۹۶۲۰۲۳۶</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>نشانی:</strong></td>
+                            <td colspan="3">ثضصبصب</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>نام و نام خانوادگی:</strong>
+                            </td>
+                            <td>ضشبصضث</td>
+                            <td class="table-label">
+                              <strong>مدت آشنایی:</strong>
+                            </td>
+                            <td>۲</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>تلفن:</strong></td>
+                            <td>۰۲۱۳۲۳۲۳۲۳۲</td>
+                            <td class="table-label">
+                              <strong>تلفن همراه:</strong>
+                            </td>
+                            <td>۰۹۱۱۹۶۲۰۲۶۶</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>نشانی:</strong></td>
+                            <td colspan="3">ثصبصثقل</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <h6
+                      class="divider-title primary-color mb-0 mt-3"
+                      style="font-size: 14px"
+                    >
+                      <span>اطلاعات افراد سرشناس</span>
+                    </h6>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>نام و نام خانوادگی:</strong>
+                            </td>
+                            <td>بثصبصث</td>
+                            <td class="table-label"><strong>تلفن:</strong></td>
+                            <td>۰۲۱۵۴۵۴۵۴۵۴</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label"><strong>شغل:</strong></td>
+                            <td>-</td>
+                            <td class="table-label">
+                              <strong>مدت آشنایی:</strong>
+                            </td>
+                            <td>۲</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>تلفن همراه:</strong>
+                            </td>
+                            <td>۰۹۱۱۹۶۲۰۲۶۶</td>
+                            <td class="table-label"><strong>نشانی:</strong></td>
+                            <td>صثلبصثلب</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <h5 class="divider-title primary-color mb-0 mt-4">
+                      <span>اطلاعات سوابق</span>
+                    </h5>
+
+                    <h6
+                      class="divider-title primary-color mb-0 mt-3"
+                      style="font-size: 14px"
+                    >
+                      <span>اطلاعات سوابق حضور در جبهه</span>
+                    </h6>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>اطلاعات:</strong>
+                            </td>
+                            <td colspan="3">هیچ اطلاعاتی موجود نیست</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <h6
+                      class="divider-title primary-color mb-0 mt-3"
+                      style="font-size: 14px"
+                    >
+                      <span>اطلاعات افراد عضو در گروه های معاند</span>
+                    </h6>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>اطلاعات:</strong>
+                            </td>
+                            <td colspan="3">هیچ اطلاعاتی موجود نیست</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <h6
+                      class="divider-title primary-color mb-0 mt-3"
+                      style="font-size: 14px"
+                    >
+                      <span>سابقه عضویت در احزاب و گروه ها</span>
+                    </h6>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>اطلاعات:</strong>
+                            </td>
+                            <td colspan="3">هیچ اطلاعاتی موجود نیست</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <h6
+                      class="divider-title primary-color mb-0 mt-3"
+                      style="font-size: 14px"
+                    >
+                      <span>سوابق کیفری و دادگاه</span>
+                    </h6>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>اطلاعات:</strong>
+                            </td>
+                            <td colspan="3">هیچ اطلاعاتی موجود نیست</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <h6
+                      class="divider-title primary-color mb-0 mt-3"
+                      style="font-size: 14px"
+                    >
+                      <span>سوابق اعتیاد</span>
+                    </h6>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>اطلاعات:</strong>
+                            </td>
+                            <td colspan="3">هیچ اطلاعاتی موجود نیست</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <h6
+                      class="divider-title primary-color mb-0 mt-3"
+                      style="font-size: 14px"
+                    >
+                      <span>سوابق کمیته انضباطی</span>
+                    </h6>
+
+                    <div class="table-responsive mt-3">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>اطلاعات:</strong>
+                            </td>
+                            <td colspan="3">هیچ اطلاعاتی موجود نیست</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- اطلاعات سوابق اجرایی -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse3"
+                    aria-expanded="false"
+                    aria-controls="collapse3"
+                  >
+                    اطلاعات سوابق اجرایی
+                  </button>
+                </h2>
+                <div
+                  id="collapse3"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading3"
+                  data-bs-parent="#userAccordion"
+                >
+                  <div class="accordion-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>سمت فعلی:</strong>
+                            </td>
+                            <td>وکیل پایه یک دادگستری</td>
+                            <td class="table-label">
+                              <strong>محل خدمت:</strong>
+                            </td>
+                            <td>دادگستری تهران</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>تاریخ شروع:</strong>
+                            </td>
+                            <td>۱۵ شهریور ۱۳۹۵</td>
+                            <td class="table-label">
+                              <strong>سابقه کاری:</strong>
+                            </td>
+                            <td>۸ سال</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- اطلاعات حوزه های تخصصی -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse4"
+                    aria-expanded="false"
+                    aria-controls="collapse4"
+                  >
+                    اطلاعات حوزه های تخصصی
+                  </button>
+                </h2>
+                <div
+                  id="collapse4"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading4"
+                  data-bs-parent="#userAccordion"
+                >
+                  <div class="accordion-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>حوزه تخصصی اصلی:</strong>
+                            </td>
+                            <td>حقوق خانواده</td>
+                            <td class="table-label">
+                              <strong>حوزه تخصصی فرعی:</strong>
+                            </td>
+                            <td>حقوق تجارت</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>تعداد پرونده‌های موفق:</strong>
+                            </td>
+                            <td>۱۵۰ پرونده</td>
+                            <td class="table-label">
+                              <strong>نرخ موفقیت:</strong>
+                            </td>
+                            <td>۸۵٪</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- اطلاعات سوابق علمی -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse5"
+                    aria-expanded="false"
+                    aria-controls="collapse5"
+                  >
+                    اطلاعات سوابق علمی
+                  </button>
+                </h2>
+                <div
+                  id="collapse5"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading5"
+                  data-bs-parent="#userAccordion"
+                >
+                  <div class="accordion-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>مقطع تحصیلی:</strong>
+                            </td>
+                            <td>کارشناسی ارشد</td>
+                            <td class="table-label">
+                              <strong>رشته تحصیلی:</strong>
+                            </td>
+                            <td>حقوق خصوصی</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>دانشگاه:</strong>
+                            </td>
+                            <td>دانشگاه تهران</td>
+                            <td class="table-label">
+                              <strong>سال فارغ التحصیلی:</strong>
+                            </td>
+                            <td>۱۳۹۳</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>مقالات منتشر شده:</strong>
+                            </td>
+                            <td>۱۲ مقاله</td>
+                            <td class="table-label">
+                              <strong>کتاب‌های تالیف شده:</strong>
+                            </td>
+                            <td>۳ کتاب</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- گواهینامه های تخصصی -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5-1">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse5-1"
+                    aria-expanded="false"
+                    aria-controls="collapse5-1"
+                  >
+                    گواهینامه های تخصصی
+                  </button>
+                </h2>
+                <div
+                  id="collapse5-1"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading5-1"
+                  data-bs-parent="#userAccordion"
+                >
+                  <div class="accordion-body">
+                    <div class="certificates-gallery">
+                      <div class="row">
+                        <div class="col-md-4 col-sm-6 mb-3">
+                          <div class="certificate-item">
+                            <img
+                              src="static/img/cert1.jpg"
+                              alt="گواهینامه ۱"
+                              class="certificate-img"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                          <div class="certificate-item">
+                            <img
+                              src="static/img/cert2.jpg"
+                              alt="گواهینامه ۲"
+                              class="certificate-img"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                          <div class="certificate-item">
+                            <img
+                              src="static/img/cert3.jpg"
+                              alt="گواهینامه ۳"
+                              class="certificate-img"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- استعلامات -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse6"
+                    aria-expanded="false"
+                    aria-controls="collapse6"
+                  >
+                    استعلامات
+                  </button>
+                </h2>
+                <div
+                  id="collapse6"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="heading6"
+                  data-bs-parent="#userAccordion"
+                >
+                  <div class="accordion-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-hover">
+                        <tbody>
+                          <tr>
+                            <td class="table-label">
+                              <strong>وضعیت سابقه کیفری:</strong>
+                            </td>
+                            <td style="color: #28a745">سالم</td>
+                            <td class="table-label">
+                              <strong>وضعیت سابقه انتظامی:</strong>
+                            </td>
+                            <td style="color: #28a745">سالم</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>وضعیت عضویت در احزاب:</strong>
+                            </td>
+                            <td>عضو حزب اصولگرا</td>
+                            <td class="table-label">
+                              <strong>تاریخ آخرین استعلام:</strong>
+                            </td>
+                            <td>۱۵ آذر ۱۴۰۲</td>
+                          </tr>
+                          <tr>
+                            <td class="table-label">
+                              <strong>وضعیت تایید نهایی:</strong>
+                            </td>
+                            <td style="color: #28a745">تایید شده</td>
+                            <td class="table-label"></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="mt-4">
+                      <button
+                        class="btn btn-primary"
+                        onclick="showInquiryForm()"
+                      >
+                        <i class="fa fa-plus"></i> افزودن استعلام جدید
+                      </button>
+                    </div>
+
+                    <!-- فرم استعلام جدید -->
+                    <div id="inquiryForm" class="mt-4" style="display: none">
+                      <div class="inquiry-form-container">
+                        <h5 class="divider-title primary-color mb-4">
+                          <span>استعلام جدید</span>
+                        </h5>
+
+                        <form id="newInquiryForm">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group mb-3">
+                                <label
+                                  for="organizationName"
+                                  class="form-label"
+                                >
+                                  نام سازمان <span class="text-danger">*</span>
+                                </label>
+                                <input
+                                  type="text"
+                                  class="form-control required"
+                                  id="organizationName"
+                                />
+                              </div>
+
+                              <div class="form-group mb-3">
+                                <label for="inquiryType" class="form-label">
+                                  نوع استعلام <span class="text-danger">*</span>
+                                </label>
+                                <input
+                                  type="text"
+                                  class="form-control required"
+                                  id="inquiryType"
+                                />
+                              </div>
+
+                              <div class="form-group mb-3">
+                                <label for="description" class="form-label">
+                                  توضیحات <span class="text-danger">*</span>
+                                </label>
+                                <textarea
+                                  class="form-control required"
+                                  id="description"
+                                  rows="3"
+                                ></textarea>
+                              </div>
+                            </div>
+
+                            <div class="col-md-6">
+                              <div class="form-group mb-3">
+                                <label for="resultFile" class="form-label">
+                                  فایل نتیجه استعلام
+                                  <span class="text-danger">*</span>
+                                </label>
+                                <div class="personal-image-upload" style="border: 1px solid #e3e6f0;padding: 10px; border-radius: 10px;">
+                                  <div
+                                    class="image-upload-area"
+                                    onclick="document.getElementById('resultFile').click()"
+                                  >
+                                    <div class="upload-placeholder" style="display: flex;gap: 10px;">
+                                      <div class="upload-icon">
+                                        <i class="fa fa-camera"></i>
+                                      </div>
+                                      <div class="upload-text">
+                                        <p>برای انتخاب فایل کلیک کنید</p>
+                                        <small>یا فایل را اینجا بکشید</small>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="image-preview-small"
+                                      id="imagePreview"
+                                      style="display: none"
+                                    >
+                                      <img
+                                        id="previewImage"
+                                        src=""
+                                        alt="پیش‌نمایش"
+                                        class="w-25"
+                                      />
+                                    </div>
+                                  </div>
+                                  <input
+                                    type="file"
+                                    class="form-control required"
+                                    id="resultFile"
+                                    accept="image/*"
+                                    style="display: none"
+                                    onchange="updateImagePreview(this)"
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="form-group mb-3">
+                                <label for="inquiryResult" class="form-label">
+                                  نتیجه استعلام
+                                  <span class="text-danger">*</span>
+                                </label>
+                                <textarea
+                                  class="form-control required"
+                                  id="inquiryResult"
+                                  rows="3"
+                                ></textarea>
+                              </div>
+
+                              
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group mb-3">
+                                <button type="submit" class="btn submit-btn">
+                                  <i class="fa fa-save"></i> ثبت
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group mt-4">
+                            <label class="form-label">
+                              وضعیت کلی استعلام های متقاضی:
+                              <span class="text-danger">*</span>
+                            </label>
+                            <div class="radio-group d-flex flex-row gap-2">
+                              <div class="form-check form-check-inline">
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="overallStatus"
+                                  id="approved"
+                                  value="approved"
+                                />
+                                <label class="form-check-label" for="approved"
+                                  >تایید</label
+                                >
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="overallStatus"
+                                  id="notApproved"
+                                  value="notApproved"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="notApproved"
+                                  >عدم تایید</label
+                                >
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="overallStatus"
+                                  id="needsReview"
+                                  value="needsReview"
+                                  checked
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="needsReview"
+                                  >نیازمند بررسی</label
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="static/js/jquery-3.7.1.min.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/theme.js"></script>
+    <script src="static/js/formcontrol.js"></script>
+    <script>
+      function printPage() {
+        // باز کردن تمام accordion ها قبل از پرینت
+        const accordionButtons = document.querySelectorAll(
+          ".accordion-button.collapsed"
+        );
+        accordionButtons.forEach((button) => {
+          button.classList.remove("collapsed");
+          const target = button.getAttribute("data-bs-target");
+          const collapseElement = document.querySelector(target);
+          if (collapseElement) {
+            collapseElement.classList.add("show");
+          }
+        });
+
+        // پرینت صفحه
+        window.print();
+      }
+
+      function confirmAction() {
+        const fileCode = document.getElementById("fileCode").value;
+        if (fileCode.trim() === "") {
+          alert("لطفاً کد پرونده را وارد کنید");
+          return;
+        }
+        alert("عملیات تایید با موفقیت انجام شد");
+      }
+
+      // تابع نمایش فرم استعلام
+      function showInquiryForm() {
+        const form = document.getElementById("inquiryForm");
+        if (form.style.display === "none") {
+          form.style.display = "block";
+        } else {
+          form.style.display = "none";
+        }
+      }
+
+      // تابع نمایش پیش‌نمایش تصویر کوچک
+      function updateImagePreview(input) {
+        const imagePreview = document.getElementById("imagePreview");
+        const previewImage = document.getElementById("previewImage");
+        const uploadPlaceholder = document.querySelector(".upload-placeholder");
+
+        if (input.files && input.files[0]) {
+          const file = input.files[0];
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+            previewImage.src = e.target.result;
+            imagePreview.style.display = "block";
+            uploadPlaceholder.style.display = "none";
+          };
+
+          reader.readAsDataURL(file);
+        }
+      }
+
+      // کنترل فرم استعلام
+      document.addEventListener("DOMContentLoaded", function () {
+        const inquiryForm = document.getElementById("newInquiryForm");
+        if (inquiryForm) {
+          inquiryForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // بررسی فیلدهای اجباری
+            const organizationName =
+              document.getElementById("organizationName").value;
+            const inquiryType = document.getElementById("inquiryType").value;
+            const description = document.getElementById("description").value;
+            const resultFile = document.getElementById("resultFile").value;
+            const inquiryResult =
+              document.getElementById("inquiryResult").value;
+            const overallStatus = document.querySelector(
+              'input[name="overallStatus"]:checked'
+            );
+
+            if (
+              !organizationName ||
+              !inquiryType ||
+              !description ||
+              !resultFile ||
+              !inquiryResult ||
+              !overallStatus
+            ) {
+              return;
+            }
+
+            // ارسال فرم (در اینجا می‌توانید کد ارسال به سرور را اضافه کنید)
+            alert("استعلام جدید با موفقیت ثبت شد");
+
+            // پاک کردن فرم
+            inquiryForm.reset();
+
+            // مخفی کردن فرم
+            document.getElementById("inquiryForm").style.display = "none";
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="fa">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="لیست محققان - سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا"
+    />
+    <title>لیست محققان</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="../static/fonts/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="../static/fonts/fontawesome5-overrides.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/IRANSans.css" />
+  </head>
+  <body>
+    <div id="wrapper" class="dashboard-container position-relative">
+      <nav
+        class="navbar align-items-start sidebar sidebar-light accordion p-0 m-0 navbar-dark py-4"
+        style="flex-wrap: nowrap"
+      >
+        <div
+          class="container-fluid d-flex flex-column p-0 w-full align-items-center mx-auto"
+        >
+          <span id="closeSidebar" class="close-sidebar d-block d-lg-none"
+            >×</span
+          >
+          <div
+            class="navbar-brand d-flex justify-content-center align-items-center flex-column m-0 w-100"
+          >
+            <div class="text-center my-3">
+              <img
+                class="w-50 mb-1"
+                src="../static/img/logo.jpeg"
+                style="mix-blend-mode: multiply"
+              />
+              <div class="nastaligh primary-color" style="font-size: 17px">
+                معاونت منابع انسانی
+              </div>
+            </div>
+          </div>
+          <hr class="sidebar-divider my-0" />
+          <ul
+            class="navbar-nav text-light w-100 ps-3 gap-2"
+            id="accordionSidebar"
+          >
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="user-dashboard.html">
+                <i class="fa fa-users"></i>
+                <span>مشاهده اطلاعات کاربران</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="create-interview.html">
+                <i class="fa fa-plus-circle"></i>
+                <span>ایجاد مصاحبه جدید</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="create-research.html">
+                <i class="fa fa-search-plus"></i>
+                <span>ایجاد تحقیقات جدید</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link rounded-small active"
+                href="researchers-list.html"
+              >
+                <i class="fa fa-user-graduate"></i>
+                <span>لیست محققان</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="create-interviewer.html">
+                <i class="fa fa-user-plus"></i>
+                <span>ایجاد مصاحبه کننده و محقق</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link rounded-small"
+                href="ideological-interviewers.html"
+              >
+                <i class="fa fa-user-friends"></i>
+                <span>لیست مصاحبه کنندگان عقیدتی</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="performance-report.html">
+                <i class="fa fa-chart-bar"></i>
+                <span>گزارش عملکرد کارکنان</span>
+              </a>
+            </li>
+          </ul>
+          <div
+            class="my-2 d-flex justify-content-center align-items-center gap-3 flex-row"
+          >
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../static/img/eitaa.webp"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../static/img/sorush.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../static/img/bale.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../static/img/igap.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="d-flex flex-column pb-4 bg-white"
+        id="content-wrapper"
+        style="border-right: 1px solid #e9eced"
+      >
+        <div id="content">
+          <nav
+            class="navbar navbar-expand bg-white mb-3 topbar static-top navbar-light px-md-3"
+            style="border-right: 0"
+          >
+            <div class="container-fluid px-1 px-lg-4">
+              <button
+                class="btn bg-transparent border-0 d-flex d-lg-none rounded-circle me-lg-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i
+                  class="fa fa-bars text-black font-size-medium"
+                  style="margin-top: 4px"
+                ></i>
+              </button>
+              <div id="overlay" class="overlay"></div>
+              <div class="ms-auto">
+                <a
+                  class="d-flex justify-content-center align-items-center rounded-medium"
+                  href="#"
+                  style="border: 0; text-decoration: none"
+                >
+                  <img
+                    class="ms-2 d-none d-lg-block"
+                    src="../static/img/user.png"
+                    style="width: 40px; height: 40px; color: #fff"
+                  />
+                  <p class="text-black d-flex">
+                    <span style="display: inline-block; margin-bottom: 7px">
+                      محمدرضا آرمانیان</span
+                    >
+                  </p>
+                </a>
+              </div>
+              <ul class="navbar-nav flex-nowrap d-flex">
+                <li class="nav-item dropdown no-arrow d-flex flex-row gap-2">
+                  <a
+                    class="btn text-black bg-transparent border-0 d-flex justify-content-center align-items-center py-2 px-2 position-relative"
+                    role="button"
+                    href="#"
+                    ><i class="fa fa-bell text-black font-size-medium"></i
+                    ><span
+                      class="badge bg-danger rounded-circle d-flex justify-content-center align-items-center position-absolute"
+                      style="width: 16px; height: 16px; top: -5px; right: 10%"
+                      >3</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container px-3 px-sm-4">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div>
+                <h4 class="mb-0 text-dark">لیست محققان</h4>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-12 px-sm-3">
+                <div class="row">
+                  <div class="col-md-3 mb-4">
+                    <div class="card p-3" style="border-radius: 20px">
+                      <form id="filtersForm">
+                        <div class="mb-3">
+                          <label class="form-label">وضعیت متقاضی</label>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="همه"
+                              id="applicantStatus1"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="applicantStatus1"
+                              >همه</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="جدید"
+                              id="applicantStatus2"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="applicantStatus2"
+                              >جدید</label
+                            >
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">جنسیت</label>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="مرد"
+                              id="gender1"
+                            />
+                            <label class="form-check-label" for="gender1"
+                              >مرد</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="زن"
+                              id="gender2"
+                            />
+                            <label class="form-check-label" for="gender2"
+                              >زن</label
+                            >
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">وضعیت رزومه</label>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="تکمیل شده"
+                              id="resumeStatus1"
+                            />
+                            <label class="form-check-label" for="resumeStatus1"
+                              >تکمیل شده</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="ناقص"
+                              id="resumeStatus2"
+                            />
+                            <label class="form-check-label" for="resumeStatus2"
+                              >ناقص</label
+                            >
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">سطح بندی</label>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="سطح 1"
+                              id="level1"
+                            />
+                            <label class="form-check-label" for="level1"
+                              >سطح 1</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="سطح 2"
+                              id="level2"
+                            />
+                            <label class="form-check-label" for="level2"
+                              >سطح 2</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="سطح 3"
+                              id="level3"
+                            />
+                            <label class="form-check-label" for="level3"
+                              >سطح 3</label
+                            >
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">تحصیلات</label>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="کاردانی"
+                              id="education1"
+                            />
+                            <label class="form-check-label" for="education1"
+                              >کاردانی</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="کارشناسی"
+                              id="education2"
+                            />
+                            <label class="form-check-label" for="education2"
+                              >کارشناسی</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="کارشناسی ارشد"
+                              id="education3"
+                            />
+                            <label class="form-check-label" for="education3"
+                              >کارشناسی ارشد</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="دکتری"
+                              id="education4"
+                            />
+                            <label class="form-check-label" for="education4"
+                              >دکتری</label
+                            >
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">رشته تحصیلی</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="fieldOfStudy"
+                            placeholder="رشته تحصیلی را وارد کنید"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">سوابق کاری</label>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="کمتر از 1 سال"
+                              id="experience1"
+                            />
+                            <label class="form-check-label" for="experience1"
+                              >کمتر از 1 سال</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="1 تا 3 سال"
+                              id="experience2"
+                            />
+                            <label class="form-check-label" for="experience2"
+                              >1 تا 3 سال</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="3 تا 5 سال"
+                              id="experience3"
+                            />
+                            <label class="form-check-label" for="experience3"
+                              >3 تا 5 سال</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="بیش از 5 سال"
+                              id="experience4"
+                            />
+                            <label class="form-check-label" for="experience4"
+                              >بیش از 5 سال</label
+                            >
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">شرایط شغلی</label>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="تمام وقت"
+                              id="jobCondition1"
+                            />
+                            <label class="form-check-label" for="jobCondition1"
+                              >تمام وقت</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="نیمه وقت"
+                              id="jobCondition2"
+                            />
+                            <label class="form-check-label" for="jobCondition2"
+                              >نیمه وقت</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="آزاد"
+                              id="jobCondition3"
+                            />
+                            <label class="form-check-label" for="jobCondition3"
+                              >آزاد</label
+                            >
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">عرصه پیشنهادی ترجمان</label>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="حقوق مدنی"
+                              id="suggestedField1"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="suggestedField1"
+                              >حقوق مدنی</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="حقوق کیفری"
+                              id="suggestedField2"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="suggestedField2"
+                              >حقوق کیفری</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="حقوق تجارت"
+                              id="suggestedField3"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="suggestedField3"
+                              >حقوق تجارت</label
+                            >
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">عرصه فعالیت فعلی</label>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="قضایی"
+                              id="currentField1"
+                            />
+                            <label class="form-check-label" for="currentField1"
+                              >قضایی</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="اداری"
+                              id="currentField2"
+                            />
+                            <label class="form-check-label" for="currentField2"
+                              >اداری</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="آموزشی"
+                              id="currentField3"
+                            />
+                            <label class="form-check-label" for="currentField3"
+                              >آموزشی</label
+                            >
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label"
+                            >عرصه فعالیت موردعلاقه</label
+                          >
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="قضایی"
+                              id="preferredField1"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="preferredField1"
+                              >قضایی</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="اداری"
+                              id="preferredField2"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="preferredField2"
+                              >اداری</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="آموزشی"
+                              id="preferredField3"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="preferredField3"
+                              >آموزشی</label
+                            >
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">عرصه تحصیلی</label>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="حقوق"
+                              id="academicField1"
+                            />
+                            <label class="form-check-label" for="academicField1"
+                              >حقوق</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="فقه"
+                              id="academicField2"
+                            />
+                            <label class="form-check-label" for="academicField2"
+                              >فقه</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="علوم سیاسی"
+                              id="academicField3"
+                            />
+                            <label class="form-check-label" for="academicField3"
+                              >علوم سیاسی</label
+                            >
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">استان</label>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="تهران"
+                              id="province1"
+                            />
+                            <label class="form-check-label" for="province1"
+                              >تهران</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="اصفهان"
+                              id="province2"
+                            />
+                            <label class="form-check-label" for="province2"
+                              >اصفهان</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="خراسان رضوی"
+                              id="province3"
+                            />
+                            <label class="form-check-label" for="province3"
+                              >خراسان رضوی</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="فارس"
+                              id="province4"
+                            />
+                            <label class="form-check-label" for="province4"
+                              >فارس</label
+                            >
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value="آذربایجان شرقی"
+                              id="province5"
+                            />
+                            <label class="form-check-label" for="province5"
+                              >آذربایجان شرقی</label
+                            >
+                          </div>
+                        </div>
+                        <button
+                          type="submit"
+                          class="btn btn-primary w-100 mt-2"
+                        >
+                          اعمال فیلتر
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="row mb-4">
+                      <div class="col-12">
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="searchBox"
+                            placeholder="جستجو در محققان..."
+                            style="border-radius: 0px 8px 8px 0px !important"
+                          />
+                          <button
+                            class="btn btn-primary"
+                            type="button"
+                            id="searchButton"
+                            style="border-radius: 8px 0px 0px 8px !important"
+                          >
+                            <i class="fa fa-search"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="col-md-12">
+                        <a
+                          href="../researcher-detail.html"
+                          style="text-decoration: none; color: inherit"
+                        >
+                          <div
+                            class="card p-4 d-flex flex-column flex-md-row align-items-start gap-4 mb-3"
+                            style="
+                              border-radius: 20px;
+                              transition: all 0.3s ease;
+                            "
+                            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'"
+                          >
+                            <img
+                              src="../static/img/user.png"
+                              alt="researcher"
+                              class="rounded-circle"
+                              style="
+                                width: 60px;
+                                height: 60px;
+                                object-fit: cover;
+                              "
+                            />
+                            <div class="flex-grow-1">
+                              <div class="row">
+                                <div class="col-12 col-sm-6 col-md-4 mb-2">
+                                  <span
+                                    style="
+                                      color: #000;
+                                      font-weight: normal;
+                                      font-size: 14px;
+                                    "
+                                    >نام: علی</span
+                                  >
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-2">
+                                  <span
+                                    style="
+                                      color: #000;
+                                      font-weight: normal;
+                                      font-size: 14px;
+                                    "
+                                    >نام خانوادگی: احمدی</span
+                                  >
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-2">
+                                  <span
+                                    style="
+                                      color: #000;
+                                      font-weight: normal;
+                                      font-size: 14px;
+                                    "
+                                    >تخصص: تحقیقات سوابق</span
+                                  >
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-2">
+                                  <span
+                                    style="
+                                      color: #000;
+                                      font-weight: normal;
+                                      font-size: 14px;
+                                    "
+                                    >وضعیت: فعال</span
+                                  >
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-2">
+                                  <span
+                                    style="
+                                      color: #000;
+                                      font-weight: normal;
+                                      font-size: 14px;
+                                    "
+                                    >سطح: 2</span
+                                  >
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-2">
+                                  <span
+                                    style="
+                                      color: #000;
+                                      font-weight: normal;
+                                      font-size: 14px;
+                                    "
+                                    >کد ملی: ۱۲۳۴۵۶۷۸۹۰</span
+                                  >
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-4 mb-2">
+                                  <span
+                                    style="
+                                      color: #000;
+                                      font-weight: normal;
+                                      font-size: 14px;
+                                    "
+                                    >شماره همراه: ۰۹۱۲۳۴۵۶۷۸۹</span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                        <!-- کارت‌های بیشتر را اینجا اضافه کنید -->
+                      </div>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="row mt-4">
+                      <div class="col-12">
+                        <nav aria-label="صفحه‌بندی محققان">
+                          <ul class="pagination justify-content-center">
+                            <!-- First Page -->
+                            <li class="page-item disabled">
+                              <a
+                                class="page-link"
+                                href="#"
+                                tabindex="-1"
+                                aria-disabled="true"
+                                style="color: #6c757d; border-color: #dee2e6"
+                              >
+                                <i class="fa fa-angle-double-right"></i>
+                              </a>
+                            </li>
+                            <!-- Previous Page -->
+                            <li class="page-item disabled">
+                              <a
+                                class="page-link"
+                                href="#"
+                                tabindex="-1"
+                                aria-disabled="true"
+                                style="color: #6c757d; border-color: #dee2e6"
+                              >
+                                <i class="fa fa-angle-right"></i>
+                              </a>
+                            </li>
+                            <!-- Page Numbers -->
+                            <li class="page-item active">
+                              <a
+                                class="page-link"
+                                href="#"
+                                style="
+                                  background-color: #1c90b0;
+                                  border-color: #1c90b0;
+                                  color: white;
+                                "
+                                >1</a
+                              >
+                            </li>
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                style="color: #1c90b0; border-color: #dee2e6"
+                                >2</a
+                              >
+                            </li>
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                style="color: #1c90b0; border-color: #dee2e6"
+                                >3</a
+                              >
+                            </li>
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                style="color: #1c90b0; border-color: #dee2e6"
+                                >4</a
+                              >
+                            </li>
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                style="color: #1c90b0; border-color: #dee2e6"
+                                >5</a
+                              >
+                            </li>
+                            <!-- Next Page -->
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                style="color: #1c90b0; border-color: #dee2e6"
+                              >
+                                <i class="fa fa-angle-left"></i>
+                              </a>
+                            </li>
+                            <!-- Last Page -->
+                            <li class="page-item">
+                              <a
+                                class="page-link"
+                                href="#"
+                                style="color: #1c90b0; border-color: #dee2e6"
+                              >
+                                <i class="fa fa-angle-double-left"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                        <!-- Page Info -->
+                        <div class="text-center mt-2">
+                          <small class="text-muted">
+                            نمایش ۱ تا ۱۰ از ۵۰ محقق
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/jquery-3.7.1.min.js"></script>
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/js/theme.js"></script>
+  </body>
+</html>

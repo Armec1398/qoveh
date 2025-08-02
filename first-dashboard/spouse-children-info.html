@@ -153,6 +153,31 @@
                     <div class="row">
                       <div class="col-md-3 mb-3">
                         <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> نام و نام
+                          خانوادگی همسر</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="spouse_fullname"
+                          placeholder="مثال: زهرا محمدی"
+                        />
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span> کد ملی
+                          همسر</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="spouse_national_code"
+                          placeholder="مثال: 1234567890"
+                          maxlength="10"
+                        />
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> مدت زمان ازدواج
                           (سال)</label
                         >
@@ -200,6 +225,103 @@
                           min="1200"
                           max="1500"
                         />
+                      </div>
+                    </div>
+                    <div class="form-check my-3">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="divorcedCheck"
+                      />
+                      <label class="form-check-label" for="divorcedCheck"
+                        >متارکه هستم (امکان ثبت همسر دوم)</label
+                      >
+                    </div>
+                    <div id="secondSpouseForm" style="display: none">
+                      <div
+                        class="w-100 d-flex justify-content-center mb-3 mt-4"
+                      >
+                        <h5 class="divider-title primary-color mb-0">
+                          <span>مشخصات همسر دوم</span>
+                        </h5>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-3 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> نام و نام
+                            خانوادگی همسر دوم</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required"
+                            name="spouse_fullname2"
+                            placeholder="مثال: فاطمه حسینی"
+                          />
+                        </div>
+                        <div class="col-md-3 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> کد ملی همسر
+                            دوم</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required"
+                            name="spouse_national_code2"
+                            placeholder="مثال: 1234567890"
+                            maxlength="10"
+                          />
+                        </div>
+                        <div class="col-md-3 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> مدت زمان
+                            ازدواج (سال)</label
+                          >
+                          <input
+                            type="number"
+                            class="form-control required"
+                            name="marriage_duration2"
+                            placeholder="مثال: 5"
+                            min="0"
+                          />
+                        </div>
+                        <div class="col-md-3 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> تحصیلات همسر
+                            دوم</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required"
+                            name="spouse_education2"
+                            placeholder="مثال: فوق لیسانس"
+                          />
+                        </div>
+                        <div class="col-md-3 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> شغل همسر
+                            دوم</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required"
+                            name="spouse_job2"
+                            placeholder="مثال: پزشک"
+                          />
+                        </div>
+                        <div class="col-md-3 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> سال تولد همسر
+                            دوم</label
+                          >
+                          <input
+                            type="number"
+                            class="form-control required"
+                            name="spouse_birth_year2"
+                            placeholder="مثال: 1370"
+                            min="1200"
+                            max="1500"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="w-100 d-flex justify-content-center mb-3 mt-4">
@@ -254,6 +376,10 @@
             html += `
               <div class="row align-items-end mb-3 child-row" data-index="${i}">
                 <div class="col-md-3 mb-2">
+                  <label class="form-label"><span style='color: #ff4d4f'>*</span> نام و نام خانوادگی فرزند ${i}</label>
+                  <input type="text" class="form-control required" name="child_fullname_${i}" placeholder="مثال: علی رضایی" />
+                </div>
+                <div class="col-md-2 mb-2">
                   <label class="form-label"><span style='color: #ff4d4f'>*</span> جنسیت فرزند ${i}</label>
                   <select class="form-select required" name="child_gender_${i}">
                     <option value="">انتخاب کنید</option>
@@ -261,7 +387,15 @@
                     <option value="دختر">دختر</option>
                   </select>
                 </div>
-                <div class="col-md-3 mb-2">
+                <div class="col-md-2 mb-2">
+                  <label class="form-label"><span style='color: #ff4d4f'>*</span> کد ملی فرزند ${i}</label>
+                  <input type="text" class="form-control required" name="child_national_code_${i}" placeholder="مثال: 1234567890" maxlength="10" />
+                </div>
+                <div class="col-md-2 mb-2">
+                  <label class="form-label"><span style='color: #ff4d4f'>*</span> شغل فرزند ${i}</label>
+                  <input type="text" class="form-control required" name="child_job_${i}" placeholder="مثال: دانش‌آموز" />
+                </div>
+                <div class="col-md-2 mb-2">
                   <label class="form-label"><span style='color: #ff4d4f'>*</span> سن فرزند ${i}</label>
                   <input type="number" class="form-control required" name="child_age_${i}" placeholder="مثال: 8" min="0" max="50" />
                 </div>
@@ -277,6 +411,9 @@
           } else {
             $("#childrenFields").html("");
           }
+        });
+        $("#divorcedCheck").on("change", function () {
+          $("#secondSpouseForm").toggle($(this).is(":checked"));
         });
       });
     </script>

@@ -139,7 +139,9 @@
                 >
                   <form>
                     <div class="mb-4">
-                      <label class="form-label fw-bold">نحوه ورود:</label>
+                      <label class="form-label fw-bold"
+                        >نحوه ورود(سابقه جذب قبلی):</label
+                      >
                       <div class="d-flex flex-wrap gap-4 px-3">
                         <div class="form-check">
                           <input
@@ -198,19 +200,43 @@
                           />
                         </div>
                         <div class="col-md-6 mb-3">
-                          <label class="form-label"
-                            ><span style="color: #ff4d4f">*</span> رتبه
-                            تشریحی</label
-                          >
+                          <label class="form-label">رتبه تشریحی</label>
                           <input
                             type="text"
-                            class="form-control required"
+                            class="form-control"
                             placeholder="مثال: 8"
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label">شماره پرونده</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="مثال: 12345"
                           />
                         </div>
                       </div>
                     </div>
                     <hr />
+                    <div class="mb-4 mt-4 px-3">
+                      <label class="form-label fw-bold">وضعیت:</label>
+                      <select class="form-select" name="status_select">
+                        <option value="">انتخاب کنید</option>
+                        <option value="not_accepted_exam">
+                          پذیرفته نشده آزمون علمی
+                        </option>
+                        <option value="not_accepted_interview">
+                          پذیرفته نشده مصاحبه علمی
+                        </option>
+                        <option value="not_accepted_belief">
+                          پذیرفته نشده مصاحبه اعتقادی
+                        </option>
+                        <option value="not_accepted_eval">
+                          پذیرفته نشده ارزیابی
+                        </option>
+                        <option value="in_progress">در جریان</option>
+                      </select>
+                    </div>
                     <div class="mb-4 mt-4 px-3">
                       <div class="form-check">
                         <input

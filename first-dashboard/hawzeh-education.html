@@ -181,6 +181,17 @@
                             >سطح ۳</label
                           >
                         </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input hawzeh-checkbox"
+                            type="checkbox"
+                            value="level4"
+                            id="level4"
+                          />
+                          <label class="form-check-label" for="level4"
+                            >سطح ۴</label
+                          >
+                        </div>
                       </div>
                     </div>
                     <!-- فرم سطح ۱ -->
@@ -384,6 +395,73 @@
                         </div>
                       </div>
                     </div>
+                    <!-- فرم سطح ۴ -->
+                    <div
+                      class="hawzeh-form"
+                      id="formLevel4"
+                      style="display: none"
+                    >
+                      <h5 class="divider-title primary-color mb-3 mt-4">
+                        <span>سطح ۴</span>
+                      </h5>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> تاریخ
+                            ورود</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required jalali-date"
+                            placeholder="انتخاب تاریخ"
+                            readonly
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> تاریخ
+                            اخذ</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required jalali-date"
+                            placeholder="انتخاب تاریخ"
+                            readonly
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> محل
+                            تحصیل</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required"
+                            placeholder="مثال: حوزه علمیه اصفهان"
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label"
+                            ><span style="color: #ff4d4f">*</span> معدل</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control required"
+                            placeholder="مثال: 18.75"
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3 d-flex align-items-center">
+                          <input
+                            type="checkbox"
+                            class="form-check-input ms-2 is-studying"
+                            id="studyingLevel4"
+                          />
+                          <label class="form-label mb-0" for="studyingLevel4"
+                            >در حال تحصیل هستم</label
+                          >
+                        </div>
+                      </div>
+                    </div>
                     <div class="d-flex justify-content-end mt-4">
                       <button
                         type="submit"
@@ -414,6 +492,7 @@
           $("#formLevel1").toggle($("#level1").is(":checked"));
           $("#formLevel2").toggle($("#level2").is(":checked"));
           $("#formLevel3").toggle($("#level3").is(":checked"));
+          $("#formLevel4").toggle($("#level4").is(":checked"));
         });
         // فعال‌سازی تقویم شمسی روی همه فیلدهای تاریخ
         $(".jalali-date").persianDatepicker({

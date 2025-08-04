@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="داشبورد ادمین - سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا"
+    />
+    <title>داشبورد ادمین</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../static/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../../../static/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="../../../static/fonts/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="../../../static/fonts/fontawesome5-overrides.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../../../static/css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../static/css/dashboard.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../static/css/IRANSans.css"
+    />
+  </head>
+
+  <body>
+    <div id="wrapper" class="dashboard-container position-relative">
+      <nav
+        class="navbar align-items-start sidebar sidebar-light accordion p-0 m-0 navbar-dark py-4"
+        style="flex-wrap: nowrap"
+      >
+        <div
+          class="container-fluid d-flex flex-column p-0 w-full align-items-center mx-auto"
+        >
+          <span id="closeSidebar" class="close-sidebar d-block d-lg-none"
+            >×</span
+          >
+          <div
+            class="navbar-brand d-flex justify-content-center align-items-center flex-column m-0 w-100"
+          >
+            <div class="text-center my-3">
+              <img
+                class="w-50 mb-1"
+                src="../../../static/img/logo.jpeg"
+                style="mix-blend-mode: multiply"
+              />
+              <div class="nastaligh primary-color" style="font-size: 17px">
+                معاونت منابع انسانی
+              </div>
+            </div>
+          </div>
+          <hr class="sidebar-divider my-0" />
+          <ul
+            class="navbar-nav text-light w-100 ps-3 gap-2"
+            id="accordionSidebar"
+          >
+            <li class="nav-item active">
+              <a
+                class="nav-link rounded-small"
+                href="../../../dashboard-user.html"
+              >
+                <i class="fa fa-home"></i>
+                <span>داشبورد</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link rounded-small"
+                href="../../../admin/dashboard-admin.html"
+              >
+                <i class="fa fa-home"></i>
+                <span>داشبورد ادمین</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../../login.html">
+                <i class="fa fa-home"></i>
+                <span>ورود/عضویت</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی دوم</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی سوم</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی چهارم</span></a
+              >
+            </li>
+            <div class="divider-sidebar my-2">
+              <span>پروفایل کاربر</span>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../personal.html">
+                <i class="fa fa-user"></i>
+                <span>اطلاعات فردی</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../contact.html">
+                <i class="fa fa-phone"></i>
+                <span>اطلاعات تماس</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link rounded-small" href="job.html">
+                <i class="fa fa-tv"></i>
+                <span>سوابق اجرایی</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../addict_history.html">
+                <i class="fa fa-history"></i>
+                <span>سوابق شغلی</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../criminal_records.html">
+                <i class="fa fa-gavel"></i>
+                <span>سوابق گزینش در سایر نهادها</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../disciplinarycommittee.html">
+                <i class="fa fa-users"></i>
+                <span>سوابق عضویت در بسیج</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../family.html">
+                <i class="fa fa-home"></i>
+                <span>سوابق تشکیلاتی</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../final.html">
+                <i class="fa fa-check-circle"></i>
+                <span>ثبت نهایی</span></a
+              >
+            </li>
+          </ul>
+          <div
+            class="my-2 d-flex justify-content-center align-items-center gap-3 flex-row"
+          >
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../../../static/img/eitaa.webp"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../../../static/img/sorush.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../../../static/img/bale.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../../../static/img/igap.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="d-flex flex-column pb-4 bg-white"
+        id="content-wrapper"
+        style="border-right: 1px solid #e9eced"
+      >
+        <div id="content">
+          <nav
+            class="navbar navbar-expand bg-white mb-3 topbar static-top navbar-light px-md-3"
+            style="border-right: 0"
+          >
+            <div class="container-fluid px-1 px-lg-4">
+              <button
+                class="btn bg-transparent border-0 d-flex d-lg-none rounded-circle me-lg-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i
+                  class="fa fa-bars text-black font-size-medium"
+                  style="margin-top: 4px"
+                ></i>
+              </button>
+              <div id="overlay" class="overlay"></div>
+              <div class="ms-auto">
+                <a
+                  class="d-flex justify-content-center align-items-center rounded-medium"
+                  href="#"
+                  style="border: 0; text-decoration: none"
+                  ><img
+                    class="ms-2 d-none d-lg-block"
+                    src="../../../static/img/user.png"
+                    style="width: 40px; height: 40px; color: #fff"
+                  />
+                  <p class="text-black d-flex">
+                    <span style="display: inline-block; margin-bottom: 7px"
+                      >محمدرضا آرمانیان</span
+                    >
+                  </p>
+                </a>
+              </div>
+              <ul class="navbar-nav flex-nowrap d-flex">
+                <li class="nav-item dropdown no-arrow d-flex flex-row gap-2">
+                  <a
+                    class="btn text-black bg-transparent border-0 d-flex justify-content-center align-items-center py-2 px-2 position-relative"
+                    role="button"
+                    href="#"
+                    ><i class="fa fa-bell text-black font-size-medium"></i
+                    ><span
+                      class="badge bg-danger rounded-circle d-flex justify-content-center align-items-center position-absolute"
+                      style="width: 16px; height: 16px; top: -5px; right: 10%"
+                      >3</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container px-3 px-sm-4">
+            <div class="row d-flex mb-3 mb-md-4">
+              <div class="col-lg-12 px-sm-3">
+                <div class="stepper-container" id="stepper"></div>
+              </div>
+            </div>
+            <div class="row d-flex mb-3">
+              <div class="col-lg-12 px-sm-3">
+                <div class="">
+                  <h1 class="text-black main-heading mb-0">سوابق شغلی</h1>
+                </div>
+              </div>
+            </div>
+            <div class="row d-flex">
+              <div class="col-lg-12 px-sm-3">
+                <div
+                  class="content bg-white shadow-sm rounded-medium py-2 py-sm-4 px-3 px-sm-4"
+                >
+                <div class="w-100 d-flex justify-content-center mb-3">
+                  <h5 class="divider-title primary-color mb-0">
+                    <span>مواردی که قبلا ثبت کرده اید:</span>
+                  </h5>
+                </div>
+                <span class="text-black d-block pb-1"
+                  >موردی ثبت نشده است.</span
+                >
+                <!-- سوال اصلی -->
+                <div class="row mb-4">
+                  <div class="col-12">
+                    <div class="text-center">
+                      <h6 class="mb-3 text-black">
+                        آیا دارای سوابق بسیج هستید؟
+                      </h6>
+                      <div class="d-flex justify-content-center gap-3">
+                        <button
+                          type="button"
+                          class="btn btn-primary px-4"
+                          id="btnYes"
+                        >
+                          بله
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-primary px-4"
+                          id="btnNo"
+                        >
+                          خیر
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  <div class="w-100 d-flex justify-content-center mb-3">
+                   
+                  </div>
+                  <form id="basojForm" style="display: none;">
+                    <h5 class="divider-title primary-color mb-4">
+                      <span>اطلاعات عضویت بسیج</span>
+                    </h5>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span>نوع عضویت</label
+                        >
+                        <select class="form-select required" name="basij_status">
+                          <option value="">انتخاب کنید</option>
+                          <option value="official">عادی</option>
+                          <option value="contract">فعال</option>
+                          <option value="temporary">راکد</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span>نام پایگاه/گردان</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="gordan"
+                          placeholder="قدس"
+                        />
+                      </div>
+                    
+                      
+                      <!-- فیلد علت عدم پذیرش که فقط برای گزینه "رد" نمایش داده می‌شود -->
+                    
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span>سال عضویت</label
+                        >
+                        <input
+                          type="number"
+                          class="form-control required"
+                          name="employment_duration"
+                          placeholder="۱۳۹۵"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span>سال پایان همکاری
+                          </label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="work_phone"
+                          placeholder="۱۴۰۰"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span>مسئولیت 
+                          </label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="work_phone"
+                          placeholder="فاوا"
+                        />
+                      </div>
+                      <div class="col-md-12 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span>نشانی 
+                          </label
+                        >
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="work_phone"
+                          placeholder="آدرسی"
+                        />
+                      </div>
+                    <div class="d-flex justify-content-between mt-4">
+                      <button
+                        type="submit"
+                        class="button btn btn-primary px-4 submit-btn"
+                        onclick="saveJobRecord()"
+                      >
+                        ثبت سابقه
+                      </button>
+                     
+                    </div>
+                    <div class="d-flex justify-content-between mt-2">
+                      <div>
+                        <button
+                        type="submit"
+                        class="btn btn-primary px-4 submit-btn"
+                      >
+                        ثبت اطلاعات
+                      </button>
+                    </div>
+                    <div class="d-flex justify-content-between mt-2">
+                      <button
+                        type="button"
+                        class="btn btn-secondary px-4 next-btn"
+                        onclick="window.location.href='selection-records.html'"
+                      >
+                        بعدی
+                      </button>
+                      </div>
+                    </div>
+                    
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../../static/js/jquery-3.7.1.min.js"></script>
+    <script src="../../../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../static/js/theme.js"></script>
+    <script src="../../../static/js/dashboard.js"></script>
+    <script src="../../../static/js/formcontrol.js"></script>
+
+    <script>
+      // تعریف مسیرهای صفحات برای navigation
+      const pageRoutes = [
+        "job.html",
+        "selection-records.html",
+        "basij-membership.html",
+        "organizational-records.html",
+        "../final.html"
+
+      ];
+
+      // تعریف مراحل برای صفحه contact
+      const stepTitles = [
+        "سوابق شغلی",
+        "سوابق گزینش در سایر نهاد ها",
+        "سوابق عضویت در بسیج",
+        "سوابق تشکیلاتی",
+        "ثبت نهایی"
+      ];
+      const jobs =[]
+      const totalSteps = stepTitles.length;
+      let currentStep = 3; // شروع از مرحله اول
+
+      // تابع navigation برای رفتن به مرحله بعدی
+      function goToNextStep() {
+        if (currentStep < totalSteps) {
+          window.location.href = pageRoutes[currentStep];
+        }
+      }
+
+      // تابع navigation برای رفتن به مرحله قبلی
+      function goToPreviousStep() {
+        if (currentStep > 1) {
+          window.location.href = pageRoutes[currentStep - 2];
+        }
+      }
+
+      const renderStepper = () => {
+        const container = document.getElementById("stepper");
+        container.innerHTML = "";
+
+        if (currentStep > 2) {
+          const dotsPrev = document.createElement("div");
+          dotsPrev.className = "step dots";
+          dotsPrev.textContent = "مرحله قبل";
+          dotsPrev.addEventListener("click", goToPreviousStep);
+          container.appendChild(dotsPrev);
+        }
+
+        if (currentStep > 1) {
+          const prev = document.createElement("div");
+          prev.className = "step prev";
+          prev.textContent = stepTitles[currentStep - 2];
+          prev.addEventListener("click", goToPreviousStep);
+          container.appendChild(prev);
+        }
+
+        const curr = document.createElement("div");
+        curr.className = "step current";
+        curr.textContent = stepTitles[currentStep - 1];
+        container.appendChild(curr);
+
+        if (currentStep < totalSteps) {
+          const next = document.createElement("div");
+          next.className = "step next";
+          next.textContent = stepTitles[currentStep];
+          next.addEventListener("click", goToNextStep);
+          container.appendChild(next);
+        }
+
+        if (currentStep < totalSteps - 1) {
+          const dotsNext = document.createElement("div");
+          dotsNext.className = "step dots";
+          dotsNext.textContent = "مرحله بعد";
+          dotsNext.addEventListener("click", goToNextStep);
+          container.appendChild(dotsNext);
+        }
+      };
+      const job =[]
+      
+      // تابع نمایش/مخفی کردن فیلد علت عدم پذیرش
+      function toggleRejectionReasonField() {
+        const resultRadios = document.querySelectorAll('input[name="result"]');
+        const rejectionReasonDiv = document.getElementById('rejectionReasonDiv');
+        const rejectionReasonTextarea = rejectionReasonDiv.querySelector('textarea[name="rejection_reason"]');
+        
+        resultRadios.forEach(radio => {
+          radio.addEventListener('change', function() {
+            if (this.value === 'reject') {
+              rejectionReasonDiv.style.display = 'block';
+              rejectionReasonTextarea.classList.add('required');
+            } else {
+              rejectionReasonDiv.style.display = 'none';
+              rejectionReasonTextarea.classList.remove('required');
+              rejectionReasonTextarea.value = '';
+            }
+          });
+        });
+      }
+      
+
+      // اجرای stepper هنگام بارگذاری صفحه
+      document.addEventListener("DOMContentLoaded", function () {
+        renderStepper();
+        
+        // فعال کردن تابع نمایش/مخفی کردن فیلد علت عدم پذیرش
+        toggleRejectionReasonField();
+      });
+      const btnYes = document.getElementById("btnYes");
+        const btnNo = document.getElementById("btnNo");
+        const form = document.getElementById("basojForm");
+        btnYes.addEventListener("click", function () {
+          form.style.display = "block";
+          btnYes.classList.add("active");
+          btnNo.classList.remove("active");
+        });
+        btnNo.addEventListener("click", goToNextStep);
+    </script>
+  </body>
+</html>

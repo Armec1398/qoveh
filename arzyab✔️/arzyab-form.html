@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="fa">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="فرم  ارزیابی - سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا"
+    />
+    <title>فرم ارزیاب</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="../static/fonts/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="../static/fonts/fontawesome5-overrides.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/IRANSans.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/persian-datepicker.min.css"
+    />
+  </head>
+  <body>
+    <div id="wrapper" class="dashboard-container position-relative">
+      <nav
+        class="navbar align-items-start sidebar sidebar-light accordion p-0 m-0 navbar-dark py-4"
+        style="flex-wrap: nowrap"
+      >
+        <div
+          class="container-fluid d-flex flex-column p-0 w-full align-items-center mx-auto"
+        >
+          <span id="closeSidebar" class="close-sidebar d-block d-lg-none"
+            >×</span
+          >
+          <div
+            class="navbar-brand d-flex justify-content-center align-items-center flex-column m-0 w-100"
+          >
+            <div class="text-center my-3">
+              <img
+                class="w-50 mb-1"
+                src="../static/img/logo.jpeg"
+                style="mix-blend-mode: multiply"
+              />
+              <div class="nastaligh primary-color" style="font-size: 17px">
+                معاونت منابع انسانی
+              </div>
+            </div>
+          </div>
+          <hr class="sidebar-divider my-0" />
+          <ul
+            class="navbar-nav text-light w-100 ps-3 gap-2"
+            id="accordionSidebar"
+          >
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="dashboard.html">
+                <i class="fa fa-home"></i>
+                <span>داشبورد</span>
+              </a>
+            </li>
+          </ul>
+          <div
+            class="my-2 d-flex justify-content-center align-items-center gap-3 flex-row"
+          >
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../static/img/eitaa.webp"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../static/img/sorush.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../static/img/bale.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../static/img/igap.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="d-flex flex-column pb-4 bg-white"
+        id="content-wrapper"
+        style="border-right: 1px solid #e9eced"
+      >
+        <div id="content">
+          <nav
+            class="navbar navbar-expand bg-white mb-3 topbar static-top navbar-light px-md-3"
+            style="border-right: 0"
+          >
+            <div class="container-fluid px-1 px-lg-4">
+              <button
+                class="btn bg-transparent border-0 d-flex d-lg-none rounded-circle me-lg-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i
+                  class="fa fa-bars text-black font-size-medium"
+                  style="margin-top: 4px"
+                ></i>
+              </button>
+              <div id="overlay" class="overlay"></div>
+              <div class="ms-auto">
+                <a
+                  class="d-flex justify-content-center align-items-center rounded-medium"
+                  href="#"
+                  style="border: 0; text-decoration: none"
+                >
+                  <img
+                    class="ms-2 d-none d-lg-block"
+                    src="../static/img/user.png"
+                    style="width: 40px; height: 40px; color: #fff"
+                  />
+                  <p class="text-black d-flex">
+                    <span style="display: inline-block; margin-bottom: 7px">
+                      محمدرضا آرمانیان</span
+                    >
+                  </p>
+                </a>
+              </div>
+              <ul class="navbar-nav flex-nowrap d-flex">
+                <li class="nav-item dropdown no-arrow d-flex flex-row gap-2">
+                  <a
+                    class="btn text-black bg-transparent border-0 d-flex justify-content-center align-items-center py-2 px-2 position-relative"
+                    role="button"
+                    href="#"
+                    ><i class="fa fa-bell text-black font-size-medium"></i
+                    ><span
+                      class="badge bg-danger rounded-circle d-flex justify-content-center align-items-center position-absolute"
+                      style="width: 16px; height: 16px; top: -5px; right: 10%"
+                      >3</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container px-3 px-sm-4">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div>
+                <h4 class="mb-0 text-dark">فرم ارزیاب</h4>
+              </div>
+            </div>
+
+            <div class="row d-flex justify-content-center">
+              <div class="col-12 px-sm-3">
+                <div class="card p-4" style="border-radius: 20px">
+                  <!-- Header with divider style -->
+                  <div class="w-100 d-flex justify-content-center mb-3">
+                    <h5 class="divider-title primary-color mb-0">
+                      <span>فرم نظرسنجی مصاحبه عقیدتی</span>
+                    </h5>
+                  </div>
+
+                  <form id="arzyabForm">
+                    <!-- Section 1: Family, Educational, and Occupational Status -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        1- خلاصه ای از وضعیت خانوادگی، تحصیلی و شغلی داوطلب:
+                      </label>
+                      <textarea
+                        class="form-control"
+                        name="familyEducationalOccupationalStatus"
+                        id="familyEducationalOccupationalStatus"
+                        rows="6"
+                        placeholder="خلاصه‌ای از وضعیت خانوادگی، تحصیلی و شغلی داوطلب را اینجا وارد کنید..."
+                      ></textarea>
+                    </div>
+
+                    <!-- Section 2: Cultural, Social, Scientific, Sports Activities -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        2- مختصری از فعالیتهای فرهنگی، اجتماعی، علمی، ورزشی و
+                        همکاری با نهادهای انقلابی:
+                      </label>
+                      <textarea
+                        class="form-control"
+                        name="culturalSocialScientificActivities"
+                        id="culturalSocialScientificActivities"
+                        rows="6"
+                        placeholder="مختصری از فعالیتهای فرهنگی، اجتماعی، علمی، ورزشی و همکاری با نهادهای انقلابی را اینجا وارد کنید..."
+                      ></textarea>
+                    </div>
+
+                    <!-- Section 3: Appearance and Attire Status -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        3- وضعیت ظاهری و پوشش داوطلب:
+                      </label>
+                      <textarea
+                        class="form-control"
+                        name="appearanceAndAttireStatus"
+                        id="appearanceAndAttireStatus"
+                        rows="6"
+                        placeholder="وضعیت ظاهری و پوشش داوطلب را اینجا وارد کنید..."
+                      ></textarea>
+                    </div>
+
+                    <!-- Section 4: Ethical and Behavioral Status -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        4- وضعیت اخلاقی و رفتاری داوطلب:
+                      </label>
+                      <textarea
+                        class="form-control"
+                        name="ethicalAndBehavioralStatus"
+                        id="ethicalAndBehavioralStatus"
+                        rows="6"
+                        placeholder="وضعیت اخلاقی و رفتاری داوطلب را اینجا وارد کنید..."
+                      ></textarea>
+                    </div>
+
+                    <!-- Section 5: Religious Status and Religious Duties -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        5- وضعیت اعتقادی، پایبندی به فرایض (نماز و روزه) و انجام
+                        امور مذهبی (حضور در جمعه و جماعات و فعالیتهای:
+                      </label>
+                      <textarea
+                        class="form-control"
+                        name="religiousStatusAndDuties"
+                        id="religiousStatusAndDuties"
+                        rows="6"
+                        placeholder="وضعیت اعتقادی، پایبندی به فرایض و انجام امور مذهبی را اینجا وارد کنید..."
+                      ></textarea>
+                    </div>
+
+                    <!-- Section 6: Belief and Commitment to Velayat-e Faqih -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        6- وضعیت اعتقاد و التزام به ولایت فقیه نظام جمهوری
+                        اسلامی و قانون اساسی (با ذکر مصداق و دلیل):
+                      </label>
+                      <textarea
+                        class="form-control"
+                        name="beliefAndCommitmentToVelayat"
+                        id="beliefAndCommitmentToVelayat"
+                        rows="6"
+                        placeholder="وضعیت اعتقاد و التزام به ولایت فقیه و قانون اساسی را با ذکر مصداق و دلیل اینجا وارد کنید..."
+                      ></textarea>
+                    </div>
+
+                    <!-- Section 7: Quran Familiarity Level -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        7- میزان آشنایی با قرآن:
+                      </label>
+                      <textarea
+                        class="form-control"
+                        name="quranFamiliarityLevel"
+                        id="quranFamiliarityLevel"
+                        rows="6"
+                        placeholder="میزان آشنایی با قرآن را اینجا وارد کنید..."
+                      ></textarea>
+                    </div>
+
+                    <!-- Stance on Velayat-e Faqih Section -->
+                    <div class="w-100 d-flex justify-content-center mb-3">
+                      <h5 class="divider-title primary-color mb-0">
+                        <span>موضع گیری نسبت به ولایت فقیه</span>
+                      </h5>
+                    </div>
+
+                    <!-- Question 1: Stance on Velayat-e Faqih -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        موضع گیری نسبت به ولایت فقیه
+                        <span class="text-danger">*</span>
+                      </label>
+                      <div
+                        class="custom-radio-group"
+                        style="display: flex; gap: 1rem; width: 100%"
+                      >
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="velayatStance"
+                            value="مدافع"
+                            class="required"
+                            id="velayatDefender"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          مدافع
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="velayatStance"
+                            value="منتقد و ملتزم"
+                            class="required"
+                            id="velayatCriticCommitted"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          منتقد و ملتزم
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="velayatStance"
+                            value="گرایش مثبت"
+                            class="required"
+                            id="velayatPositiveInclination"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          گرایش مثبت
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="velayatStance"
+                            value="بی تفاوت"
+                            class="required"
+                            id="velayatIndifferent"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          بی تفاوت
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Question 2: Islamic Dress Code Commitment -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        میزان تقید به رعایت پوشش اسلامی
+                        <span class="text-danger">*</span>
+                      </label>
+                      <div
+                        class="custom-radio-group"
+                        style="display: flex; gap: 1rem; width: 100%"
+                      >
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="islamicDressCommitment"
+                            value="عالی"
+                            class="required"
+                            id="islamicDressExcellent"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          عالی
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="islamicDressCommitment"
+                            value="خوب"
+                            class="required"
+                            id="islamicDressGood"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          خوب
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="islamicDressCommitment"
+                            value="متوسط"
+                            class="required"
+                            id="islamicDressAverage"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          متوسط
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="islamicDressCommitment"
+                            value="ضعیف"
+                            class="required"
+                            id="islamicDressWeak"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          ضعیف
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Question 3: Participation in Marches -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        شرکت در راهپیمایی <span class="text-danger">*</span>
+                      </label>
+                      <div
+                        class="custom-radio-group"
+                        style="display: flex; gap: 1rem; width: 100%"
+                      >
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="marchesParticipation"
+                            value="دارد"
+                            class="required"
+                            id="marchesParticipates"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          دارد
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="marchesParticipation"
+                            value="گاهی"
+                            class="required"
+                            id="marchesSometimes"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          گاهی
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="marchesParticipation"
+                            value="به ندرت"
+                            class="required"
+                            id="marchesRarely"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          به ندرت
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="marchesParticipation"
+                            value="ندارد"
+                            class="required"
+                            id="marchesNotParticipates"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          ندارد
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Question 4: Friday Prayer Participation -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        شرکت در نماز جمعه <span class="text-danger">*</span>
+                      </label>
+                      <div
+                        class="custom-radio-group"
+                        style="display: flex; gap: 1rem; width: 100%"
+                      >
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="fridayPrayerParticipation"
+                            value="دارد"
+                            class="required"
+                            id="fridayPrayerParticipates"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          دارد
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="fridayPrayerParticipation"
+                            value="گاهی"
+                            class="required"
+                            id="fridayPrayerSometimes"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          گاهی
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="fridayPrayerParticipation"
+                            value="به ندرت"
+                            class="required"
+                            id="fridayPrayerRarely"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          به ندرت
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="fridayPrayerParticipation"
+                            value="ندارد"
+                            class="required"
+                            id="fridayPrayerNotParticipates"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          ندارد
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Question 5: Basij Activity -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        فعالیت در بسیج <span class="text-danger">*</span>
+                      </label>
+                      <div
+                        class="custom-radio-group"
+                        style="display: flex; gap: 1rem; width: 100%"
+                      >
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="basijActivity"
+                            value="کادر - عضو شورا یا گردان"
+                            class="required"
+                            id="basijCadre"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          کادر - عضو شورا یا گردان
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="basijActivity"
+                            value="فعال"
+                            class="required"
+                            id="basijActive"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          فعال
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="basijActivity"
+                            value="عادی"
+                            class="required"
+                            id="basijNormal"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          عادی
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="basijActivity"
+                            value="ندارد"
+                            class="required"
+                            id="basijNotHave"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          ندارد
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Question 6: Congregational Prayer Participation -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        شرکت در نماز جماعت <span class="text-danger">*</span>
+                      </label>
+                      <div
+                        class="custom-radio-group"
+                        style="display: flex; gap: 1rem; width: 100%"
+                      >
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="congregationalPrayerParticipation"
+                            value="دارد"
+                            class="required"
+                            id="congregationalPrayerParticipates"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          دارد
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="congregationalPrayerParticipation"
+                            value="گاهی"
+                            class="required"
+                            id="congregationalPrayerSometimes"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          گاهی
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="congregationalPrayerParticipation"
+                            value="به ندرت"
+                            class="required"
+                            id="congregationalPrayerRarely"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          به ندرت
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="congregationalPrayerParticipation"
+                            value="ندارد"
+                            class="required"
+                            id="congregationalPrayerNotParticipates"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          ندارد
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Question 7: Voluntary Participation in Revolutionary Institutions -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        شرکت داوطلبانه در نهادهای انقلاب و انجام فعالیت های
+                        مذهبی <span class="text-danger">*</span>
+                      </label>
+                      <div
+                        class="custom-radio-group"
+                        style="display: flex; gap: 1rem; width: 100%"
+                      >
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="voluntaryRevolutionaryParticipation"
+                            value="دارد"
+                            class="required"
+                            id="voluntaryRevolutionaryParticipates"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          دارد
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="voluntaryRevolutionaryParticipation"
+                            value="گاهی"
+                            class="required"
+                            id="voluntaryRevolutionarySometimes"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          گاهی
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="voluntaryRevolutionaryParticipation"
+                            value="به ندرت"
+                            class="required"
+                            id="voluntaryRevolutionaryRarely"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          به ندرت
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="voluntaryRevolutionaryParticipation"
+                            value="ندارد"
+                            class="required"
+                            id="voluntaryRevolutionaryNotParticipates"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          ندارد
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Question 8: Commitment to Choosing Suitable Friends -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        میزان تقید به انتخاب دوستان مناسب
+                        <span class="text-danger">*</span>
+                      </label>
+                      <div
+                        class="custom-radio-group"
+                        style="display: flex; gap: 1rem; width: 100%"
+                      >
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="suitableFriendsCommitment"
+                            value="عالی"
+                            class="required"
+                            id="suitableFriendsExcellent"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          عالی
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="suitableFriendsCommitment"
+                            value="خوب"
+                            class="required"
+                            id="suitableFriendsGood"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          خوب
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="suitableFriendsCommitment"
+                            value="متوسط"
+                            class="required"
+                            id="suitableFriendsAverage"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          متوسط
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="suitableFriendsCommitment"
+                            value="ضعیف"
+                            class="required"
+                            id="suitableFriendsWeak"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          ضعیف
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Question 9: Election Participation -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        شرکت در انتخابات <span class="text-danger">*</span>
+                      </label>
+                      <div
+                        class="custom-radio-group"
+                        style="display: flex; gap: 1rem; width: 100%"
+                      >
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="electionParticipation"
+                            value="دارد"
+                            class="required"
+                            id="electionParticipates"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          دارد
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="electionParticipation"
+                            value="گاهی"
+                            class="required"
+                            id="electionSometimes"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          گاهی
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="electionParticipation"
+                            value="به ندرت"
+                            class="required"
+                            id="electionRarely"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          به ندرت
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="electionParticipation"
+                            value="ندارد"
+                            class="required"
+                            id="electionNotParticipates"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          ندارد
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Question 10: Quran -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        قرآن <span class="text-danger">*</span>
+                      </label>
+                      <div
+                        class="custom-radio-group"
+                        style="display: flex; gap: 1rem; width: 100%"
+                      >
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="quranCommitment"
+                            value="عالی"
+                            class="required"
+                            id="quranExcellent"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          عالی
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="quranCommitment"
+                            value="خوب"
+                            class="required"
+                            id="quranGood"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          خوب
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="quranCommitment"
+                            value="متوسط"
+                            class="required"
+                            id="quranAverage"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          متوسط
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 23%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="quranCommitment"
+                            value="ضعیف"
+                            class="required"
+                            id="quranWeak"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          ضعیف
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Additional Comments for Previous Reviews -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        در صورت وجود ابهام در بررسی های قبلی نتیجه موارد مهم
+                        پرونده و ارائه پیشنهاد جهت پیگیری های بعدی:
+                      </label>
+                      <textarea
+                        class="form-control"
+                        name="previousReviewsNotes"
+                        id="previousReviewsNotes"
+                        rows="6"
+                        placeholder="نتیجه موارد مهم پرونده و پیشنهادات پیگیری را اینجا وارد کنید..."
+                      ></textarea>
+                    </div>
+
+                    <!-- Final Analytical Opinion -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        نظر نهایی و تحلیلی مصاحبه گر نفیاً و اثباتاً:
+                      </label>
+                      <textarea
+                        class="form-control"
+                        name="finalAnalyticalOpinion"
+                        id="finalAnalyticalOpinion"
+                        rows="6"
+                        placeholder="نظر نهایی و تحلیلی خود را اینجا وارد کنید..."
+                      ></textarea>
+                    </div>
+
+                    <!-- Interview File Upload -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        آپلود فایل مصاحبه
+                      </label>
+                      <div class="input-group">
+                        <input
+                          type="file"
+                          class="form-control"
+                          name="interviewFile"
+                          id="interviewFile"
+                          accept=".pdf,.doc,.docx,.txt"
+                        />
+                        <button class="btn btn-outline-secondary" type="button">
+                          انتخاب
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- Final Decision -->
+                    <div class="mb-4">
+                      <label class="form-label fw-bold">
+                        نظر نهایی نسبت به متقاضی
+                        <span class="text-danger">*</span>
+                      </label>
+                      <div
+                        class="custom-radio-group"
+                        style="display: flex; gap: 1rem; width: 100%"
+                      >
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 33%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="finalDecision"
+                            value="تایید"
+                            class="required"
+                            id="finalDecisionApprove"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          تایید
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 33%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="finalDecision"
+                            value="عدم تایید"
+                            class="required"
+                            id="finalDecisionDisapprove"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          عدم تایید
+                        </label>
+                        <label
+                          class="custom-radio-label"
+                          style="flex: 1 1 33%; justify-content: center"
+                        >
+                          <input
+                            type="radio"
+                            name="finalDecision"
+                            value="عدم حضور"
+                            class="required"
+                            id="finalDecisionAbsent"
+                          />
+                          <span class="custom-radio-indicator"></span>
+                          عدم حضور
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="d-flex justify-content-end">
+                      <button type="submit" class="btn btn-primary">
+                        ثبت فرم نظرسنجی
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../static/js/jquery-3.7.1.min.js"></script>
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/js/theme.js"></script>
+    <script src="../static/js/persian-date.js"></script>
+    <script src="../static/js/persian-datepicker.min.js"></script>
+    <script src="../static/js/formcontrol.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize Persian datepickers
+        $("#fromDate").persianDatepicker({
+          format: "YYYY/MM/DD",
+          initialValue: false,
+          autoClose: true,
+          position: "auto",
+          calendar: {
+            persian: {
+              locale: "fa",
+            },
+          },
+          toolbox: {
+            enabled: true,
+            submitButton: {
+              enabled: true,
+              text: {
+                fa: "تایید",
+                en: "Submit",
+              },
+            },
+            todayButton: {
+              enabled: true,
+              text: {
+                fa: "امروز",
+                en: "Today",
+              },
+            },
+            calendarSwitch: {
+              enabled: true,
+            },
+          },
+        });
+
+        $("#toDate").persianDatepicker({
+          format: "YYYY/MM/DD",
+          initialValue: false,
+          autoClose: true,
+          position: "auto",
+          calendar: {
+            persian: {
+              locale: "fa",
+            },
+          },
+          toolbox: {
+            enabled: true,
+            submitButton: {
+              enabled: true,
+              text: {
+                fa: "تایید",
+                en: "Submit",
+              },
+            },
+            todayButton: {
+              enabled: true,
+              text: {
+                fa: "امروز",
+                en: "Today",
+              },
+            },
+            calendarSwitch: {
+              enabled: true,
+            },
+          },
+        });
+
+        // Handle form submission
+        document
+          .getElementById("arzyabForm")
+          .addEventListener("submit", function (e) {
+            // اعتبارسنجی فرم توسط formcontrol.js انجام می‌شود
+            // اگر فرم معتبر باشد، اینجا ادامه می‌دهیم
+
+            // Get form data
+            const formData = {
+              // Section 1: Family, Educational, and Occupational Status
+              familyEducationalOccupationalStatus: document.getElementById(
+                "familyEducationalOccupationalStatus"
+              )?.value,
+
+              // Section 2: Cultural, Social, Scientific, Sports Activities
+              culturalSocialScientificActivities: document.getElementById(
+                "culturalSocialScientificActivities"
+              )?.value,
+
+              // Section 3: Appearance and Attire Status
+              appearanceAndAttireStatus: document.getElementById(
+                "appearanceAndAttireStatus"
+              )?.value,
+
+              // Section 4: Ethical and Behavioral Status
+              ethicalAndBehavioralStatus: document.getElementById(
+                "ethicalAndBehavioralStatus"
+              )?.value,
+
+              // Section 5: Religious Status and Religious Duties
+              religiousStatusAndDuties: document.getElementById(
+                "religiousStatusAndDuties"
+              )?.value,
+
+              // Section 6: Belief and Commitment to Velayat-e Faqih
+              beliefAndCommitmentToVelayat: document.getElementById(
+                "beliefAndCommitmentToVelayat"
+              )?.value,
+
+              // Section 7: Quran Familiarity Level
+              quranFamiliarityLevel: document.getElementById(
+                "quranFamiliarityLevel"
+              )?.value,
+
+              // Stance on Velayat-e Faqih section
+              velayatStance: document.querySelector(
+                'input[name="velayatStance"]:checked'
+              )?.value,
+              islamicDressCommitment: document.querySelector(
+                'input[name="islamicDressCommitment"]:checked'
+              )?.value,
+              marchesParticipation: document.querySelector(
+                'input[name="marchesParticipation"]:checked'
+              )?.value,
+              fridayPrayerParticipation: document.querySelector(
+                'input[name="fridayPrayerParticipation"]:checked'
+              )?.value,
+              basijActivity: document.querySelector(
+                'input[name="basijActivity"]:checked'
+              )?.value,
+              congregationalPrayerParticipation: document.querySelector(
+                'input[name="congregationalPrayerParticipation"]:checked'
+              )?.value,
+              voluntaryRevolutionaryParticipation: document.querySelector(
+                'input[name="voluntaryRevolutionaryParticipation"]:checked'
+              )?.value,
+              suitableFriendsCommitment: document.querySelector(
+                'input[name="suitableFriendsCommitment"]:checked'
+              )?.value,
+              electionParticipation: document.querySelector(
+                'input[name="electionParticipation"]:checked'
+              )?.value,
+              quranCommitment: document.querySelector(
+                'input[name="quranCommitment"]:checked'
+              )?.value,
+
+              // Additional fields
+              previousReviewsNotes: document.getElementById(
+                "previousReviewsNotes"
+              )?.value,
+              finalAnalyticalOpinion: document.getElementById(
+                "finalAnalyticalOpinion"
+              )?.value,
+              interviewFile:
+                document.getElementById("interviewFile")?.files[0]?.name,
+              finalDecision: document.querySelector(
+                'input[name="finalDecision"]:checked'
+              )?.value,
+            };
+
+            // حذف تمام پیام‌های خطا
+            $(".error-message").remove();
+          });
+      });
+    </script>
+  </body>
+</html>

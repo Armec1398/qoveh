@@ -155,12 +155,20 @@
                         <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> نسبت</label
                         >
-                        <input
-                          type="text"
-                          class="form-control required"
+                        <select
+                          class="form-select required"
                           name="relation"
-                          placeholder="نسبت (مثال: پدر)"
-                        />
+                          id="relationSelect"
+                        >
+                          <option value="">انتخاب کنید</option>
+                          <option value="خودم">خودم</option>
+                          <option value="پدر">پدر</option>
+                          <option value="مادر">مادر</option>
+                          <option value="برادر">برادر</option>
+                          <option value="خواهر">خواهر</option>
+                          <option value="فرزند">فرزند</option>
+                          <option value="همسر">همسر</option>
+                        </select>
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
@@ -170,13 +178,9 @@
                         <select
                           class="form-select required"
                           name="isargari_type"
+                          id="isargariTypeSelect"
                         >
                           <option value="">انتخاب کنید</option>
-                          <option>رزمنده</option>
-                          <option>جانباز</option>
-                          <option>آزاده</option>
-                          <option>شهید</option>
-                          <option>سایر</option>
                         </select>
                       </div>
                       <div class="col-md-6 mb-3">
@@ -191,16 +195,48 @@
                           placeholder="محل اعزام (مثال: جبهه جنوب)"
                         />
                       </div>
-                      <div class="col-md-6 mb-3">
+                      <div
+                        class="col-md-6 mb-3"
+                        id="presenceDurationField"
+                        style="display: none"
+                      >
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> مدت حضور (مثال:
-                          6 ماه)</label
+                          ><span style="color: #ff4d4f">*</span> مدت حضور در
+                          جبهه</label
                         >
                         <input
                           type="text"
                           class="form-control required"
                           name="presence_duration"
                           placeholder="مدت حضور (مثال: 6 ماه)"
+                        />
+                      </div>
+                      <div
+                        class="col-md-6 mb-3"
+                        id="disabilityPercentField"
+                        style="display: none"
+                      >
+                        <label class="form-label">درصد جانبازی</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          name="disability_percent"
+                          placeholder="درصد جانبازی (مثال: 25)"
+                          min="0"
+                          max="100"
+                        />
+                      </div>
+                      <div
+                        class="col-md-6 mb-3"
+                        id="captivityDurationField"
+                        style="display: none"
+                      >
+                        <label class="form-label">مدت زمان اسارت</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="captivity_duration"
+                          placeholder="مدت اسارت (مثال: 2 سال)"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
@@ -236,5 +272,126 @@
     <script src="../static/js/theme.js"></script>
     <script src="../static/js/dashboard.js"></script>
     <script src="../static/js/formcontrol.js"></script>
+    <script>
+      $(document).ready(function () {
+        // تعریف گزینه‌های مختلف برای نوع ایثارگری
+        const isargariOptions = {
+          خودم: [
+            { value: "جانباز", text: "جانباز" },
+            { value: "آزاده", text: "آزاده" },
+            { value: "ایثارگر", text: "ایثارگر" },
+          ],
+          پدر: [
+            { value: "جانباز", text: "جانباز" },
+            { value: "آزاده", text: "آزاده" },
+            { value: "ایثارگر", text: "ایثارگر" },
+            { value: "شهید", text: "شهید" },
+            { value: "مفقود الاثر", text: "مفقود الاثر" },
+          ],
+          مادر: [
+            { value: "جانباز", text: "جانباز" },
+            { value: "آزاده", text: "آزاده" },
+            { value: "ایثارگر", text: "ایثارگر" },
+            { value: "شهید", text: "شهید" },
+            { value: "مفقود الاثر", text: "مفقود الاثر" },
+          ],
+          فرزند: [
+            { value: "جانباز", text: "جانباز" },
+            { value: "آزاده", text: "آزاده" },
+            { value: "ایثارگر", text: "ایثارگر" },
+            { value: "شهید", text: "شهید" },
+            { value: "مفقود الاثر", text: "مفقود الاثر" },
+          ],
+          برادر: [{ value: "شهید", text: "شهید" }],
+          خواهر: [{ value: "شهید", text: "شهید" }],
+          همسر: [
+            { value: "جانباز", text: "جانباز" },
+            { value: "آزاده", text: "آزاده" },
+            { value: "ایثارگر", text: "ایثارگر" },
+            { value: "شهید", text: "شهید" },
+            { value: "مفقود الاثر", text: "مفقود الاثر" },
+          ],
+        };
+
+        // تابع برای پر کردن گزینه‌های نوع ایثارگری
+        function populateIsargariOptions(relation) {
+          const select = $("#isargariTypeSelect");
+          select.empty();
+          select.append('<option value="">انتخاب کنید</option>');
+
+          if (isargariOptions[relation]) {
+            isargariOptions[relation].forEach((option) => {
+              select.append(
+                `<option value="${option.value}">${option.text}</option>`
+              );
+            });
+          }
+        }
+
+        // کنترل نمایش فیلدهای مختلف بر اساس انتخاب نوع ایثارگری
+        $("#isargariTypeSelect").change(function () {
+          const selectedType = $(this).val();
+          const selectedRelation = $("#relationSelect").val();
+
+          // مخفی کردن همه فیلدهای اضافی
+          $(
+            "#presenceDurationField, #disabilityPercentField, #captivityDurationField"
+          ).hide();
+
+          // نمایش فیلدهای مربوطه بر اساس انتخاب
+          if (selectedType === "جانباز") {
+            $("#presenceDurationField, #disabilityPercentField").show();
+            // اگر همسر انتخاب شده باشد، درصد جانبازی اجباری است
+            if (selectedRelation === "همسر") {
+              $("#disabilityPercentField input").addClass("required");
+              $("#disabilityPercentField label").html(
+                '<span style="color: #ff4d4f">*</span> درصد جانبازی'
+              );
+            } else {
+              $("#disabilityPercentField input").removeClass("required");
+              $("#disabilityPercentField label").html("درصد جانبازی");
+            }
+          } else if (selectedType === "آزاده") {
+            $("#presenceDurationField, #captivityDurationField").show();
+          } else if (
+            selectedType === "ایثارگر" ||
+            selectedType === "شهید" ||
+            selectedType === "مفقود الاثر"
+          ) {
+            $("#presenceDurationField").show();
+          }
+        });
+
+        // کنترل نمایش فیلد نوع ایثارگری بر اساس انتخاب نسبت
+        $("#relationSelect").change(function () {
+          const selectedRelation = $(this).val();
+
+          if (
+            selectedRelation === "خودم" ||
+            selectedRelation === "پدر" ||
+            selectedRelation === "مادر" ||
+            selectedRelation === "فرزند" ||
+            selectedRelation === "برادر" ||
+            selectedRelation === "خواهر" ||
+            selectedRelation === "همسر"
+          ) {
+            $("#isargariTypeSelect").prop("disabled", false);
+            $("#isargariTypeSelect").closest(".col-md-6").show();
+            populateIsargariOptions(selectedRelation);
+          } else {
+            $("#isargariTypeSelect").prop("disabled", true);
+            $("#isargariTypeSelect").val("");
+            $("#isargariTypeSelect").closest(".col-md-6").hide();
+            // مخفی کردن همه فیلدهای اضافی
+            $(
+              "#presenceDurationField, #disabilityPercentField, #captivityDurationField"
+            ).hide();
+          }
+        });
+
+        // اجرای اولیه برای تنظیم وضعیت اولیه
+        $("#relationSelect").trigger("change");
+      });
+    </script>
   </body>
 </html>

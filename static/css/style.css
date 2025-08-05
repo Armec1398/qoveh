@@ -99,7 +99,46 @@ input::placeholder {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
+
+/* Responsive styles for radio buttons */
+@media (max-width: 768px) {
+  .custom-radio-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .custom-radio-label {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    margin-bottom: 0.25rem;
+  }
+
+  .custom-radio-indicator {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-radio-group {
+    gap: 0.25rem;
+  }
+
+  .custom-radio-label {
+    font-size: 14px;
+    padding: 0.4rem;
+  }
+}
+
 .custom-radio-group input[type="radio"] {
   display: none;
 }

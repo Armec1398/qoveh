@@ -16,13 +16,20 @@
       type="text/css"
       href="../../../static/bootstrap/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="../../../static/fonts/fontawesome-all.min.css" />
+    <link
+      rel="stylesheet"
+      href="../../../static/fonts/fontawesome-all.min.css"
+    />
     <link rel="stylesheet" href="../../../static/fonts/font-awesome.min.css" />
     <link
       rel="stylesheet"
       href="../../../static/fonts/fontawesome5-overrides.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="../../../static/css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../static/css/style.css"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -142,7 +149,10 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-small" href="../disciplinarycommittee.html">
+              <a
+                class="nav-link rounded-small"
+                href="../disciplinarycommittee.html"
+              >
                 <i class="fa fa-users"></i>
                 <span>سوابق عضویت در بسیج</span></a
               >
@@ -280,50 +290,49 @@
                 <div
                   class="content bg-white shadow-sm rounded-medium py-2 py-sm-4 px-3 px-sm-4"
                 >
-                
                   <div class="w-100 d-flex justify-content-center mb-3">
                     <h5 class="divider-title primary-color mb-0">
-                    <span>مواردی که قبلا ثبت کرده اید:</span>
-                  </h5>
-                </div>
-                <span class="text-black d-block pb-1"
-                  >موردی ثبت نشده است.</span
-                >
-                <!-- سوال اصلی -->
-                <div class="row mb-4">
-                  <div class="col-12">
-                    <div class="text-center">
-                      <h6 class="mb-3 text-black">
-                        آیا دارای سوابق شغلی هستید؟
-                      </h6>
-                      <div class="d-flex justify-content-center gap-3">
-                        <button
-                          type="button"
-                          class="btn btn-primary px-4"
-                          id="btnYes"
-                        >
-                          بله
-                        </button>
-                        <button
-                          type="button"
-                          class="btn btn-primary px-4"
-                          id="btnNo"
-                        >
-                          خیر
-                        </button>
+                      <span>مواردی که قبلا ثبت کرده اید:</span>
+                    </h5>
+                  </div>
+                  <span class="text-black d-block pb-1"
+                    >موردی ثبت نشده است.</span
+                  >
+                  <!-- سوال اصلی -->
+                  <div class="row mb-4">
+                    <div class="col-12">
+                      <div class="text-center">
+                        <h6 class="mb-3 text-black">
+                          آیا دارای سوابق شغلی هستید؟
+                        </h6>
+                        <div class="d-flex justify-content-center gap-3">
+                          <button
+                            type="button"
+                            class="btn btn-primary px-4"
+                            id="btnYes"
+                          >
+                            بله
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-primary px-4"
+                            id="btnNo"
+                          >
+                            خیر
+                          </button>
+                        </div>
                       </div>
                     </div>
-                </div>
-                   
                   </div>
-                  <form id="jobForm" style="display: none;">
+                  <form id="jobForm" style="display: none">
                     <h5 class="divider-title primary-color mb-4">
                       <span>اطلاعات شغلی</span>
                     </h5>
                     <div class="row">
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> نام محل کار</label
+                          ><span style="color: #ff4d4f">*</span> نام محل
+                          کار</label
                         >
                         <input
                           id="workplace_name"
@@ -335,7 +344,8 @@
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> عنوان شغلی</label
+                          ><span style="color: #ff4d4f">*</span> عنوان
+                          شغلی</label
                         >
                         <input
                           id="job_title"
@@ -348,15 +358,14 @@
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> زمان همکاری
-                          </label
-                        >
+                        </label>
                         <div
                           class="custom-radio-group"
                           style="display: flex; gap: 1rem; width: 100%"
                         >
                           <label
                             class="custom-radio-label"
-                            style="flex: 1 1 50%; justify-content: center"
+                            style="flex: 1 1 48%; justify-content: center"
                           >
                             <input
                               type="radio"
@@ -369,7 +378,7 @@
                           </label>
                           <label
                             class="custom-radio-label"
-                            style="flex: 1 1 50%; justify-content: center"
+                            style="flex: 1 1 48%; justify-content: center"
                           >
                             <input
                               type="radio"
@@ -383,9 +392,14 @@
                           </label>
                         </div>
                       </div>
-                      <div class="col-md-6 mb-3" id="reasonDiv" style="display: none;">
+                      <div
+                        class="col-md-6 mb-3"
+                        id="reasonDiv"
+                        style="display: none"
+                      >
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> علت ترک فعالیت</label
+                          ><span style="color: #ff4d4f">*</span> علت ترک
+                          فعالیت</label
                         >
                         <input
                           type="text"
@@ -396,16 +410,16 @@
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span>کارمند سابق سازمان قضا هستم 
-                          </label
-                        >
+                          ><span style="color: #ff4d4f">*</span>کارمند سابق
+                          سازمان قضا هستم
+                        </label>
                         <div
                           class="custom-radio-group"
                           style="display: flex; gap: 1rem; width: 100%"
                         >
                           <label
                             class="custom-radio-label"
-                            style="flex: 1 1 50%; justify-content: center"
+                            style="flex: 1 1 48%; justify-content: center"
                           >
                             <input
                               type="radio"
@@ -414,11 +428,11 @@
                               class="required"
                             />
                             <span class="custom-radio-indicator"></span>
-                            بله 
+                            بله
                           </label>
                           <label
                             class="custom-radio-label"
-                            style="flex: 1 1 50%; justify-content: center"
+                            style="flex: 1 1 48%; justify-content: center"
                           >
                             <input
                               type="radio"
@@ -428,13 +442,14 @@
                               class="required"
                             />
                             <span class="custom-radio-indicator"></span>
-                            خیر 
+                            خیر
                           </label>
                         </div>
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> مدت زمان همکاری (ماه)</label
+                          ><span style="color: #ff4d4f">*</span> مدت زمان همکاری
+                          (ماه)</label
                         >
                         <input
                           type="number"
@@ -446,7 +461,8 @@
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> تلفن محل کار</label
+                          ><span style="color: #ff4d4f">*</span> تلفن محل
+                          کار</label
                         >
                         <input
                           type="text"
@@ -457,9 +473,13 @@
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> وضعیت استخدامی</label
+                          ><span style="color: #ff4d4f">*</span> وضعیت
+                          استخدامی</label
                         >
-                        <select class="form-select required" name="employment_status">
+                        <select
+                          class="form-select required"
+                          name="employment_status"
+                        >
                           <option value="">انتخاب کنید</option>
                           <option value="official">رسمی</option>
                           <option value="contract">قراردادی</option>
@@ -470,7 +490,8 @@
                       </div>
                       <div class="col-12 mb-3">
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> نشانی محل کار</label
+                          ><span style="color: #ff4d4f">*</span> نشانی محل
+                          کار</label
                         >
                         <textarea
                           class="form-control required"
@@ -489,16 +510,24 @@
                         ></textarea>
                       </div>
                     </div>
-                    
+
                     <div class="alert alert-info mt-4">
                       <h6 class="alert-heading">تذکر مهم:</h6>
-                      <p class="mb-0">در صورت داشتن هر یک از شرایط ذیل حتما موردی که شامل شما می شود را علامت بزنید:</p>
+                      <p class="mb-0">
+                        در صورت داشتن هر یک از شرایط ذیل حتما موردی که شامل شما
+                        می شود را علامت بزنید:
+                      </p>
                     </div>
-                    
+
                     <div class="row mt-3">
                       <div class="col-md-6 mb-3">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="legal_intern" id="legalIntern">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="legal_intern"
+                            id="legalIntern"
+                          />
                           <label class="form-check-label" for="legalIntern">
                             کارآموز وکالت (کانون وکلا)
                           </label>
@@ -506,7 +535,12 @@
                       </div>
                       <div class="col-md-6 mb-3">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="legal_license" id="legalLicense">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="legal_license"
+                            id="legalLicense"
+                          />
                           <label class="form-check-label" for="legalLicense">
                             دارای پروانه وکالت (کانون وکلا)
                           </label>
@@ -514,22 +548,38 @@
                       </div>
                       <div class="col-md-6 mb-3">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="legal_consultant_intern" id="legalConsultantIntern">
-                          <label class="form-check-label" for="legalConsultantIntern">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="legal_consultant_intern"
+                            id="legalConsultantIntern"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="legalConsultantIntern"
+                          >
                             کارآموز مشاوران حقوقی (ماده ۱۸۷)
                           </label>
                         </div>
                       </div>
                       <div class="col-md-6 mb-3">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="legal_consultant_license" id="legalConsultantLicense">
-                          <label class="form-check-label" for="legalConsultantLicense">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="legal_consultant_license"
+                            id="legalConsultantLicense"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="legalConsultantLicense"
+                          >
                             دارای پروانه مشاوران حقوقی (ماده ۱۸۷)
                           </label>
                         </div>
                       </div>
                     </div>
-                    
+
                     <div class="mt-4">
                       <button
                         type="submit"
@@ -558,7 +608,6 @@
                         </button>
                       </div>
                     </div>
-                    
                   </form>
                 </div>
               </div>
@@ -580,8 +629,7 @@
         "selection-records.html",
         "basij-membership.html",
         "organizational-records.html",
-        "../final.html"
-
+        "../final.html",
       ];
 
       // تعریف مراحل برای صفحه contact
@@ -590,9 +638,9 @@
         "سوابق گزینش در سایر نهاد ها",
         "سوابق عضویت در بسیج",
         "سوابق تشکیلاتی",
-        "ثبت نهایی"
+        "ثبت نهایی",
       ];
-      const jobs =[]
+      const jobs = [];
       const totalSteps = stepTitles.length;
       let currentStep = 1; // شروع از مرحله اول
 
@@ -651,65 +699,69 @@
           container.appendChild(dotsNext);
         }
       };
-      const job =[]
-      
+      const job = [];
+
       // تابع نمایش/مخفی کردن فیلد علت ترک فعالیت
       function toggleReasonField() {
-        const collaborationRadios = document.querySelectorAll('input[name="collaboration"]');
-        const reasonDiv = document.getElementById('reasonDiv');
-        const reasonInput = reasonDiv.querySelector('input[name="leave_reason"]');
-        
-        collaborationRadios.forEach(radio => {
-          radio.addEventListener('change', function() {
-            if (this.value === 'previous') {
-              reasonDiv.style.display = 'block';
-              reasonInput.classList.add('required');
+        const collaborationRadios = document.querySelectorAll(
+          'input[name="collaboration"]'
+        );
+        const reasonDiv = document.getElementById("reasonDiv");
+        const reasonInput = reasonDiv.querySelector(
+          'input[name="leave_reason"]'
+        );
+
+        collaborationRadios.forEach((radio) => {
+          radio.addEventListener("change", function () {
+            if (this.value === "previous") {
+              reasonDiv.style.display = "block";
+              reasonInput.classList.add("required");
             } else {
-              reasonDiv.style.display = 'none';
-              reasonInput.classList.remove('required');
-              reasonInput.value = '';
+              reasonDiv.style.display = "none";
+              reasonInput.classList.remove("required");
+              reasonInput.value = "";
             }
           });
         });
       }
-      
+
       // تابع مدیریت چک‌باکس‌های متقابل
       function handleMutualCheckboxes(checkedCheckbox, otherCheckbox) {
         if (checkedCheckbox.checked) {
           otherCheckbox.checked = false;
         }
       }
-      
+
       // تابع ثبت سابقه شغلی
       function saveJobRecord() {
-        const form = document.getElementById('jobForm');
+        const form = document.getElementById("jobForm");
         const formData = new FormData(form);
-        
-       
+
         // پاک کردن فرم
         form.reset();
-        document.getElementById('reasonDiv').style.display = 'none';
-        document.getElementById('employmentDurationInput').style.display = 'none';
-        
-        console.log('سوابق شغلی ثبت شده:', job);
+        document.getElementById("reasonDiv").style.display = "none";
+        document.getElementById("employmentDurationInput").style.display =
+          "none";
+
+        console.log("سوابق شغلی ثبت شده:", job);
       }
-      
+
       // اجرای stepper هنگام بارگذاری صفحه
       document.addEventListener("DOMContentLoaded", function () {
         renderStepper();
-        
+
         // فعال کردن تابع نمایش/مخفی کردن فیلد علت ترک فعالیت
         toggleReasonField();
       });
       const btnYes = document.getElementById("btnYes");
-        const btnNo = document.getElementById("btnNo");
-        const form = document.getElementById("jobForm");
-        btnYes.addEventListener("click", function () {
-          form.style.display = "block";
-          btnYes.classList.add("active");
-          btnNo.classList.remove("active");
-        });
-        btnNo.addEventListener("click", goToNextStep);
+      const btnNo = document.getElementById("btnNo");
+      const form = document.getElementById("jobForm");
+      btnYes.addEventListener("click", function () {
+        form.style.display = "block";
+        btnYes.classList.add("active");
+        btnNo.classList.remove("active");
+      });
+      btnNo.addEventListener("click", goToNextStep);
     </script>
   </body>
 </html>

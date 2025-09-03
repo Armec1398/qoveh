@@ -271,7 +271,7 @@
             <div class="row d-flex mb-3">
               <div class="col-lg-12 px-sm-3">
                 <div class="">
-                  <h1 class="text-black main-heading mb-0">سوابق شغلی</h1>
+                  <h1 class="text-black main-heading mb-0">سوابق تحصیلات دانشگاهی</h1>
                 </div>
               </div>
             </div>
@@ -294,7 +294,7 @@
                   <div class="col-12">
                     <div class="text-center">
                       <h6 class="mb-3 text-black">
-                        آیا دارای سوابق شغلی هستید؟
+                        آیا دارای تحصیلات دانشگاهی هستید؟
                       </h6>
                       <div class="d-flex justify-content-center gap-3">
                         <button
@@ -316,220 +316,110 @@
                 </div>
                    
                   </div>
-                  <form id="jobForm" style="display: none;">
+                  <form id="universityForm" style="display: none;">
                     <h5 class="divider-title primary-color mb-4">
-                      <span>اطلاعات شغلی</span>
+                      <span>اطلاعات دانشگاهی</span>
                     </h5>
                     <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label"
+                              ><span style="color: #ff4d4f">*</span>مقطع تحصیلی</label>
+                            <select class="form-select required" name="employment_status">
+                              <option value="">انتخاب کنید</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label class="form-label"><span style="color: #ff4d4f">*</span>بورسیه دانشگاه علوم قضایی </label>
+                            <select class="form-select required" name="employment_status">
+                              <option value="">انتخاب کنید</option>
+                              <option value="official">هستم</option>
+                              <option value="contract">نیستم</option>
+                            </select>
+                          </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> نام محل کار</label
-                        >
-                        <input
-                          id="workplace_name"
-                          type="text"
-                          class="form-control required"
-                          name="workplace_name"
-                          placeholder="نام محل کار"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> عنوان شغلی</label
-                        >
-                        <input
-                          id="job_title"
-                          type="text"
-                          class="form-control required"
-                          name="job_title"
-                          placeholder="عنوان شغلی"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> زمان همکاری
-                          </label
-                        >
-                        <div
-                          class="custom-radio-group"
-                          style="display: flex; gap: 1rem; width: 100%"
-                        >
-                          <label
-                            class="custom-radio-label"
-                            style="flex: 1 1 50%; justify-content: center"
-                          >
-                            <input
-                              type="radio"
-                              name="collaboration"
-                              value="previous"
-                              class="required"
-                            />
-                            <span class="custom-radio-indicator"></span>
-                            شغل قبلی
-                          </label>
-                          <label
-                            class="custom-radio-label"
-                            style="flex: 1 1 50%; justify-content: center"
-                          >
-                            <input
-                              type="radio"
-                              name="collaboration"
-                              value="current"
-                              checked
-                              class="required"
-                            />
-                            <span class="custom-radio-indicator"></span>
-                            شغل فعلی
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3" id="reasonDiv" style="display: none;">
-                        <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> علت ترک فعالیت</label
+                          ><span style="color: #ff4d4f">*</span>رشته تحصیلی</label
                         >
                         <input
                           type="text"
-                          class="form-control"
-                          name="leave_reason"
-                          placeholder="علت ترک فعالیت"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span>کارمند سابق سازمان قضا هستم 
-                          </label
-                        >
-                        <div
-                          class="custom-radio-group"
-                          style="display: flex; gap: 1rem; width: 100%"
-                        >
-                          <label
-                            class="custom-radio-label"
-                            style="flex: 1 1 50%; justify-content: center"
-                          >
-                            <input
-                              type="radio"
-                              name="qaza"
-                              value="yes"
-                              class="required"
-                            />
-                            <span class="custom-radio-indicator"></span>
-                            بله 
-                          </label>
-                          <label
-                            class="custom-radio-label"
-                            style="flex: 1 1 50%; justify-content: center"
-                          >
-                            <input
-                              type="radio"
-                              name="qaza"
-                              value="no"
-                              checked
-                              class="required"
-                            />
-                            <span class="custom-radio-indicator"></span>
-                            خیر 
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> مدت زمان همکاری (ماه)</label
-                        >
-                        <input
-                          type="number"
                           class="form-control required"
                           name="employment_duration"
-                          placeholder="تعداد ماه"
-                          min="1"
-                        />
+                          placeholder="حقوق یا رواشناسی یا ..."
+                                                  />
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> تلفن محل کار</label
-                        >
+                          ><span style="color: #ff4d4f">*</span>گرایش</label>
                         <input
                           type="text"
                           class="form-control required"
                           name="work_phone"
-                          placeholder="مثال: 02112345678"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> وضعیت استخدامی</label
-                        >
+                          ><span style="color: #ff4d4f">*</span>نوع دانشگاه</label>
                         <select class="form-select required" name="employment_status">
                           <option value="">انتخاب کنید</option>
-                          <option value="official">رسمی</option>
-                          <option value="contract">قراردادی</option>
-                          <option value="temporary">موقت</option>
-                          <option value="part_time">پاره وقت</option>
-                          <option value="other">سایر</option>
                         </select>
                       </div>
-                      <div class="col-12 mb-3">
+                      <div class="col-md-6 mb-3">
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> نشانی محل کار</label
-                        >
-                        <textarea
+                          ><span style="color: #ff4d4f">*</span>نام دانشگاه</label>
+                        <input
+                          type="text"
                           class="form-control required"
-                          name="work_address"
-                          rows="3"
-                          placeholder="نشانی کامل محل کار"
-                        ></textarea>
+                          name="work_phone"
+                        />
                       </div>
-                      <div class="col-12 mb-3">
-                        <label class="form-label">توضیحات</label>
-                        <textarea
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span>سال ورود</label>
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="work_phone"
+                          placeholder="۱۳۹۵"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span>سال فارغ التحصیلی</label>
+                        <input
+                          type="text"
                           class="form-control"
-                          name="description"
-                          rows="4"
-                          placeholder="توضیحات اضافی (اختیاری)"
-                        ></textarea>
+                          name="work_phone"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label class="form-label"
+                          ><span style="color: #ff4d4f">*</span>معدل تا کنون</label>
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="work_phone"
+                        />
+                      </div>
+                      <div class="col-md-12 mb-3">
+                        <label class="form-label"
+                          ><span></span>آدرس</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="work_phone"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label"
+                          ><span></span>تلفن داشنگاه</label>
+                        <input
+                          type="text"
+                          class="form-control required"
+                          name="work_phone"
+                        />
                       </div>
                     </div>
-                    
-                    <div class="alert alert-info mt-4">
-                      <h6 class="alert-heading">تذکر مهم:</h6>
-                      <p class="mb-0">در صورت داشتن هر یک از شرایط ذیل حتما موردی که شامل شما می شود را علامت بزنید:</p>
-                    </div>
-                    
-                    <div class="row mt-3">
-                      <div class="col-md-6 mb-3">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="legal_intern" id="legalIntern">
-                          <label class="form-check-label" for="legalIntern">
-                            کارآموز وکالت (کانون وکلا)
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="legal_license" id="legalLicense">
-                          <label class="form-check-label" for="legalLicense">
-                            دارای پروانه وکالت (کانون وکلا)
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="legal_consultant_intern" id="legalConsultantIntern">
-                          <label class="form-check-label" for="legalConsultantIntern">
-                            کارآموز مشاوران حقوقی (ماده ۱۸۷)
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="legal_consultant_license" id="legalConsultantLicense">
-                          <label class="form-check-label" for="legalConsultantLicense">
-                            دارای پروانه مشاوران حقوقی (ماده ۱۸۷)
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    
+    
                     <div class="mt-4">
                       <button
                         type="submit"
@@ -576,23 +466,22 @@
     <script>
       // تعریف مسیرهای صفحات برای navigation
       const pageRoutes = [
-        "executive-records.html",
-        "selection-records.html",
-        "basij-membership.html",
-        "organizational-records.html",
-        "final.html"
+        "university.html",
+        "hawzeh.html",
+        "unfinished.html",
+        "professional_certificates.html",
+        "final.html",
 
       ];
 
       // تعریف مراحل برای صفحه contact
       const stepTitles = [
-        "سوابق شغلی",
-        "سوابق گزینش در سایر نهاد ها",
-        "سوابق عضویت در بسیج",
-        "سوابق تشکیلاتی",
+        "سوابق تحصیلات دانشگاهی",
+        "سوابق تحصیلات حوزوی",
+        "سوابق تحصلات ناتمام",
+        "افتخارات علمی و گواهینامه های تخصصی",
         "ثبت نهایی"
       ];
-      const jobs =[]
       const totalSteps = stepTitles.length;
       let currentStep = 1; // شروع از مرحله اول
 
@@ -651,49 +540,7 @@
           container.appendChild(dotsNext);
         }
       };
-      const job =[]
-      
-      // تابع نمایش/مخفی کردن فیلد علت ترک فعالیت
-      function toggleReasonField() {
-        const collaborationRadios = document.querySelectorAll('input[name="collaboration"]');
-        const reasonDiv = document.getElementById('reasonDiv');
-        const reasonInput = reasonDiv.querySelector('input[name="leave_reason"]');
-        
-        collaborationRadios.forEach(radio => {
-          radio.addEventListener('change', function() {
-            if (this.value === 'previous') {
-              reasonDiv.style.display = 'block';
-              reasonInput.classList.add('required');
-            } else {
-              reasonDiv.style.display = 'none';
-              reasonInput.classList.remove('required');
-              reasonInput.value = '';
-            }
-          });
-        });
-      }
-      
-      // تابع مدیریت چک‌باکس‌های متقابل
-      function handleMutualCheckboxes(checkedCheckbox, otherCheckbox) {
-        if (checkedCheckbox.checked) {
-          otherCheckbox.checked = false;
-        }
-      }
-      
-      // تابع ثبت سابقه شغلی
-      function saveJobRecord() {
-        const form = document.getElementById('jobForm');
-        const formData = new FormData(form);
-        
-       
-        // پاک کردن فرم
-        form.reset();
-        document.getElementById('reasonDiv').style.display = 'none';
-        document.getElementById('employmentDurationInput').style.display = 'none';
-        
-        console.log('سوابق شغلی ثبت شده:', job);
-      }
-      
+ 
       // اجرای stepper هنگام بارگذاری صفحه
       document.addEventListener("DOMContentLoaded", function () {
         renderStepper();
@@ -703,7 +550,7 @@
       });
       const btnYes = document.getElementById("btnYes");
         const btnNo = document.getElementById("btnNo");
-        const form = document.getElementById("jobForm");
+        const form = document.getElementById("universityForm");
         btnYes.addEventListener("click", function () {
           form.style.display = "block";
           btnYes.classList.add("active");

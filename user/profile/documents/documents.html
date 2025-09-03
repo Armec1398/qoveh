@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="داشبورد ادمین - سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا"
+    />
+    <title>داشبورد ادمین</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../static/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../../../static/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="../../../static/fonts/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="../../../static/fonts/fontawesome5-overrides.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../../../static/css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../static/css/dashboard.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../static/css/IRANSans.css"
+    />
+  </head>
+
+  <body>
+    <div id="wrapper" class="dashboard-container position-relative">
+      <nav
+        class="navbar align-items-start sidebar sidebar-light accordion p-0 m-0 navbar-dark py-4"
+        style="flex-wrap: nowrap"
+      >
+        <div
+          class="container-fluid d-flex flex-column p-0 w-full align-items-center mx-auto"
+        >
+          <span id="closeSidebar" class="close-sidebar d-block d-lg-none"
+            >×</span
+          >
+          <div
+            class="navbar-brand d-flex justify-content-center align-items-center flex-column m-0 w-100"
+          >
+            <div class="text-center my-3">
+              <img
+                class="w-50 mb-1"
+                src="../../../static/img/logo.jpeg"
+                style="mix-blend-mode: multiply"
+              />
+              <div class="nastaligh primary-color" style="font-size: 17px">
+                معاونت منابع انسانی
+              </div>
+            </div>
+          </div>
+          <hr class="sidebar-divider my-0" />
+          <ul
+            class="navbar-nav text-light w-100 ps-3 gap-2"
+            id="accordionSidebar"
+          >
+            <li class="nav-item active">
+              <a
+                class="nav-link rounded-small"
+                href="../../../dashboard-user.html"
+              >
+                <i class="fa fa-home"></i>
+                <span>داشبورد</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link rounded-small"
+                href="../../../admin/dashboard-admin.html"
+              >
+                <i class="fa fa-home"></i>
+                <span>داشبورد ادمین</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../../login.html">
+                <i class="fa fa-home"></i>
+                <span>ورود/عضویت</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی دوم</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی سوم</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی چهارم</span></a
+              >
+            </li>
+            <div class="divider-sidebar my-2">
+              <span>پروفایل کاربر</span>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../personal.html">
+                <i class="fa fa-user"></i>
+                <span>اطلاعات فردی</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../contact.html">
+                <i class="fa fa-phone"></i>
+                <span>اطلاعات تماس</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link rounded-small" href="job.html">
+                <i class="fa fa-tv"></i>
+                <span>سوابق اجرایی</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../addict_history.html">
+                <i class="fa fa-history"></i>
+                <span>سوابق شغلی</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../criminal_records.html">
+                <i class="fa fa-gavel"></i>
+                <span>سوابق گزینش در سایر نهادها</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../disciplinarycommittee.html">
+                <i class="fa fa-users"></i>
+                <span>سوابق عضویت در بسیج</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../family.html">
+                <i class="fa fa-home"></i>
+                <span>سوابق تشکیلاتی</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../final.html">
+                <i class="fa fa-check-circle"></i>
+                <span>ثبت نهایی</span></a
+              >
+            </li>
+          </ul>
+          <div
+            class="my-2 d-flex justify-content-center align-items-center gap-3 flex-row"
+          >
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../../../static/img/eitaa.webp"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../../../static/img/sorush.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../../../static/img/bale.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../../../static/img/igap.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="d-flex flex-column pb-4 bg-white"
+        id="content-wrapper"
+        style="border-right: 1px solid #e9eced"
+      >
+        <div id="content">
+          <nav
+            class="navbar navbar-expand bg-white mb-3 topbar static-top navbar-light px-md-3"
+            style="border-right: 0"
+          >
+            <div class="container-fluid px-1 px-lg-4">
+              <button
+                class="btn bg-transparent border-0 d-flex d-lg-none rounded-circle me-lg-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i
+                  class="fa fa-bars text-black font-size-medium"
+                  style="margin-top: 4px"
+                ></i>
+              </button>
+              <div id="overlay" class="overlay"></div>
+              <div class="ms-auto">
+                <a
+                  class="d-flex justify-content-center align-items-center rounded-medium"
+                  href="#"
+                  style="border: 0; text-decoration: none"
+                  ><img
+                    class="ms-2 d-none d-lg-block"
+                    src="../../../static/img/user.png"
+                    style="width: 40px; height: 40px; color: #fff"
+                  />
+                  <p class="text-black d-flex">
+                    <span style="display: inline-block; margin-bottom: 7px"
+                      >محمدرضا آرمانیان</span
+                    >
+                  </p>
+                </a>
+              </div>
+              <ul class="navbar-nav flex-nowrap d-flex">
+                <li class="nav-item dropdown no-arrow d-flex flex-row gap-2">
+                  <a
+                    class="btn text-black bg-transparent border-0 d-flex justify-content-center align-items-center py-2 px-2 position-relative"
+                    role="button"
+                    href="#"
+                    ><i class="fa fa-bell text-black font-size-medium"></i
+                    ><span
+                      class="badge bg-danger rounded-circle d-flex justify-content-center align-items-center position-absolute"
+                      style="width: 16px; height: 16px; top: -5px; right: 10%"
+                      >3</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container px-3 px-sm-4">
+            <div class="row d-flex mb-3 mb-md-4">
+              <div class="col-lg-12 px-sm-3">
+                <div class="stepper-container" id="stepper"></div>
+              </div>
+            </div>
+            <div class="row d-flex mb-3">
+              <div class="col-lg-12 px-sm-3">
+                <div class="">
+                  <h1 class="text-black main-heading mb-0">مدارک شناسایی</h1>
+                </div>
+              </div>
+            </div>
+            <div class="row d-flex">
+              <div class="col-lg-12 px-sm-3">
+                <div
+                  class="content bg-white shadow-sm rounded-medium py-2 py-sm-4 px-3 px-sm-4"
+                >
+                
+
+                  <form id="documentsForm">
+                    <h5 class="divider-title primary-color mb-4">
+                      <span>مدارک شناسایی</span>
+                    </h5>
+                    
+                    <!-- صفحه اول شناسنامه -->
+                    <div class="mb-4 p-3 border rounded">
+                      <label class="form-label fw-bold text-primary">صفحه اول شناسنامه</label>
+                      <div class="d-flex gap-3 align-items-center">
+                        <div style="position: relative;">
+                          <input type="file" id="file_birth1" accept=".pdf,.jpg,.jpeg,.png"
+                                 style="position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer;"
+                                 onchange="showDocPreview('birth1')">
+                          <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('file_birth1').click();">
+                            <i class="fa fa-upload me-2"></i>انتخاب فایل
+                          </button>
+                        </div>
+                        <div id="preview_birth1" class="flex-grow-1" style="min-height: 50px;"></div>
+                      </div>
+                    </div>
+
+                    <!-- صفحه دوم شناسنامه -->
+                    <div class="mb-4 p-3 border rounded">
+                      <label class="form-label fw-bold text-primary">صفحه دوم شناسنامه</label>
+                      <div class="d-flex gap-3 align-items-center">
+                        <div style="position: relative;">
+                          <input type="file" id="file_birth2" accept=".pdf,.jpg,.jpeg,.png"
+                                 style="position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer;"
+                                 onchange="showDocPreview('birth2')">
+                          <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('file_birth2').click();">
+                            <i class="fa fa-upload me-2"></i>انتخاب فایل
+                          </button>
+                        </div>
+                        <div id="preview_birth2" class="flex-grow-1"></div>
+                      </div>
+                    </div>
+
+                    <!-- صفحه سوم شناسنامه -->
+                    <div class="mb-4 p-3 border rounded">
+                      <label class="form-label fw-bold text-primary">صفحه سوم شناسنامه</label>
+                      <div class="d-flex gap-3 align-items-center">
+                        <div style="position: relative;">
+                          <input type="file" id="file_birth3" accept=".pdf,.jpg,.jpeg,.png"
+                                 style="position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer;"
+                                 onchange="showDocPreview('birth3')">
+                          <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('file_birth3').click();">
+                            <i class="fa fa-upload me-2"></i>انتخاب فایل
+                          </button>
+                        </div>
+                        <div id="preview_birth3" class="flex-grow-1"></div>
+                      </div>
+                    </div>
+
+                    <!-- صفحه چهارم شناسنامه -->
+                    <div class="mb-4 p-3 border rounded">
+                      <label class="form-label fw-bold text-primary">صفحه چهارم شناسنامه</label>
+                      <div class="d-flex gap-3 align-items-center">
+                        <div style="position: relative;">
+                          <input type="file" id="file_birth4" accept=".pdf,.jpg,.jpeg,.png"
+                                 style="position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer;"
+                                 onchange="showDocPreview('birth4')">
+                          <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('file_birth4').click();">
+                            <i class="fa fa-upload me-2"></i>انتخاب فایل
+                          </button>
+                        </div>
+                        <div id="preview_birth4" class="flex-grow-1"></div>
+                      </div>
+                    </div>
+
+                    <!-- عکس روی کارت ملی -->
+                    <div class="mb-4 p-3 border rounded">
+                      <label class="form-label fw-bold text-primary">عکس روی کارت ملی</label>
+                      <div class="d-flex gap-3 align-items-center">
+                        <div style="position: relative;">
+                          <input type="file" id="file_melli_front" accept=".pdf,.jpg,.jpeg,.png"
+                                 style="position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer;"
+                                 onchange="showDocPreview('melli_front')">
+                          <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('file_melli_front').click();">
+                            <i class="fa fa-upload me-2"></i>انتخاب فایل
+                          </button>
+                        </div>
+                        <div id="preview_melli_front" class="flex-grow-1"></div>
+                      </div>
+                    </div>
+
+                    <!-- عکس پشت کارت ملی -->
+                    <div class="mb-4 p-3 border rounded">
+                      <label class="form-label fw-bold text-primary">عکس پشت کارت ملی</label>
+                      <div class="d-flex gap-3 align-items-center">
+                        <div style="position: relative;">
+                          <input type="file" id="file_melli_back" accept=".pdf,.jpg,.jpeg,.png"
+                                 style="position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer;"
+                                 onchange="showDocPreview('melli_back')">
+                          <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('file_melli_back').click();">
+                            <i class="fa fa-upload me-2"></i>انتخاب فایل
+                          </button>
+                        </div>
+                        <div id="preview_melli_back" class="flex-grow-1"></div>
+                      </div>
+                    </div>
+
+                    <!-- کارت یا مدرک پایان خدمت -->
+                    <div class="mb-4 p-3 border rounded">
+                      <label class="form-label fw-bold text-primary">کارت یا مدرک پایان خدمت</label>
+                      <div class="d-flex gap-3 align-items-center">
+                        <div style="position: relative;">
+                          <input type="file" id="file_military" accept=".pdf,.jpg,.jpeg,.png"
+                                 style="position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer;"
+                                 onchange="showDocPreview('military')">
+                          <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('file_military').click();">
+                            <i class="fa fa-upload me-2"></i>انتخاب فایل
+                          </button>
+                        </div>
+                        <div id="preview_military" class="flex-grow-1"></div>
+                      </div>
+                    </div>
+
+                    <!-- مدرک تحصیلی -->
+                    <div class="mb-4 p-3 border rounded">
+                      <label class="form-label fw-bold text-primary">مدرک تحصیلی</label>
+                      <div class="d-flex gap-3 align-items-center">
+                        <div style="position: relative;">
+                          <input type="file" id="file_degree" accept=".pdf,.jpg,.jpeg,.png"
+                                 style="position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer;"
+                                 onchange="showDocPreview('degree')">
+                          <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('file_degree').click();">
+                            <i class="fa fa-upload me-2"></i>انتخاب فایل
+                          </button>
+                        </div>
+                        <div id="preview_degree" class="flex-grow-1"></div>
+                      </div>
+                    </div>
+
+                    <!-- Progress Bar برای آپلود -->
+                    <div id="uploadProgressContainer" class="mb-4" style="display: none;">
+                      <div class="card">
+                        <div class="card-header bg-primary text-white">
+                          <h6 class="mb-0">در حال آپلود فایل‌ها...</h6>
+                        </div>
+                        <div class="card-body">
+                          <div class="progress mb-3">
+                            <div id="uploadProgressBar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                              0%
+                            </div>
+                          </div>
+                          <div id="uploadStatus" class="text-muted">آماده برای آپلود...</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- دکمه آپلود همه -->
+                    <div class="mt-4 text-center">
+                      <button type="button" class="btn btn-success btn-lg px-5" onclick="uploadAllDocuments()">
+                        <i class="fa fa-cloud-upload me-2"></i>آپلود همه مدارک
+                      </button>
+                    </div>
+
+                    <!-- دکمه بعدی -->
+                    <div class="mt-3 text-center">
+                      <button type="button" class="btn btn-secondary px-4 next-btn" onclick="window.location.href='other-documents.html'">
+                        بعدی
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../../static/js/jquery-3.7.1.min.js"></script>
+    <script src="../../../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../static/js/theme.js"></script>
+    <script src="../../../static/js/dashboard.js"></script>
+    <script src="../../../static/js/formcontrol.js"></script>
+
+    <script>
+      // تعریف مسیرهای صفحات برای navigation
+      const pageRoutes = [
+        "documents.html",
+        "other-documents.html",
+        "../final.html",
+
+      ];
+
+      // تعریف مراحل برای صفحه contact
+      const stepTitles = [
+        "مدارک شناسایی",
+        "سایر مدارک",
+        "ثبت نهایی"
+      ];
+      const totalSteps = stepTitles.length;
+      let currentStep = 1; // شروع از مرحله اول
+
+      // تابع navigation برای رفتن به مرحله بعدی
+      function goToNextStep() {
+        if (currentStep < totalSteps) {
+          window.location.href = pageRoutes[currentStep];
+        }
+      }
+
+      // تابع navigation برای رفتن به مرحله قبلی
+      function goToPreviousStep() {
+        if (currentStep > 1) {
+          window.location.href = pageRoutes[currentStep - 2];
+        }
+      }
+
+      const renderStepper = () => {
+        const container = document.getElementById("stepper");
+        container.innerHTML = "";
+
+        if (currentStep > 2) {
+          const dotsPrev = document.createElement("div");
+          dotsPrev.className = "step dots";
+          dotsPrev.textContent = "مرحله قبل";
+          dotsPrev.addEventListener("click", goToPreviousStep);
+          container.appendChild(dotsPrev);
+        }
+
+        if (currentStep > 1) {
+          const prev = document.createElement("div");
+          prev.className = "step prev";
+          prev.textContent = stepTitles[currentStep - 2];
+          prev.addEventListener("click", goToPreviousStep);
+          container.appendChild(prev);
+        }
+
+        const curr = document.createElement("div");
+        curr.className = "step current";
+        curr.textContent = stepTitles[currentStep - 1];
+        container.appendChild(curr);
+
+        if (currentStep < totalSteps) {
+          const next = document.createElement("div");
+          next.className = "step next";
+          next.textContent = stepTitles[currentStep];
+          next.addEventListener("click", goToNextStep);
+          container.appendChild(next);
+        }
+
+        if (currentStep < totalSteps - 1) {
+          const dotsNext = document.createElement("div");
+          dotsNext.className = "step dots";
+          dotsNext.textContent = "مرحله بعد";
+          dotsNext.addEventListener("click", goToNextStep);
+          container.appendChild(dotsNext);
+        }
+      };
+ 
+      // آرایه فایل‌های مدارک
+      const docFiles = {
+        birth1: null,
+        birth2: null,
+        birth3: null,
+        birth4: null,
+        melli_front: null,
+        melli_back: null,
+        military: null,
+        degree: null
+      };
+      const docDataUrls = {};
+
+      // تابع تبدیل اندازه فایل
+      function formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+      }
+
+      // تابع نمایش پیش‌نمایش فایل انتخاب شده
+      function showDocPreview(key) {
+        console.log('showDocPreview called for key:', key);
+        const input = document.getElementById('file_' + key);
+        const file = input.files[0];
+        const preview = document.getElementById('preview_' + key);
+
+        console.log('File selected:', file);
+        console.log('Preview element:', preview);
+
+        if (!file) {
+          preview.innerHTML = '';
+          docFiles[key] = null;
+          docDataUrls[key] = null;
+          return;
+        }
+
+        // بررسی نوع فایل
+        const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg', 'image/jpg', 'image/png'];
+        if (!allowedTypes.includes(file.type)) {
+          alert('فقط فایل‌های PDF، Word، JPG و PNG مجاز هستند.');
+          input.value = '';
+          return;
+        }
+
+        // بررسی اندازه فایل (حداکثر 5MB)
+        if (file.size > 5 * 1024 * 1024) {
+          alert('حجم فایل نباید بیشتر از 5 مگابایت باشد.');
+          input.value = '';
+          return;
+        }
+
+        docFiles[key] = file;
+
+        if (file.type.startsWith('image/')) {
+          console.log('Processing image file:', file.name, file.type);
+          // نمایش پیش‌نمایش عکس بزرگ‌تر
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            console.log('FileReader loaded, result:', e.target.result.substring(0, 50) + '...');
+            docDataUrls[key] = e.target.result;
+            const html = `
+              <div class="d-flex align-items-center gap-3">
+                <div style="position: relative; display: inline-block;">
+                  <img src="${e.target.result}" style="width: 120px; height: 120px; object-fit: cover; border-radius: 12px; border: 2px solid #dee2e6; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                  <button type="button" class="btn btn-sm btn-danger" style="position: absolute; top: -8px; right: -8px; width: 24px; height: 24px; border-radius: 50%; padding: 0; font-size: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" onclick="removeDocFile('${key}')">×</button>
+                </div>
+                <div>
+                  <div class="fw-bold text-success">${file.name}</div>
+                  <small class="text-muted">${formatFileSize(file.size)}</small>
+                </div>
+              </div>
+            `;
+            console.log('Setting preview HTML:', html);
+            preview.innerHTML = html;
+          };
+          reader.onerror = function(e) {
+            console.error('FileReader error:', e);
+          };
+          reader.readAsDataURL(file);
+        } else if (file.type === 'application/pdf') {
+          // نمایش آیکون PDF بزرگ‌تر
+          docDataUrls[key] = null;
+          preview.innerHTML = `
+            <div class="d-flex align-items-center gap-3">
+              <div style="position: relative; display: inline-block;">
+                <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px; border: 2px solid #dee2e6; display: flex; align-items: center; justify-content: center; font-size: 48px; color: #dc3545; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                  <i class="fa fa-file-pdf-o"></i>
+                </div>
+                <button type="button" class="btn btn-sm btn-danger" style="position: absolute; top: -8px; right: -8px; width: 24px; height: 24px; border-radius: 50%; padding: 0; font-size: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" onclick="removeDocFile('${key}')">×</button>
+              </div>
+              <div>
+                <div class="fw-bold text-success">${file.name}</div>
+                <small class="text-muted">${formatFileSize(file.size)}</small>
+              </div>
+            </div>
+          `;
+        } else {
+          // نمایش آیکون Word بزرگ‌تر
+          docDataUrls[key] = null;
+          preview.innerHTML = `
+            <div class="d-flex align-items-center gap-3">
+              <div style="position: relative; display: inline-block;">
+                <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px; border: 2px solid #dee2e6; display: flex; align-items: center; justify-content: center; font-size: 48px; color: #0d6efd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                  <i class="fa fa-file-word-o"></i>
+                </div>
+                <button type="button" class="btn btn-sm btn-danger" style="position: absolute; top: -8px; right: -8px; width: 24px; height: 24px; border-radius: 50%; padding: 0; font-size: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);" onclick="removeDocFile('${key}')">×</button>
+              </div>
+              <div>
+                <div class="fw-bold text-success">${file.name}</div>
+                <small class="text-muted">${formatFileSize(file.size)}</small>
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      // تابع حذف فایل انتخاب شده
+      function removeDocFile(key) {
+        document.getElementById('file_' + key).value = '';
+        document.getElementById('preview_' + key).innerHTML = '';
+        docFiles[key] = null;
+        docDataUrls[key] = null;
+      }
+
+      // تابع آپلود همه مدارک
+      function uploadAllDocuments() {
+        const selectedFiles = Object.keys(docFiles).filter(key => docFiles[key] !== null);
+        
+        if (selectedFiles.length === 0) {
+          alert('لطفاً حداقل یک فایل انتخاب کنید.');
+          return;
+        }
+
+        // نمایش progress bar
+        const progressContainer = document.getElementById('uploadProgressContainer');
+        const progressBar = document.getElementById('uploadProgressBar');
+        const uploadStatus = document.getElementById('uploadStatus');
+        const uploadBtn = document.querySelector('button[onclick="uploadAllDocuments()"]');
+        
+        progressContainer.style.display = 'block';
+        uploadBtn.disabled = true;
+        uploadStatus.textContent = 'آماده برای آپلود...';
+        
+        let uploadedCount = 0;
+        const totalFiles = selectedFiles.length;
+        
+        // شبیه‌سازی آپلود همه فایل‌ها
+        selectedFiles.forEach((key, index) => {
+          setTimeout(() => {
+            // آپلود فایل
+            console.log(`آپلود فایل ${key}: ${docFiles[key].name}`);
+            
+            // به‌روزرسانی progress bar
+            uploadedCount++;
+            const progress = (uploadedCount / totalFiles) * 100;
+            progressBar.style.width = progress + '%';
+            progressBar.textContent = Math.round(progress) + '%';
+            uploadStatus.textContent = `در حال آپلود فایل ${uploadedCount} از ${totalFiles}: ${docFiles[key].name}`;
+            
+            // اگر همه فایل‌ها آپلود شدند
+            if (uploadedCount === totalFiles) {
+              setTimeout(() => {
+                progressBar.classList.add('bg-success');
+                uploadStatus.textContent = 'همه فایل‌ها با موفقیت آپلود شدند!';
+                
+                // مخفی کردن progress bar بعد از 3 ثانیه
+                setTimeout(() => {
+                  progressContainer.style.display = 'none';
+                  progressBar.classList.remove('bg-success');
+                  progressBar.style.width = '0%';
+                  progressBar.textContent = '0%';
+                  uploadBtn.disabled = false;
+                  
+                  // پاک کردن همه فایل‌ها بعد از آپلود موفق
+                  Object.keys(docFiles).forEach(key => {
+                    removeDocFile(key);
+                  });
+                }, 3000);
+              }, 500);
+            }
+          }, index * 1500); // هر فایل با 1.5 ثانیه تاخیر
+        });
+      }
+
+      // تابع تست ساده برای نمایش فایل
+      function testFilePreview(key) {
+        const input = document.getElementById('file_' + key);
+        const file = input.files[0];
+        const preview = document.getElementById('preview_' + key);
+        
+        if (file) {
+          preview.innerHTML = `<div class="alert alert-success">فایل انتخاب شد: ${file.name}</div>`;
+        }
+      }
+
+      // اجرای stepper هنگام بارگذاری صفحه
+      document.addEventListener("DOMContentLoaded", function () {
+        renderStepper();
+        console.log('Page loaded, DOM ready');
+      });
+    </script>
+  </body>
+</html>

@@ -271,7 +271,7 @@
             <div class="row d-flex mb-3">
               <div class="col-lg-12 px-sm-3">
                 <div class="">
-                  <h1 class="text-black main-heading mb-0">سوابق شغلی</h1>
+                  <h1 class="text-black main-heading mb-0">افتخارات علمی و گواهینامه های تخصصی</h1>
                 </div>
               </div>
             </div>
@@ -294,8 +294,8 @@
                   <div class="col-12">
                     <div class="text-center">
                       <h6 class="mb-3 text-black">
-                        آیا دارای سوابق شغلی هستید؟
-                      </h6>
+                        آیا از افتخارات علمی یا گواهینامه تخصصی بهره مند هستید؟
+                    </h6>
                       <div class="d-flex justify-content-center gap-3">
                         <button
                           type="button"
@@ -316,220 +316,72 @@
                 </div>
                    
                   </div>
-                  <form id="jobForm" style="display: none;">
+                  <form id="unfinishedForm">
                     <h5 class="divider-title primary-color mb-4">
-                      <span>اطلاعات شغلی</span>
+                      <span>اطلاعات گواهینامه یا افتخارات علمی</span>
                     </h5>
                     <div class="row">
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> نام محل کار</label
-                        >
-                        <input
-                          id="workplace_name"
-                          type="text"
-                          class="form-control required"
-                          name="workplace_name"
-                          placeholder="نام محل کار"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> عنوان شغلی</label
-                        >
-                        <input
-                          id="job_title"
-                          type="text"
-                          class="form-control required"
-                          name="job_title"
-                          placeholder="عنوان شغلی"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> زمان همکاری
-                          </label
-                        >
-                        <div
-                          class="custom-radio-group"
-                          style="display: flex; gap: 1rem; width: 100%"
-                        >
-                          <label
-                            class="custom-radio-label"
-                            style="flex: 1 1 50%; justify-content: center"
-                          >
-                            <input
-                              type="radio"
-                              name="collaboration"
-                              value="previous"
-                              class="required"
-                            />
-                            <span class="custom-radio-indicator"></span>
-                            شغل قبلی
-                          </label>
-                          <label
-                            class="custom-radio-label"
-                            style="flex: 1 1 50%; justify-content: center"
-                          >
-                            <input
-                              type="radio"
-                              name="collaboration"
-                              value="current"
-                              checked
-                              class="required"
-                            />
-                            <span class="custom-radio-indicator"></span>
-                            شغل فعلی
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3" id="reasonDiv" style="display: none;">
-                        <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> علت ترک فعالیت</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="leave_reason"
-                          placeholder="علت ترک فعالیت"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span>کارمند سابق سازمان قضا هستم 
-                          </label
-                        >
-                        <div
-                          class="custom-radio-group"
-                          style="display: flex; gap: 1rem; width: 100%"
-                        >
-                          <label
-                            class="custom-radio-label"
-                            style="flex: 1 1 50%; justify-content: center"
-                          >
-                            <input
-                              type="radio"
-                              name="qaza"
-                              value="yes"
-                              class="required"
-                            />
-                            <span class="custom-radio-indicator"></span>
-                            بله 
-                          </label>
-                          <label
-                            class="custom-radio-label"
-                            style="flex: 1 1 50%; justify-content: center"
-                          >
-                            <input
-                              type="radio"
-                              name="qaza"
-                              value="no"
-                              checked
-                              class="required"
-                            />
-                            <span class="custom-radio-indicator"></span>
-                            خیر 
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> مدت زمان همکاری (ماه)</label
-                        >
-                        <input
-                          type="number"
-                          class="form-control required"
-                          name="employment_duration"
-                          placeholder="تعداد ماه"
-                          min="1"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> تلفن محل کار</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control required"
-                          name="work_phone"
-                          placeholder="مثال: 02112345678"
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> وضعیت استخدامی</label
-                        >
-                        <select class="form-select required" name="employment_status">
-                          <option value="">انتخاب کنید</option>
-                          <option value="official">رسمی</option>
-                          <option value="contract">قراردادی</option>
-                          <option value="temporary">موقت</option>
-                          <option value="part_time">پاره وقت</option>
-                          <option value="other">سایر</option>
-                        </select>
-                      </div>
-                      <div class="col-12 mb-3">
-                        <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> نشانی محل کار</label
-                        >
-                        <textarea
-                          class="form-control required"
-                          name="work_address"
-                          rows="3"
-                          placeholder="نشانی کامل محل کار"
-                        ></textarea>
-                      </div>
-                      <div class="col-12 mb-3">
-                        <label class="form-label">توضیحات</label>
-                        <textarea
-                          class="form-control"
-                          name="description"
-                          rows="4"
-                          placeholder="توضیحات اضافی (اختیاری)"
-                        ></textarea>
-                      </div>
+                          <div class="col-md-12 mb-3">
+                            <p>مقامات علمی - افتخارات و گواهینامه های تخصصی</p>
+                            <div class="d-flex gap-2 mb-3">
+                              <div style="position: relative;">
+                                <input
+                                  type="file"
+                                  id="fileInput"
+                                  accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                                  style="position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer;"
+                                  onchange="showFilePreview()"
+                                >
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-primary px-4"
+                                  style="pointer-events: none;"
+                                >
+                                  انتخاب فایل
+                                </button>
+                              </div>
+                              <button
+                                type="button"
+                                class="btn btn-primary px-4"
+                                id="uploadBtn"
+                                onclick="uploadFile()"
+                                disabled
+                              >
+                                آپلود
+                              </button>
+                            </div>
+                            
+                            <!-- پیش‌نمایش فایل انتخاب شده -->
+                            <div id="filePreview" class="mb-3" style="display: none;">
+                              <!-- پیش‌نمایش فایل اینجا نمایش داده می‌شود -->
+                            </div>
+                            
+                            <!-- Progress Bar -->
+                            <div id="progressContainer" style="display: none;" class="mb-3">
+                              <div class="progress">
+                                <div 
+                                  class="progress-bar" 
+                                  id="progressBar" 
+                                  role="progressbar" 
+                                  style="width: 0%" 
+                                  aria-valuenow="0" 
+                                  aria-valuemin="0" 
+                                  aria-valuemax="100"
+                                >
+                                  0%
+                                </div>
+                              </div>
+                              <small class="text-muted" id="progressText">در حال آپلود...</small>
+                            </div>
+                            
+                            <!-- فایل‌های آپلود شده -->
+                            <div id="uploadedFiles" class="mt-3">
+                              <!-- فایل‌های آپلود شده اینجا نمایش داده می‌شوند -->
+                            </div>
+                          </div>
+
                     </div>
-                    
-                    <div class="alert alert-info mt-4">
-                      <h6 class="alert-heading">تذکر مهم:</h6>
-                      <p class="mb-0">در صورت داشتن هر یک از شرایط ذیل حتما موردی که شامل شما می شود را علامت بزنید:</p>
-                    </div>
-                    
-                    <div class="row mt-3">
-                      <div class="col-md-6 mb-3">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="legal_intern" id="legalIntern">
-                          <label class="form-check-label" for="legalIntern">
-                            کارآموز وکالت (کانون وکلا)
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="legal_license" id="legalLicense">
-                          <label class="form-check-label" for="legalLicense">
-                            دارای پروانه وکالت (کانون وکلا)
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="legal_consultant_intern" id="legalConsultantIntern">
-                          <label class="form-check-label" for="legalConsultantIntern">
-                            کارآموز مشاوران حقوقی (ماده ۱۸۷)
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="legal_consultant_license" id="legalConsultantLicense">
-                          <label class="form-check-label" for="legalConsultantLicense">
-                            دارای پروانه مشاوران حقوقی (ماده ۱۸۷)
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    
+    
                     <div class="mt-4">
                       <button
                         type="submit"
@@ -576,25 +428,24 @@
     <script>
       // تعریف مسیرهای صفحات برای navigation
       const pageRoutes = [
-        "executive-records.html",
-        "selection-records.html",
-        "basij-membership.html",
-        "organizational-records.html",
-        "final.html"
+        "university.html",
+        "hawzeh.html",
+        "unfinished.html",
+        "professional_certificates.html",
+        "final.html",
 
       ];
 
       // تعریف مراحل برای صفحه contact
       const stepTitles = [
-        "سوابق شغلی",
-        "سوابق گزینش در سایر نهاد ها",
-        "سوابق عضویت در بسیج",
-        "سوابق تشکیلاتی",
+        "سوابق تحصیلات دانشگاهی",
+        "سوابق تحصیلات حوزوی",
+        "سوابق تحصلات ناتمام",
+        "افتخارات علمی و گواهینامه های تخصصی",
         "ثبت نهایی"
       ];
-      const jobs =[]
       const totalSteps = stepTitles.length;
-      let currentStep = 1; // شروع از مرحله اول
+      let currentStep = 4; // شروع از مرحله اول
 
       // تابع navigation برای رفتن به مرحله بعدی
       function goToNextStep() {
@@ -651,59 +502,247 @@
           container.appendChild(dotsNext);
         }
       };
-      const job =[]
+ 
+      // آرایه فایل‌های آپلود شده
+      let uploadedFiles = [];
+      let selectedFile = null;
+      let selectedFileDataUrl = null;
       
-      // تابع نمایش/مخفی کردن فیلد علت ترک فعالیت
-      function toggleReasonField() {
-        const collaborationRadios = document.querySelectorAll('input[name="collaboration"]');
-        const reasonDiv = document.getElementById('reasonDiv');
-        const reasonInput = reasonDiv.querySelector('input[name="leave_reason"]');
+      // تابع نمایش پیش‌نمایش فایل انتخاب شده
+      function showFilePreview() {
+        const fileInput = document.getElementById('fileInput');
+        const file = fileInput.files[0];
+        const uploadBtn = document.getElementById('uploadBtn');
+        const filePreview = document.getElementById('filePreview');
         
-        collaborationRadios.forEach(radio => {
-          radio.addEventListener('change', function() {
-            if (this.value === 'previous') {
-              reasonDiv.style.display = 'block';
-              reasonInput.classList.add('required');
-            } else {
-              reasonDiv.style.display = 'none';
-              reasonInput.classList.remove('required');
-              reasonInput.value = '';
-            }
-          });
-        });
-      }
-      
-      // تابع مدیریت چک‌باکس‌های متقابل
-      function handleMutualCheckboxes(checkedCheckbox, otherCheckbox) {
-        if (checkedCheckbox.checked) {
-          otherCheckbox.checked = false;
+        if (!file) {
+          filePreview.style.display = 'none';
+          uploadBtn.disabled = true;
+          selectedFile = null;
+          selectedFileDataUrl = null;
+          return;
+        }
+        
+        // بررسی نوع فایل
+        const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg', 'image/jpg', 'image/png'];
+        if (!allowedTypes.includes(file.type)) {
+          alert('فقط فایل‌های PDF، Word، JPG و PNG مجاز هستند.');
+          fileInput.value = '';
+          return;
+        }
+        
+        // بررسی اندازه فایل (حداکثر 5MB)
+        if (file.size > 5 * 1024 * 1024) {
+          alert('حجم فایل نباید بیشتر از 5 مگابایت باشد.');
+          fileInput.value = '';
+          return;
+        }
+        
+        selectedFile = file;
+        selectedFileDataUrl = null;
+        uploadBtn.disabled = false;
+        
+        let previewHtml = '';
+        
+        if (file.type.startsWith('image/')) {
+          // نمایش پیش‌نمایش عکس بزرگ‌تر
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            selectedFileDataUrl = e.target.result;
+            previewHtml = `
+              <div class="d-flex align-items-center gap-3">
+                <div style="position: relative; display: inline-block;">
+                  <img src="${e.target.result}" style="width: 120px; height: 120px; object-fit: cover; border-radius: 8px; border: 1px solid #ddd;">
+                  <button type="button" class="btn btn-sm btn-danger" style="position: absolute; top: -5px; right: -5px; width: 22px; height: 22px; border-radius: 50%; padding: 0; font-size: 14px;" onclick="removeSelectedFile()">×</button>
+                </div>
+                <div>
+                  <strong>${file.name}</strong><br>
+                  <small class="text-muted">${formatFileSize(file.size)}</small>
+                </div>
+              </div>
+            `;
+            filePreview.innerHTML = previewHtml;
+            filePreview.style.display = 'block';
+          };
+          reader.readAsDataURL(file);
+        } else if (file.type === 'application/pdf') {
+          // نمایش آیکون PDF
+          previewHtml = `
+            <div class="d-flex align-items-center gap-3">
+              <div style="position: relative; display: inline-block;">
+                <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 6px; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #dc3545;">
+                  <i class="fa fa-file-pdf-o"></i>
+                </div>
+                <button type="button" class="btn btn-sm btn-danger" style="position: absolute; top: -5px; right: -5px; width: 20px; height: 20px; border-radius: 50%; padding: 0; font-size: 12px;" onclick="removeSelectedFile()">×</button>
+              </div>
+              <div>
+                <strong>${file.name}</strong><br>
+                <small class="text-muted">${formatFileSize(file.size)}</small>
+              </div>
+            </div>
+          `;
+          filePreview.innerHTML = previewHtml;
+          filePreview.style.display = 'block';
+        } else {
+          // نمایش آیکون Word
+          previewHtml = `
+            <div class="d-flex align-items-center gap-3">
+              <div style="position: relative; display: inline-block;">
+                <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 6px; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #0d6efd;">
+                  <i class="fa fa-file-word-o"></i>
+                </div>
+                <button type="button" class="btn btn-sm btn-danger" style="position: absolute; top: -5px; right: -5px; width: 20px; height: 20px; border-radius: 50%; padding: 0; font-size: 12px;" onclick="removeSelectedFile()">×</button>
+              </div>
+              <div>
+                <strong>${file.name}</strong><br>
+                <small class="text-muted">${formatFileSize(file.size)}</small>
+              </div>
+            </div>
+          `;
+          filePreview.innerHTML = previewHtml;
+          filePreview.style.display = 'block';
         }
       }
       
-      // تابع ثبت سابقه شغلی
-      function saveJobRecord() {
-        const form = document.getElementById('jobForm');
-        const formData = new FormData(form);
+      // تابع حذف فایل انتخاب شده
+      function removeSelectedFile() {
+        const fileInput = document.getElementById('fileInput');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const filePreview = document.getElementById('filePreview');
         
-       
-        // پاک کردن فرم
-        form.reset();
-        document.getElementById('reasonDiv').style.display = 'none';
-        document.getElementById('employmentDurationInput').style.display = 'none';
+        fileInput.value = '';
+        filePreview.style.display = 'none';
+        uploadBtn.disabled = true;
+        selectedFile = null;
+        selectedFileDataUrl = null;
+      }
+      
+      // تابع آپلود فایل
+      function uploadFile() {
+        if (!selectedFile) {
+          alert('لطفاً ابتدا یک فایل انتخاب کنید.');
+          return;
+        }
         
-        console.log('سوابق شغلی ثبت شده:', job);
+        // نمایش progress bar
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        const uploadBtn = document.getElementById('uploadBtn');
+        
+        progressContainer.style.display = 'block';
+        uploadBtn.disabled = true;
+        
+        // شبیه‌سازی آپلود (در واقعیت باید به سرور ارسال شود)
+        let progress = 0;
+        const interval = setInterval(() => {
+          progress += Math.random() * 15;
+          if (progress >= 100) {
+            progress = 100;
+            clearInterval(interval);
+            
+            // آپلود موفق
+            progressText.textContent = 'آپلود با موفقیت انجام شد!';
+            progressBar.classList.add('bg-success');
+            
+            // اضافه کردن فایل به لیست
+            const fileInfo = {
+              name: selectedFile.name,
+              size: formatFileSize(selectedFile.size),
+              type: selectedFile.type,
+              uploadDate: new Date().toLocaleDateString('fa-IR'),
+              dataUrl: selectedFileDataUrl // فقط برای عکس
+            };
+            
+            uploadedFiles.push(fileInfo);
+            displayUploadedFiles();
+            
+            // پاک کردن فایل انتخاب شده
+            removeSelectedFile();
+            
+            // مخفی کردن progress bar بعد از 2 ثانیه
+            setTimeout(() => {
+              progressContainer.style.display = 'none';
+              progressBar.classList.remove('bg-success');
+              progressBar.style.width = '0%';
+              progressBar.textContent = '0%';
+              uploadBtn.disabled = false;
+            }, 2000);
+            
+          } else {
+            progressBar.style.width = progress + '%';
+            progressBar.textContent = Math.round(progress) + '%';
+            progressText.textContent = 'در حال آپلود...';
+          }
+        }, 200);
+      }
+      
+      // تابع نمایش فایل‌های آپلود شده
+      function displayUploadedFiles() {
+        const uploadedFilesDiv = document.getElementById('uploadedFiles');
+        
+        if (uploadedFiles.length === 0) {
+          uploadedFilesDiv.innerHTML = '';
+          return;
+        }
+        
+        let html = '<h6 class="mb-3">فایل‌های آپلود شده:</h6>';
+        
+        uploadedFiles.forEach((file, index) => {
+          let fileIcon = '';
+          if (file.type && file.type.startsWith('image/') && file.dataUrl) {
+            fileIcon = `<img src="${file.dataUrl}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 6px; border: 1px solid #ddd;">`;
+          } else if (file.type === 'application/pdf') {
+            fileIcon = `<div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 6px; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #dc3545;"><i class='fa fa-file-pdf-o'></i></div>`;
+          } else {
+            fileIcon = `<div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 6px; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #0d6efd;"><i class='fa fa-file-word-o'></i></div>`;
+          }
+          html += `
+            <div class="card mb-2">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                  ${fileIcon}
+                  <div>
+                    <strong>${file.name}</strong><br>
+                    <small class="text-muted">حجم: ${file.size} | تاریخ: ${file.uploadDate}</small>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-sm btn-danger" onclick="deleteFile(${index})">
+                  <i class="fa fa-trash"></i> حذف
+                </button>
+              </div>
+            </div>
+          `;
+        });
+        
+        uploadedFilesDiv.innerHTML = html;
+      }
+      
+      // تابع حذف فایل
+      function deleteFile(index) {
+        if (confirm('آیا از حذف این فایل اطمینان دارید؟')) {
+          uploadedFiles.splice(index, 1);
+          displayUploadedFiles();
+          alert('فایل با موفقیت حذف شد!');
+        }
+      }
+      
+      // تابع تبدیل اندازه فایل
+      function formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
       }
       
       // اجرای stepper هنگام بارگذاری صفحه
       document.addEventListener("DOMContentLoaded", function () {
         renderStepper();
-        
-        // فعال کردن تابع نمایش/مخفی کردن فیلد علت ترک فعالیت
-        toggleReasonField();
       });
       const btnYes = document.getElementById("btnYes");
         const btnNo = document.getElementById("btnNo");
-        const form = document.getElementById("jobForm");
+        const form = document.getElementById("unfinishedForm");
         btnYes.addEventListener("click", function () {
           form.style.display = "block";
           btnYes.classList.add("active");

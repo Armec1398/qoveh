@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="داشبورد ادمین - سامانه جامع جذب و گزینش داوطلبان تصدی منصب قضا"
+    />
+    <title>داشبورد ادمین</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../static/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../../../static/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="../../../static/fonts/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="../../../static/fonts/fontawesome5-overrides.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../../../static/css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../static/css/dashboard.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../static/css/IRANSans.css"
+    />
+  </head>
+
+  <body>
+    <div id="wrapper" class="dashboard-container position-relative">
+      <nav
+        class="navbar align-items-start sidebar sidebar-light accordion p-0 m-0 navbar-dark py-4"
+        style="flex-wrap: nowrap"
+      >
+        <div
+          class="container-fluid d-flex flex-column p-0 w-full align-items-center mx-auto"
+        >
+          <span id="closeSidebar" class="close-sidebar d-block d-lg-none"
+            >×</span
+          >
+          <div
+            class="navbar-brand d-flex justify-content-center align-items-center flex-column m-0 w-100"
+          >
+            <div class="text-center my-3">
+              <img
+                class="w-50 mb-1"
+                src="../../../static/img/logo.jpeg"
+                style="mix-blend-mode: multiply"
+              />
+              <div class="nastaligh primary-color" style="font-size: 17px">
+                معاونت منابع انسانی
+              </div>
+            </div>
+          </div>
+          <hr class="sidebar-divider my-0" />
+          <ul
+            class="navbar-nav text-light w-100 ps-3 gap-2"
+            id="accordionSidebar"
+          >
+            <li class="nav-item active">
+              <a
+                class="nav-link rounded-small"
+                href="../../../dashboard-user.html"
+              >
+                <i class="fa fa-home"></i>
+                <span>داشبورد</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link rounded-small"
+                href="../../../admin/dashboard-admin.html"
+              >
+                <i class="fa fa-home"></i>
+                <span>داشبورد ادمین</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../../login.html">
+                <i class="fa fa-home"></i>
+                <span>ورود/عضویت</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی دوم</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی سوم</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="#">
+                <i class="fa fa-user"></i>
+                <span>منوی چهارم</span></a
+              >
+            </li>
+            <div class="divider-sidebar my-2">
+              <span>پروفایل کاربر</span>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../personal.html">
+                <i class="fa fa-user"></i>
+                <span>اطلاعات فردی</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../contact.html">
+                <i class="fa fa-phone"></i>
+                <span>اطلاعات تماس</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link rounded-small" href="job.html">
+                <i class="fa fa-tv"></i>
+                <span>سوابق اجرایی</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../addict_history.html">
+                <i class="fa fa-history"></i>
+                <span>سوابق شغلی</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../criminal_records.html">
+                <i class="fa fa-gavel"></i>
+                <span>سوابق گزینش در سایر نهادها</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../disciplinarycommittee.html">
+                <i class="fa fa-users"></i>
+                <span>سوابق عضویت در بسیج</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../family.html">
+                <i class="fa fa-home"></i>
+                <span>سوابق تشکیلاتی</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-small" href="../final.html">
+                <i class="fa fa-check-circle"></i>
+                <span>ثبت نهایی</span></a
+              >
+            </li>
+          </ul>
+          <div
+            class="my-2 d-flex justify-content-center align-items-center gap-3 flex-row"
+          >
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../../../static/img/eitaa.webp"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../../../static/img/sorush.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../../../static/img/bale.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+            <a
+              class="text-white fw-bold d-flex justify-content-center align-items-center py-2 w-100"
+              role="button"
+              href="#"
+              ><img
+                src="../../../static/img/igap.png"
+                width="30px"
+                height="30px"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="d-flex flex-column pb-4 bg-white"
+        id="content-wrapper"
+        style="border-right: 1px solid #e9eced"
+      >
+        <div id="content">
+          <nav
+            class="navbar navbar-expand bg-white mb-3 topbar static-top navbar-light px-md-3"
+            style="border-right: 0"
+          >
+            <div class="container-fluid px-1 px-lg-4">
+              <button
+                class="btn bg-transparent border-0 d-flex d-lg-none rounded-circle me-lg-3"
+                id="sidebarToggleTop"
+                type="button"
+              >
+                <i
+                  class="fa fa-bars text-black font-size-medium"
+                  style="margin-top: 4px"
+                ></i>
+              </button>
+              <div id="overlay" class="overlay"></div>
+              <div class="ms-auto">
+                <a
+                  class="d-flex justify-content-center align-items-center rounded-medium"
+                  href="#"
+                  style="border: 0; text-decoration: none"
+                  ><img
+                    class="ms-2 d-none d-lg-block"
+                    src="../../../static/img/user.png"
+                    style="width: 40px; height: 40px; color: #fff"
+                  />
+                  <p class="text-black d-flex">
+                    <span style="display: inline-block; margin-bottom: 7px"
+                      >محمدرضا آرمانیان</span
+                    >
+                  </p>
+                </a>
+              </div>
+              <ul class="navbar-nav flex-nowrap d-flex">
+                <li class="nav-item dropdown no-arrow d-flex flex-row gap-2">
+                  <a
+                    class="btn text-black bg-transparent border-0 d-flex justify-content-center align-items-center py-2 px-2 position-relative"
+                    role="button"
+                    href="#"
+                    ><i class="fa fa-bell text-black font-size-medium"></i
+                    ><span
+                      class="badge bg-danger rounded-circle d-flex justify-content-center align-items-center position-absolute"
+                      style="width: 16px; height: 16px; top: -5px; right: 10%"
+                      >3</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container px-3 px-sm-4">
+            <div class="row d-flex mb-3 mb-md-4">
+              <div class="col-lg-12 px-sm-3">
+                <div class="stepper-container" id="stepper"></div>
+              </div>
+            </div>
+            <div class="row d-flex mb-3">
+              <div class="col-lg-12 px-sm-3">
+                <div class="">
+                  <h1 class="text-black main-heading mb-0">افتخارات علمی و گواهینامه های تخصصی</h1>
+                </div>
+              </div>
+            </div>
+            <div class="row d-flex">
+              <div class="col-lg-12 px-sm-3">
+                <div
+                  class="content bg-white shadow-sm rounded-medium py-2 py-sm-4 px-3 px-sm-4"
+                >
+                
+                  <div class="w-100 d-flex justify-content-center mb-3">
+                    <h5 class="divider-title primary-color mb-0">
+                    <span>مواردی که قبلا ثبت کرده اید:</span>
+                  </h5>
+                </div>
+                <span class="text-black d-block pb-1"
+                  >موردی ثبت نشده است.</span
+                >
+                <!-- سوال اصلی -->
+                <div class="row mb-4">
+                  <div class="col-12">
+                    <div class="text-center">
+                      <h6 class="mb-3 text-black">
+                        آیا از افتخارات علمی یا گواهینامه تخصصی بهره مند هستید؟
+                    </h6>
+                      <div class="d-flex justify-content-center gap-3">
+                        <button
+                          type="button"
+                          class="btn btn-primary px-4"
+                          id="btnYes"
+                        >
+                          بله
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-primary px-4"
+                          id="btnNo"
+                        >
+                          خیر
+                        </button>
+                      </div>
+                    </div>
+                </div>
+                   
+                  </div>
+                  <form id="unfinishedForm">
+                    <h5 class="divider-title primary-color mb-4">
+                      <span>اطلاعات گواهینامه یا افتخارات علمی</span>
+                    </h5>
+                    <div class="row">
+                          <div class="col-md-12 mb-3">
+                            <p>مقامات علمی - افتخارات و گواهینامه های تخصصی</p>
+                            <div class="d-flex gap-2 mb-3">
+                              <div style="position: relative;">
+                                <input
+                                  type="file"
+                                  id="fileInput"
+                                  accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                                  style="position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer;"
+                                  onchange="showFilePreview()"
+                                >
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-primary px-4"
+                                  style="pointer-events: none;"
+                                >
+                                  انتخاب فایل
+                                </button>
+                              </div>
+                              <button
+                                type="button"
+                                class="btn btn-primary px-4"
+                                id="uploadBtn"
+                                onclick="uploadFile()"
+                                disabled
+                              >
+                                آپلود
+                              </button>
+                            </div>
+                            
+                            <!-- پیش‌نمایش فایل انتخاب شده -->
+                            <div id="filePreview" class="mb-3" style="display: none;">
+                              <!-- پیش‌نمایش فایل اینجا نمایش داده می‌شود -->
+                            </div>
+                            
+                            <!-- Progress Bar -->
+                            <div id="progressContainer" style="display: none;" class="mb-3">
+                              <div class="progress">
+                                <div 
+                                  class="progress-bar" 
+                                  id="progressBar" 
+                                  role="progressbar" 
+                                  style="width: 0%" 
+                                  aria-valuenow="0" 
+                                  aria-valuemin="0" 
+                                  aria-valuemax="100"
+                                >
+                                  0%
+                                </div>
+                              </div>
+                              <small class="text-muted" id="progressText">در حال آپلود...</small>
+                            </div>
+                            
+                            <!-- فایل‌های آپلود شده -->
+                            <div id="uploadedFiles" class="mt-3">
+                              <!-- فایل‌های آپلود شده اینجا نمایش داده می‌شوند -->
+                            </div>
+                          </div>
+
+                    </div>
+    
+                    <div class="mt-4">
+                      <button
+                        type="submit"
+                        class="btn btn-success px-4"
+                        onclick="saveJobRecord()"
+                      >
+                        ثبت سابقه
+                      </button>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                      <div>
+                        <button
+                          type="submit"
+                          class="btn btn-primary px-4 submit-btn"
+                        >
+                          ثبت اطلاعات
+                        </button>
+                      </div>
+                      <div class="d-flex justify-content-between mt-2">
+                        <button
+                          type="button"
+                          class="btn btn-secondary px-4 next-btn"
+                          onclick="window.location.href='selection-records.html'"
+                        >
+                          بعدی
+                        </button>
+                      </div>
+                    </div>
+                    
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../../static/js/jquery-3.7.1.min.js"></script>
+    <script src="../../../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../static/js/theme.js"></script>
+    <script src="../../../static/js/dashboard.js"></script>
+    <script src="../../../static/js/formcontrol.js"></script>
+
+    <script>
+      // تعریف مسیرهای صفحات برای navigation
+      const pageRoutes = [
+        "university.html",
+        "hawzeh.html",
+        "unfinished.html",
+        "professional_certificates.html",
+        "final.html",
+
+      ];
+
+      // تعریف مراحل برای صفحه contact
+      const stepTitles = [
+        "سوابق تحصیلات دانشگاهی",
+        "سوابق تحصیلات حوزوی",
+        "سوابق تحصلات ناتمام",
+        "افتخارات علمی و گواهینامه های تخصصی",
+        "ثبت نهایی"
+      ];
+      const totalSteps = stepTitles.length;
+      let currentStep = 4; // شروع از مرحله اول
+
+      // تابع navigation برای رفتن به مرحله بعدی
+      function goToNextStep() {
+        if (currentStep < totalSteps) {
+          window.location.href = pageRoutes[currentStep];
+        }
+      }
+
+      // تابع navigation برای رفتن به مرحله قبلی
+      function goToPreviousStep() {
+        if (currentStep > 1) {
+          window.location.href = pageRoutes[currentStep - 2];
+        }
+      }
+
+      const renderStepper = () => {
+        const container = document.getElementById("stepper");
+        container.innerHTML = "";
+
+        if (currentStep > 2) {
+          const dotsPrev = document.createElement("div");
+          dotsPrev.className = "step dots";
+          dotsPrev.textContent = "مرحله قبل";
+          dotsPrev.addEventListener("click", goToPreviousStep);
+          container.appendChild(dotsPrev);
+        }
+
+        if (currentStep > 1) {
+          const prev = document.createElement("div");
+          prev.className = "step prev";
+          prev.textContent = stepTitles[currentStep - 2];
+          prev.addEventListener("click", goToPreviousStep);
+          container.appendChild(prev);
+        }
+
+        const curr = document.createElement("div");
+        curr.className = "step current";
+        curr.textContent = stepTitles[currentStep - 1];
+        container.appendChild(curr);
+
+        if (currentStep < totalSteps) {
+          const next = document.createElement("div");
+          next.className = "step next";
+          next.textContent = stepTitles[currentStep];
+          next.addEventListener("click", goToNextStep);
+          container.appendChild(next);
+        }
+
+        if (currentStep < totalSteps - 1) {
+          const dotsNext = document.createElement("div");
+          dotsNext.className = "step dots";
+          dotsNext.textContent = "مرحله بعد";
+          dotsNext.addEventListener("click", goToNextStep);
+          container.appendChild(dotsNext);
+        }
+      };
+ 
+      // آرایه فایل‌های آپلود شده
+      let uploadedFiles = [];
+      let selectedFile = null;
+      let selectedFileDataUrl = null;
+      
+      // تابع نمایش پیش‌نمایش فایل انتخاب شده
+      function showFilePreview() {
+        const fileInput = document.getElementById('fileInput');
+        const file = fileInput.files[0];
+        const uploadBtn = document.getElementById('uploadBtn');
+        const filePreview = document.getElementById('filePreview');
+        
+        if (!file) {
+          filePreview.style.display = 'none';
+          uploadBtn.disabled = true;
+          selectedFile = null;
+          selectedFileDataUrl = null;
+          return;
+        }
+        
+        // بررسی نوع فایل
+        const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/jpeg', 'image/jpg', 'image/png'];
+        if (!allowedTypes.includes(file.type)) {
+          alert('فقط فایل‌های PDF، Word، JPG و PNG مجاز هستند.');
+          fileInput.value = '';
+          return;
+        }
+        
+        // بررسی اندازه فایل (حداکثر 5MB)
+        if (file.size > 5 * 1024 * 1024) {
+          alert('حجم فایل نباید بیشتر از 5 مگابایت باشد.');
+          fileInput.value = '';
+          return;
+        }
+        
+        selectedFile = file;
+        selectedFileDataUrl = null;
+        uploadBtn.disabled = false;
+        
+        let previewHtml = '';
+        
+        if (file.type.startsWith('image/')) {
+          // نمایش پیش‌نمایش عکس بزرگ‌تر
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            selectedFileDataUrl = e.target.result;
+            previewHtml = `
+              <div class="d-flex align-items-center gap-3">
+                <div style="position: relative; display: inline-block;">
+                  <img src="${e.target.result}" style="width: 120px; height: 120px; object-fit: cover; border-radius: 8px; border: 1px solid #ddd;">
+                  <button type="button" class="btn btn-sm btn-danger" style="position: absolute; top: -5px; right: -5px; width: 22px; height: 22px; border-radius: 50%; padding: 0; font-size: 14px;" onclick="removeSelectedFile()">×</button>
+                </div>
+                <div>
+                  <strong>${file.name}</strong><br>
+                  <small class="text-muted">${formatFileSize(file.size)}</small>
+                </div>
+              </div>
+            `;
+            filePreview.innerHTML = previewHtml;
+            filePreview.style.display = 'block';
+          };
+          reader.readAsDataURL(file);
+        } else if (file.type === 'application/pdf') {
+          // نمایش آیکون PDF
+          previewHtml = `
+            <div class="d-flex align-items-center gap-3">
+              <div style="position: relative; display: inline-block;">
+                <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 6px; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #dc3545;">
+                  <i class="fa fa-file-pdf-o"></i>
+                </div>
+                <button type="button" class="btn btn-sm btn-danger" style="position: absolute; top: -5px; right: -5px; width: 20px; height: 20px; border-radius: 50%; padding: 0; font-size: 12px;" onclick="removeSelectedFile()">×</button>
+              </div>
+              <div>
+                <strong>${file.name}</strong><br>
+                <small class="text-muted">${formatFileSize(file.size)}</small>
+              </div>
+            </div>
+          `;
+          filePreview.innerHTML = previewHtml;
+          filePreview.style.display = 'block';
+        } else {
+          // نمایش آیکون Word
+          previewHtml = `
+            <div class="d-flex align-items-center gap-3">
+              <div style="position: relative; display: inline-block;">
+                <div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 6px; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #0d6efd;">
+                  <i class="fa fa-file-word-o"></i>
+                </div>
+                <button type="button" class="btn btn-sm btn-danger" style="position: absolute; top: -5px; right: -5px; width: 20px; height: 20px; border-radius: 50%; padding: 0; font-size: 12px;" onclick="removeSelectedFile()">×</button>
+              </div>
+              <div>
+                <strong>${file.name}</strong><br>
+                <small class="text-muted">${formatFileSize(file.size)}</small>
+              </div>
+            </div>
+          `;
+          filePreview.innerHTML = previewHtml;
+          filePreview.style.display = 'block';
+        }
+      }
+      
+      // تابع حذف فایل انتخاب شده
+      function removeSelectedFile() {
+        const fileInput = document.getElementById('fileInput');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const filePreview = document.getElementById('filePreview');
+        
+        fileInput.value = '';
+        filePreview.style.display = 'none';
+        uploadBtn.disabled = true;
+        selectedFile = null;
+        selectedFileDataUrl = null;
+      }
+      
+      // تابع آپلود فایل
+      function uploadFile() {
+        if (!selectedFile) {
+          alert('لطفاً ابتدا یک فایل انتخاب کنید.');
+          return;
+        }
+        
+        // نمایش progress bar
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        const uploadBtn = document.getElementById('uploadBtn');
+        
+        progressContainer.style.display = 'block';
+        uploadBtn.disabled = true;
+        
+        // شبیه‌سازی آپلود (در واقعیت باید به سرور ارسال شود)
+        let progress = 0;
+        const interval = setInterval(() => {
+          progress += Math.random() * 15;
+          if (progress >= 100) {
+            progress = 100;
+            clearInterval(interval);
+            
+            // آپلود موفق
+            progressText.textContent = 'آپلود با موفقیت انجام شد!';
+            progressBar.classList.add('bg-success');
+            
+            // اضافه کردن فایل به لیست
+            const fileInfo = {
+              name: selectedFile.name,
+              size: formatFileSize(selectedFile.size),
+              type: selectedFile.type,
+              uploadDate: new Date().toLocaleDateString('fa-IR'),
+              dataUrl: selectedFileDataUrl // فقط برای عکس
+            };
+            
+            uploadedFiles.push(fileInfo);
+            displayUploadedFiles();
+            
+            // پاک کردن فایل انتخاب شده
+            removeSelectedFile();
+            
+            // مخفی کردن progress bar بعد از 2 ثانیه
+            setTimeout(() => {
+              progressContainer.style.display = 'none';
+              progressBar.classList.remove('bg-success');
+              progressBar.style.width = '0%';
+              progressBar.textContent = '0%';
+              uploadBtn.disabled = false;
+            }, 2000);
+            
+          } else {
+            progressBar.style.width = progress + '%';
+            progressBar.textContent = Math.round(progress) + '%';
+            progressText.textContent = 'در حال آپلود...';
+          }
+        }, 200);
+      }
+      
+      // تابع نمایش فایل‌های آپلود شده
+      function displayUploadedFiles() {
+        const uploadedFilesDiv = document.getElementById('uploadedFiles');
+        
+        if (uploadedFiles.length === 0) {
+          uploadedFilesDiv.innerHTML = '';
+          return;
+        }
+        
+        let html = '<h6 class="mb-3">فایل‌های آپلود شده:</h6>';
+        
+        uploadedFiles.forEach((file, index) => {
+          let fileIcon = '';
+          if (file.type && file.type.startsWith('image/') && file.dataUrl) {
+            fileIcon = `<img src="${file.dataUrl}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 6px; border: 1px solid #ddd;">`;
+          } else if (file.type === 'application/pdf') {
+            fileIcon = `<div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 6px; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #dc3545;"><i class='fa fa-file-pdf-o'></i></div>`;
+          } else {
+            fileIcon = `<div style="width: 60px; height: 60px; background: #f8f9fa; border-radius: 6px; border: 1px solid #ddd; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #0d6efd;"><i class='fa fa-file-word-o'></i></div>`;
+          }
+          html += `
+            <div class="card mb-2">
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                  ${fileIcon}
+                  <div>
+                    <strong>${file.name}</strong><br>
+                    <small class="text-muted">حجم: ${file.size} | تاریخ: ${file.uploadDate}</small>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-sm btn-danger" onclick="deleteFile(${index})">
+                  <i class="fa fa-trash"></i> حذف
+                </button>
+              </div>
+            </div>
+          `;
+        });
+        
+        uploadedFilesDiv.innerHTML = html;
+      }
+      
+      // تابع حذف فایل
+      function deleteFile(index) {
+        if (confirm('آیا از حذف این فایل اطمینان دارید؟')) {
+          uploadedFiles.splice(index, 1);
+          displayUploadedFiles();
+          alert('فایل با موفقیت حذف شد!');
+        }
+      }
+      
+      // تابع تبدیل اندازه فایل
+      function formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+      }
+      
+      // اجرای stepper هنگام بارگذاری صفحه
+      document.addEventListener("DOMContentLoaded", function () {
+        renderStepper();
+      });
+      const btnYes = document.getElementById("btnYes");
+        const btnNo = document.getElementById("btnNo");
+        const form = document.getElementById("unfinishedForm");
+        btnYes.addEventListener("click", function () {
+          form.style.display = "block";
+          btnYes.classList.add("active");
+          btnNo.classList.remove("active");
+        });
+        btnNo.addEventListener("click", goToNextStep);
+    </script>
+  </body>
+</html>

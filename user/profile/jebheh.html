@@ -265,7 +265,7 @@
                       <span>نمونه جدید</span>
                     </h5>
                   </div>
-                  <form>
+                  <form id="jebhehForm">
                     <div class="row">
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
@@ -275,61 +275,111 @@
                         <input
                           type="text"
                           class="form-control required"
+                          name="fullname"
                           placeholder="نام و نام خانوادگی (مثال: علی رضایی)"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> نسبت
-                        </label>
-                        <input
-                          type="text"
-                          class="form-control required"
-                          placeholder="نسبت (مثال: پدر)"
-                        />
+                          ><span style="color: #ff4d4f">*</span> نسبت</label
+                        >
+                        <select
+                          class="form-select required"
+                          name="relation"
+                          id="relationSelect"
+                        >
+                          <option value="">انتخاب کنید</option>
+                          <option value="خودم">خودم</option>
+                          <option value="پدر">پدر</option>
+                          <option value="مادر">مادر</option>
+                          <option value="برادر">برادر</option>
+                          <option value="خواهر">خواهر</option>
+                          <option value="فرزند">فرزند</option>
+                          <option value="همسر">همسر</option>
+                        </select>
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> نوع ایثارگری
-                        </label>
-                        <select class="form-select required">
-                          <option>-</option>
-                          <option>رزمنده</option>
-                          <option>جانباز</option>
-                          <option>آزاده</option>
-                          <option>شهید</option>
-                          <option>سایر</option>
+                          ><span style="color: #ff4d4f">*</span> نوع
+                          ایثارگری</label
+                        >
+                        <select
+                          class="form-select required"
+                          name="isargari_type"
+                          id="isargariTypeSelect"
+                        >
+                          <option value="">انتخاب کنید</option>
+                          <option value="رزمنده">رزمنده</option>
+                          <option value="جانباز">جانباز</option>
+                          <option value="آزاده">آزاده</option>
+                          <option value="شهید">شهید</option>
+                          <option value="سایر">سایر</option>
                         </select>
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
                           ><span style="color: #ff4d4f">*</span> محل اعزام
-                          (مثال: جبهه جنوب)
-                        </label>
+                          (مثال: جبهه جنوب)</label
+                        >
                         <input
                           type="text"
                           class="form-control required"
+                          name="dispatch_location"
                           placeholder="محل اعزام (مثال: جبهه جنوب)"
                         />
                       </div>
-                      <div class="col-md-6 mb-3">
+                      <div
+                        class="col-md-6 mb-3"
+                        id="presenceDurationField"
+                        style="display: none"
+                      >
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> مدت حضور (مثال:
-                          6 ماه)
-                        </label>
+                          ><span style="color: #ff4d4f">*</span> مدت حضور در
+                          جبهه</label
+                        >
                         <input
                           type="text"
                           class="form-control required"
+                          name="presence_duration"
                           placeholder="مدت حضور (مثال: 6 ماه)"
+                        />
+                      </div>
+                      <div
+                        class="col-md-6 mb-3"
+                        id="disabilityPercentField"
+                        style="display: none"
+                      >
+                        <label class="form-label">درصد جانبازی</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          name="disability_percent"
+                          placeholder="درصد جانبازی (مثال: 25)"
+                          min="0"
+                          max="100"
+                        />
+                      </div>
+                      <div
+                        class="col-md-6 mb-3"
+                        id="captivityDurationField"
+                        style="display: none"
+                      >
+                        <label class="form-label">مدت زمان اسارت</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="captivity_duration"
+                          placeholder="مدت اسارت (مثال: 2 سال)"
                         />
                       </div>
                       <div class="col-md-6 mb-3">
                         <label class="form-label"
-                          ><span style="color: #ff4d4f">*</span> تلفن
-                        </label>
+                          ><span style="color: #ff4d4f">*</span> تلفن</label
+                        >
                         <input
                           type="text"
                           class="form-control required"
+                          name="phone"
                           placeholder="تلفن (مثال: 09121234567)"
                         />
                       </div>
@@ -337,7 +387,7 @@
                     <div class="d-flex justify-content-between mt-4 gap-2">
                       <button
                         type="submit"
-                        class="btn btn-success px-4 submit-btn"
+                        class="btn btn-primary px-4 submit-btn"
                       >
                         ثبت اطلاعات
                       </button>
@@ -422,6 +472,83 @@
           window.location.href = pageRoutes[2]; // family.html
         }
       }
+
+      // مدیریت dynamic fields بر اساس نوع ایثارگری
+      document.addEventListener("DOMContentLoaded", function () {
+        const isargariTypeSelect =
+          document.getElementById("isargariTypeSelect");
+        const presenceDurationField = document.getElementById(
+          "presenceDurationField"
+        );
+        const disabilityPercentField = document.getElementById(
+          "disabilityPercentField"
+        );
+        const captivityDurationField = document.getElementById(
+          "captivityDurationField"
+        );
+
+        if (isargariTypeSelect) {
+          isargariTypeSelect.addEventListener("change", function () {
+            const selectedValue = this.value;
+
+            // مخفی کردن همه فیلدهای dynamic
+            presenceDurationField.style.display = "none";
+            disabilityPercentField.style.display = "none";
+            captivityDurationField.style.display = "none";
+
+            // نمایش فیلدهای مربوطه بر اساس انتخاب
+            switch (selectedValue) {
+              case "رزمنده":
+                presenceDurationField.style.display = "block";
+                break;
+              case "جانباز":
+                presenceDurationField.style.display = "block";
+                disabilityPercentField.style.display = "block";
+                break;
+              case "آزاده":
+                presenceDurationField.style.display = "block";
+                captivityDurationField.style.display = "block";
+                break;
+              case "شهید":
+                presenceDurationField.style.display = "block";
+                break;
+              case "سایر":
+                // هیچ فیلد اضافه‌ای نمایش داده نمی‌شود
+                break;
+            }
+          });
+        }
+
+        // مدیریت فرم
+        const jebhehForm = document.getElementById("jebhehForm");
+        if (jebhehForm) {
+          jebhehForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // اعتبارسنجی فرم
+            const requiredFields = jebhehForm.querySelectorAll(".required");
+            let isValid = true;
+
+            requiredFields.forEach((field) => {
+              if (!field.value.trim()) {
+                field.classList.add("is-invalid");
+                isValid = false;
+              } else {
+                field.classList.remove("is-invalid");
+              }
+            });
+
+            if (isValid) {
+              // ارسال فرم
+              console.log("فرم با موفقیت ارسال شد");
+              alert("اطلاعات با موفقیت ثبت شد");
+              // می‌توانید اینجا کد ارسال به سرور را اضافه کنید
+            } else {
+              alert("لطفاً تمام فیلدهای اجباری را پر کنید");
+            }
+          });
+        }
+      });
 
       const renderStepper = () => {
         const container = document.getElementById("stepper");
